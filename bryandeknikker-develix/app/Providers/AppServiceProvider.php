@@ -20,8 +20,7 @@ class AppServiceProvider extends ServiceProvider
      */
     public function boot(): void
     {
-        View::addLocation(base_path('bryandeknikker.nl/views'));
-
-        View::addLocation(base_path('develix.nl/views'));
+        View::addNamespace('bryandeknikker', base_path('bryandeknikker.nl/views'));
+        View::addNamespace('develix', base_path('develix.nl/views'));
     }
 }

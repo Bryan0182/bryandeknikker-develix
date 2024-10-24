@@ -4,12 +4,12 @@ use Illuminate\Support\Facades\Route;
 
 Route::domain('bryandeknikker.nl')->group(function () {
     Route::get('/', function () {
-        return view('home');
+        return view('bryandeknikker::home');
     });
 });
 
 Route::domain('develix.nl')->group(function () {
     Route::get('/', function () {
-        return view('home');
+        return view('develix::home');
     });
 });
