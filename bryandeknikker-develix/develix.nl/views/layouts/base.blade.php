@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>@yield('title', 'Develix') - Develix</title>
 
-    @vite(['resources/scss/app.scss', 'resources/js/app.js'])
+    @vite(['resources/scss/global/app.scss', 'resources/js/app.js'])
 
     @yield('page-specific-css')
 </head>

@@ -1,0 +1,23 @@
+:root {
+    --white-color: #FAFAFA;
+    --off-white-color: #F2F0EF;
+    --grey-color: #C8C8C8;
+    --dark-grey-color: #878787;
+    --black-color: #121212;
+    --disabled-color: #585C5E;
+    --transparent-color: transparent;
+}
+
+body.dark-theme {
+    background: var(--black-color);
+    color: var(--white-color);
+}
+
+body {
+    background: var(--white-color);
+    color: var(--black-color);
+}
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
