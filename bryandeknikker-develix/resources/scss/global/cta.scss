@@ -1,0 +1,75 @@
+.cta-container-fluid {
+    border-top: 1px solid var(--black-color);
+    border-bottom: 1px solid var(--black-color);
+
+    body.dark-theme & {
+        border-top: 1px solid var(--white-color);
+        border-bottom: 1px solid var(--white-color);
+    }
+}
+
+.cta-title {
+    margin: 0;
+}
+
+.cta-text {
+    padding: 15px 0;
+}
+
+.contact-cta-button {
+    background-color: var(--transparent-color);
+    color: var(--main-color);
+    border: 1px solid var(--main-color);
+    padding: 6px 12px !important;
+    border-radius: 5px;
+    transition: ease-in-out 0.4s;
+
+    &:hover,
+    &:focus,
+    &:active {
+        background-color: var(--main-color) !important;
+        color: var(--white-color) !important;
+        border: 1px solid var(--main-color) !important;
+    }
+}
+
+.read-more-cta-button {
+    display: flex;
+    align-items: center;
+    background-color: var(--transparent-color);
+    color: var(--main-color);
+    border: none;
+    padding: 6px 12px !important;
+    border-radius: 5px;
+    transition: ease-in-out 0.4s;
+    position: relative;
+
+    &:hover,
+    &:focus,
+    &:active {
+        background-color: var(--transparent-color) !important;
+        color: var(--main-color) !important;
+    }
+
+    &::after {
+        content: '';
+        background: url('/images/develix.nl/develix-angle-right.svg') no-repeat;
+        width: 15px;
+        height: 20px;
+        display: inline-block;
+        margin-left: 5px;
+        transition: transform 0.4s ease-in-out;
+    }
+
+    &:hover::after {
+        transform: translateX(8px);
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .button-cta-row {
+        display: flex !important;
+        width: fit-content;
+        margin: auto;
+    }
+}

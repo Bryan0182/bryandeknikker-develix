@@ -3,7 +3,7 @@
 @section('title', 'Home')
 
 @section('page-specific-scss')
-    @vite(['resources/scss/global/hero.scss', 'resources/scss/global/services.scss'])
+    @vite(['resources/scss/global/hero.scss', 'resources/scss/global/services.scss', 'resources/scss/global/cta.scss'])
 @endsection
 
 @section('content')
@@ -84,8 +84,18 @@
         'imageClass' => ''
     ])
     @endcomponent
+
+    @component('components.cta', [
+        'title' => 'Twijfel je nog?',
+        'description' => 'Heb je nog vragen of twijfel je over de mogelijkheden? Neem gerust contact op en ik help je graag verder. Samen bespreken we jouw wensen en bekijken we hoe ik je het beste kan ondersteunen.',
+        'first_button' => 'Neem contact op',
+        'first_button_url' => route('contact'),
+        'second_button' => 'Lees meer',
+        'second_button_url' => route('over-develix'),
+    ])
+    @endcomponent
 @endsection
 
 @section('page-specific-js')
-{{--    @vite(['resources/js/home.js'])--}}
+    @vite([])
 @endsection

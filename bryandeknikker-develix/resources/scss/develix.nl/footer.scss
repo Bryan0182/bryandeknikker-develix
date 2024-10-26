@@ -1,0 +1,123 @@
+.dark-theme {
+    .custom-flex {
+
+        .flex-item {
+
+            .menu-item {
+                color: var(--white-color);
+            }
+        }
+    }
+}
+
+.custom-flex {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+
+    .flex-item {
+        width: fit-content;
+        padding: 0 20px;
+        border-radius: 5px;
+
+        .menu-item {
+            position: relative;
+            display: block;
+            text-decoration: none;
+            overflow: hidden;
+            padding: 0;
+            color: var(--black-color);
+            width: fit-content;
+
+            &::after {
+                content: '';
+                position: absolute;
+                width: 100%;
+                height: 2px;
+                bottom: 0;
+                left: -100%;
+                background-color: var(--main-color);
+                transition: left 0.4s ease;
+            }
+
+            &:hover::after {
+                left: 0;
+            }
+        }
+    }
+}
+
+.social-icon {
+    position: relative;
+    display: inline-block;
+
+    img {
+        transition: opacity 0.4s ease;
+    }
+
+    &.facebook:hover img {
+        opacity: 0;
+    }
+
+    &.facebook::after {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-image: url("/images/develix.nl/facebook-develix.svg");
+        background-size: contain;
+        background-repeat: no-repeat;
+        opacity: 0;
+        transition: opacity 0.4s ease;
+    }
+
+    &.facebook:hover::after {
+        opacity: 1;
+    }
+
+    &.instagram:hover img {
+        opacity: 0;
+    }
+
+    &.instagram::after {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-image: url("/images/develix.nl/instagram-develix.svg");
+        background-size: contain;
+        background-repeat: no-repeat;
+        opacity: 0;
+        transition: opacity 0.4s ease;
+    }
+
+    &.instagram:hover::after {
+        opacity: 1;
+    }
+
+    &.linkedin:hover img {
+        opacity: 0;
+    }
+
+    &.linkedin::after {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-image: url("/images/develix.nl/linkedin-develix.svg");
+        background-size: contain;
+        background-repeat: no-repeat;
+        opacity: 0;
+        transition: opacity 0.4s ease;
+    }
+
+    &.linkedin:hover::after {
+        opacity: 1;
+    }
+}
