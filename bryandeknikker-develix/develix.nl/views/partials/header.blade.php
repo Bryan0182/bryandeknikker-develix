@@ -16,7 +16,7 @@
             <div class="relative group">
                 <a href="#" class="focus:outline-none menu-item">Diensten</a>
                 <div id="dropdown-menu"
-                     class="absolute hidden group-hover:block py-2 px-4 w-80">
+                     class="absolute hidden group-hover:block py-2 px-2 w-80">
                     <a href="#" class="block px-4 py-2 nav-item">
                         <div class="flex items-center space-x-3">
                             <img src="{{ asset('images/develix.nl/website.svg') }}" alt="Website Icon" width="24"
@@ -104,7 +104,7 @@
     </div>
 
     <!-- Mobile Menu (uitklapbaar) -->
-    <div id="mobile-menu" class="lg:hidden hidden space-y-2 py-2">
+    <div id="mobile-menu" class="lg:hidden hidden space-y-2 py-4">
 
         <!-- Mobile Dropdown Menu -->
         <div class="relative">

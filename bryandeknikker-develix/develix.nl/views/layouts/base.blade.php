@@ -8,7 +8,7 @@
 
     @vite(['resources/scss/global/app.scss', 'resources/scss/develix.nl/develix.scss', 'resources/scss/develix.nl/header.scss', 'resources/js/app.js'])
 
-    @yield('page-specific-css')
+    @yield('page-specific-scss')
 </head>
 <body>
 
