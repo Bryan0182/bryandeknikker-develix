@@ -1,0 +1,88 @@
+/* Start hero SCSS */
+
+.hero-row {
+    margin: 0;
+    padding: 6rem 0 3rem 0;
+
+    .rounded-corners {
+        border-radius: 5px;
+        width: 300px;
+        height: 300px;
+        object-fit: cover;
+    }
+
+    @media (max-width: 991px) {
+        padding: 3rem 0;
+
+        .image-column {
+            margin-top: 3rem;
+        }
+    }
+}
+
+.description-paragraph {
+    padding: 30px 0;
+}
+
+.contact-hero-button {
+    background-color: var(--transparent-color);
+    color: var(--main-color);
+    border: 1px solid var(--main-color);
+    padding: 6px 12px !important;
+    border-radius: 5px;
+    transition: ease-in-out 0.4s;
+
+    &:hover,
+    &:focus,
+    &:active {
+        background-color: var(--main-color) !important;
+        color: var(--white-color) !important;
+        border: 1px solid var(--main-color) !important;
+    }
+}
+
+.read-more-hero-button {
+    display: flex;  // Zorgt ervoor dat ::after en tekst zich in hetzelfde flex-containerniveau bevinden
+    align-items: center; // Verticaal centreren van ::after naast de tekst
+    background-color: var(--transparent-color);
+    color: var(--main-color);
+    border: none;
+    padding: 6px 12px !important;
+    border-radius: 5px;
+    transition: ease-in-out 0.4s;
+    position: relative;
+
+    &:hover,
+    &:focus,
+    &:active {
+        background-color: var(--transparent-color) !important;
+        color: var(--main-color) !important;
+    }
+
+    &::after {
+        content: '';
+        background: url('/images/develix.nl/develix-angle-right.svg') no-repeat;
+        width: 15px;
+        height: 20px;
+        display: inline-block;
+        margin-left: 5px;
+        transition: transform 0.4s ease-in-out;
+    }
+
+    &:hover::after {
+        transform: translateX(8px);
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .button-hero-row {
+        display: flex !important;
+        width: fit-content;
+    }
+
+    .mt-tablet {
+        margin-top: 3rem !important; /* Pas 3rem aan naar de gewenste waarde */
+    }
+}
+
+/* End hero SCSS */

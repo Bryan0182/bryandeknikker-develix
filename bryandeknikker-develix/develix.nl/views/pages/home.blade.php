@@ -3,19 +3,23 @@
 @section('title', 'Home')
 
 @section('page-specific-css')
-    @vite(['resources/scss/develix.nl/develix.scss', 'resources/scss/develix.nl/header.scss'])
+    @vite(['resources/scss/global/hero.scss'])
 @endsection
 
 @section('content')
-    @component('components.text', [
-        'title' => 'Waarom investeren in goed design?',
-        'description' => 'Een sterk design is essentieel voor het succes van je merk. Het zorgt voor een herkenbare identiteit, geeft je bedrijf professionaliteit en trekt de aandacht van je doelgroep. Hier zijn enkele redenen waarom goed design belangrijk is:
-        <ul>
-            <li><strong>Merkherkenning:</strong> Een uniek en consistent design zorgt voor een sterke merkidentiteit.</li>
-            <li><strong>Gebruikerservaring:</strong> Goed design maakt je website of product gebruiksvriendelijker, wat leidt tot hogere tevredenheid.</li>
-            <li><strong>Professionele uitstraling:</strong> Een goed ontworpen website of logo straalt professionaliteit uit en wekt vertrouwen bij je klanten.</li>
-            <li><strong>Meer conversies:</strong> Een aantrekkelijk design zorgt ervoor dat bezoekers langer blijven en sneller actie ondernemen.</li>
-        </ul>',
+    @component('components.hero', [
+        'title' => 'Jouw complete digitale partner voor succes',
+        'description' => 'Welkom bij Develix – de plek waar we jouw digitale visie realiseren. Van websites die opvallen, SEO-strategieën die vindbaarheid verbeteren, en social media-boosts tot op maat gemaakte applicaties, professioneel design, en betrouwbare hosting. Met Develix heb je een partner die alles in huis heeft om jouw bedrijf online te laten groeien en bloeien.',
+        'first_button' => 'Neem contact op',
+        'first_button_url' => route('contact'),
+        'second_button' => 'Lees meer',
+        'second_button_url' => route('over-develix'),
+        'imageSrc' => asset('images/develix.nl/operating-system-vector.svg'),
+        'imageSrcDark' => asset('images/develix.nl/operating-system-vector-dark.svg'),
+        'altText' => 'Foto van Bryan de Knikker',
+        'width' => 300,
+        'height' => 300,
+        'imageClass' => ''
     ])
     @endcomponent
 @endsection

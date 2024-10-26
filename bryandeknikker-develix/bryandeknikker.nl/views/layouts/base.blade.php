@@ -3,10 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>@yield('title', 'Develix') - Develix</title>
-    <link rel="icon" href="images/develix.nl/develix.svg" type="image/x-icon">
+    <title>@yield('title', 'Bryan de Knikker') - Bryan de Knikker</title>
 
-    @vite(['resources/scss/global/app.scss', 'resources/scss/develix.nl/develix.scss', 'resources/scss/develix.nl/header.scss', 'resources/js/app.js'])
+    @vite(['resources/scss/global/app.scss', 'resources/scss/bryandeknikker.nl/bryandeknikker.scss', 'resources/js/app.js'])
 
     @yield('page-specific-css')
 </head>
