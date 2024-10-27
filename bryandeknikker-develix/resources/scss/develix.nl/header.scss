@@ -25,7 +25,7 @@
 
         .contact-button {
             color: var(--black-color);
-            transition: background-color 0.3s ease, color 0.3s ease;
+            transition: background-color 0.4s ease, color 0.4s ease;
 
             &:hover {
                 background-color: var(--second-color);
@@ -37,7 +37,7 @@
 
 .header {
     border-bottom: 1px solid var(--grey-color);
-    transition: background-color 0.3s ease, color 0.3s ease;
+    transition: background-color 0.4s ease, color 0.4s ease;
 
     .menu-item {
         position: relative;
@@ -126,7 +126,7 @@
         padding: 10px 20px;
         border-radius: 5px;
         text-decoration: none;
-        transition: background-color 0.3s ease, color 0.3s ease;
+        transition: background-color 0.4s ease, color 0.4s ease;
 
         &:hover {
             background-color: var(--second-color);
