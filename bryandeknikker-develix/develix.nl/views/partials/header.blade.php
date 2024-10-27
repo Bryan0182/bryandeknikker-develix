@@ -1,4 +1,4 @@
-<header class="header px-4 py-4 sticky top-0 bg-white z-50 transition-all duration-300">
+<header class="header px-4 py-4 sticky top-0 z-50 transition-all duration-300">
     <div class="container mx-auto flex justify-between items-center">
 
         <a href="{{ route('home') }}">
@@ -13,7 +13,7 @@
         <!-- Navigatiebalk (desktop) -->
         <nav id="menu" class="space-x-4 hidden lg:flex">
             <div class="relative group">
-                <a href="{{ route('diensten') }}" class="focus:outline-none menu-item">Diensten</a>
+                <a href="{{ route('diensten') }}" class="focus:outline-none menu-item dropdown-switch">Diensten</a>
                 <div id="dropdown-menu"
                      class="absolute hidden group-hover:block py-2 px-2 w-80">
                     <a href="#" class="block px-4 py-2 nav-item">
@@ -103,9 +103,9 @@
     <!-- Mobile Menu (uitklapbaar) -->
     <div id="mobile-menu" class="lg:hidden hidden space-y-2 py-4">
         <div class="relative">
-            <button id="mobile-dropdown-btn" class="block menu-item focus:outline-none">Diensten</button>
+            <button id="mobile-dropdown-btn" class="block menu-item focus:outline-none dropdown-switch">Diensten</button>
             <div id="mobile-dropdown-menu" class="hidden space-y-2 pl-4">
-                <a href="{{ route('diensten') }}" class="block menu-item">Diensten</a>
+                <a href="{{ route('diensten') }}" class="block menu-item ">Diensten</a>
                 <a href="#" class="block menu-item">Website</a>
                 <a href="#" class="block menu-item">SEO</a>
                 <a href="#" class="block menu-item">Social</a>

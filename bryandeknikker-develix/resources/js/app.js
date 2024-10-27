@@ -96,10 +96,13 @@ initTheme();
 
 window.addEventListener('scroll', function() {
     const header = document.querySelector('.header');
-    if (window.scrollY > 50) {
+
+    if (window.scrollY > 50 && !header.classList.contains('scrolled')) {
+        header.classList.add('scrolled');
         header.classList.remove('py-4');
         header.classList.add('py-2');
-    } else {
+    } else if (window.scrollY <= 50 && header.classList.contains('scrolled')) {
+        header.classList.remove('scrolled');
         header.classList.remove('py-2');
         header.classList.add('py-4');
     }

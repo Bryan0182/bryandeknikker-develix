@@ -64,6 +64,26 @@
         }
     }
 
+    .dropdown-switch {
+        cursor: pointer;
+        padding: 0;
+        position: relative;
+        width: 85px;
+        text-align: left;
+
+        &:before {
+            background: url('/images/develix.nl/angle-down.svg') no-repeat 50%;
+            background-size: contain;
+            content: "";
+            height: 16px;
+            position: absolute;
+            right: 0;
+            top: 50%;
+            transform: translateY(-50%);
+            width: 16px;
+        }
+    }
+
     .nav-item {
         padding: 5px 10px;
         color: var(--black-color);
