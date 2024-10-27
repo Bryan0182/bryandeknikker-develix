@@ -14,8 +14,72 @@
         <nav id="menu" class="space-x-4 hidden lg:flex">
             <div class="relative group">
                 <a href="{{ route('diensten') }}" class="focus:outline-none menu-item">Diensten</a>
-                <div id="dropdown-menu" class="absolute hidden group-hover:block py-2 px-2 w-80">
-                    <!-- Menu Items -->
+                <div id="dropdown-menu"
+                     class="absolute hidden group-hover:block py-2 px-2 w-80">
+                    <a href="#" class="block px-4 py-2 nav-item">
+                        <div class="flex items-center space-x-3">
+                            <img src="{{ asset('images/develix.nl/website.svg') }}" alt="Website Icon" width="24"
+                                 height="24">
+                            <div>
+                                <p class="font-semibold menu-item">Website</p>
+                                <p class="text-sm text-description">Laat je website maken</p>
+                            </div>
+                        </div>
+                    </a>
+
+                    <a href="#" class="block px-4 py-2 nav-item">
+                        <div class="flex items-center space-x-3">
+                            <img src="{{ asset('images/develix.nl/seo.svg') }}" alt="SEO Icon" width="24" height="24">
+                            <div>
+                                <p class="font-semibold menu-item">SEO</p>
+                                <p class="text-sm text-description">Verbeter je vindbaarheid in Google</p>
+                            </div>
+                        </div>
+                    </a>
+
+                    <a href="#" class="block px-4 py-2 nav-item">
+                        <div class="flex items-center space-x-3">
+                            <img src="{{ asset('images/develix.nl/social.svg') }}" alt="Social Icon" width="24"
+                                 height="24">
+                            <div>
+                                <p class="font-semibold menu-item">Social Media</p>
+                                <p class="text-sm text-description">Geef je socials een boost</p>
+                            </div>
+                        </div>
+                    </a>
+
+                    <a href="#" class="block px-4 py-2 nav-item">
+                        <div class="flex items-center space-x-3">
+                            <img src="{{ asset('images/develix.nl/design.svg') }}" alt="Design Icon" width="24"
+                                 height="24">
+                            <div>
+                                <p class="font-semibold menu-item">Design</p>
+                                <p class="text-sm text-description">Laat een professioneel design maken</p>
+                            </div>
+                        </div>
+                    </a>
+
+                    <a href="#" class="block px-4 py-2 nav-item">
+                        <div class="flex items-center space-x-3">
+                            <img src="{{ asset('images/develix.nl/application.svg') }}" alt="Applicatie Icon" width="24"
+                                 height="24">
+                            <div>
+                                <p class="font-semibold menu-item">Applicatie</p>
+                                <p class="text-sm text-description">Laat een maatwerk applicatie maken</p>
+                            </div>
+                        </div>
+                    </a>
+
+                    <a href="#" class="block px-4 py-2 nav-item">
+                        <div class="flex items-center space-x-3">
+                            <img src="{{ asset('images/develix.nl/hosting.svg') }}" alt="Hosting Icon" width="24"
+                                 height="24">
+                            <div>
+                                <p class="font-semibold menu-item">Hosting</p>
+                                <p class="text-sm text-description">Host je website met vertrouwen</p>
+                            </div>
+                        </div>
+                    </a>
                 </div>
             </div>
             <a href="#" class="menu-item">Over Develix</a>
