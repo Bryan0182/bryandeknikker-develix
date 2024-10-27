@@ -57,7 +57,7 @@ body.dark-theme {
 
             &::after {
                 content: '';
-                background: url('/images/develix.nl/develix-angle-right.svg') no-repeat;
+                background: var(--icon--angle-right-url) no-repeat;
                 width: 15px;
                 height: 20px;
                 display: inline-block;
