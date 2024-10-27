@@ -93,3 +93,14 @@ window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', (ev
 });
 
 initTheme();
+
+window.addEventListener('scroll', function() {
+    const header = document.querySelector('.header');
+    if (window.scrollY > 50) {
+        header.classList.remove('py-4');
+        header.classList.add('py-2');
+    } else {
+        header.classList.remove('py-2');
+        header.classList.add('py-4');
+    }
+});

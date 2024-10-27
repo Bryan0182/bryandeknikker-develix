@@ -31,8 +31,8 @@
                 'title' => 'Website Laten Maken',
                 'description' => 'Ik ontwerp en bouw gebruiksvriendelijke, responsive websites die werken op alle apparaten. Of het nu gaat om een eenvoudige site of een uitgebreide webshop, ik zorg voor een unieke online aanwezigheid die past bij jouw merk.',
                 'url' => route('web'),
-                'image' => '/images/global/globe-black.svg',
-                'image-dark' => '/images/global/globe.svg'
+                'image' => '/images/global/website-black.svg',
+                'image-dark' => '/images/global/website.svg'
             ],
             [
                 'title' => 'Applicatie Laten Maken',
@@ -45,8 +45,8 @@
                 'title' => 'SEO Werkzaamheden',
                 'description' => 'Met mijn SEO-diensten zorg ik ervoor dat jouw website beter gevonden wordt in zoekmachines. Van technische optimalisatie tot content creatie – ik help je om hoger te ranken en meer verkeer te genereren.',
                 'url' => route('seo'),
-                'image' => '/images/global/magnifying-glass-black.svg',
-                'image-dark' => '/images/global/magnifying-glass.svg'
+                'image' => '/images/global/seo-black.svg',
+                'image-dark' => '/images/global/seo.svg'
             ],
             [
                 'title' => 'Social Werkzaamheden',
@@ -59,15 +59,15 @@
                 'title' => 'Design Werkzaamheden',
                 'description' => 'Met oog voor detail creëer ik aantrekkelijke ontwerpen die jouw merk op een professionele manier presenteren. Van logo’s tot complete huisstijlen – ik zorg ervoor dat jouw visuele identiteit perfect aansluit bij je doelgroep.',
                 'url' => route('design'),
-                'image' => '/images/global/webdesign-black.svg',
-                'image-dark' => '/images/global/webdesign.svg'
+                'image' => '/images/global/design-black.svg',
+                'image-dark' => '/images/global/design.svg'
             ],
             [
                 'title' => 'Hosting',
                 'description' => 'Ik bied betrouwbare en snelle hostingpakketten, inclusief technische ondersteuning, zodat je website altijd online is en optimaal presteert. Ontzorg jezelf en laat het beheer van je hosting aan mij over.',
                 'url' => route('hosting'),
-                'image' => '/images/global/server-black.svg',
-                'image-dark' => '/images/global/server.svg'
+                'image' => '/images/global/hosting-black.svg',
+                'image-dark' => '/images/global/hosting.svg'
             ]
         ]
     ])

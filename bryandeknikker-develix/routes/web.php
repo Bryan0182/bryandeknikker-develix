@@ -18,8 +18,12 @@ Route::domain('develix.nl')->group(function () {
     })->name('contact');
 
     Route::get('/over-develix', function () {
-        return view('develix::pages.over-develix');
+        return view('develix::pages.about-develix');
     })->name('over-develix');
+
+    Route::get('/diensten', function () {
+        return view('develix::pages.services');
+    })->name('diensten');
 
     Route::get('/website-laten-maken', function () {
         return view('develix::services.web');

@@ -1,4 +1,4 @@
-<div class="container mx-auto px-4 py-5 hero-container">
+<div class="container mx-auto px-4 pb-5 pt-10 hero-container">
     <div class="flex flex-col lg:flex-row items-center hero-row">
         <div class="lg:w-1/2 w-full">
             <h1 class="font-bold leading-tight text-4xl">{{ $title }}</h1>
