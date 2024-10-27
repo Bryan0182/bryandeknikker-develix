@@ -3,7 +3,7 @@
 @section('title', 'Home')
 
 @section('page-specific-scss')
-    @vite(['resources/scss/global/hero.scss', 'resources/scss/global/services.scss', 'resources/scss/global/cta.scss'])
+    @vite(['resources/scss/global/hero.scss', 'resources/scss/global/services.scss', 'resources/scss/global/cta.scss', 'resources/scss/global/text.scss'])
 @endsection
 
 @section('content')
@@ -73,14 +73,20 @@
     ])
     @endcomponent
 
+    @component('components.text', [
+        'title' => 'Een betrouwbare partner voor digitale groei',
+        'description' => 'Bij Develix draait alles om kwaliteit en klantgerichtheid. Met mijn ervaring en een passie voor technologie, ondersteunen ik ondernemers om digitaal te groeien en zich te onderscheiden. Ik luisteren naar jouw wensen, denken proactief mee en leveren oplossingen die écht aansluiten bij jouw doelen. Of het nu gaat om een sterke online aanwezigheid, betere vindbaarheid of een unieke visuele identiteit – Develix biedt maatwerk met aandacht voor detail en resultaatgerichtheid, zodat jouw bedrijf zich optimaal kan profileren in de digitale wereld.',
+    ])
+    @endcomponent
+
     @component('components.text-image', [
-        'title' => 'Wil je een simpele applicatie laten maken?',
-        'description' => 'Of je nu een eenvoudige tool nodig hebt om tijd te besparen of een applicatie voor specifieke taken, ik help je graag. Neem vandaag nog contact op en ontdek de mogelijkheden!',
-        'imageSrc' => asset('images/develix.nl/operating-system-vector.svg'),
-        'imageSrcDark' => asset('images/develix.nl/operating-system-vector-dark.svg'),
+        'title' => 'Digitale strategieën die werken',
+        'description' => 'Bij Develix gaan we verder dan alleen technische oplossingen. We creëren digitale ervaringen die jouw merk versterken en jouw doelen ondersteunen. Met een scherp oog voor detail en innovatie helpen we jouw bedrijf om zichtbaar te worden en te groeien in een digitale wereld die continu verandert. Vertrouw op ons voor strategisch advies, betrouwbare technologie en een aanpak die echt werkt voor jouw onderneming.',
+        'imageSrc' => asset('images/develix.nl/code-languages.svg'),
+        'imageSrcDark' => asset('images/develix.nl/code-languages-dark.svg'),
         'altText' => 'Foto van Bryan de Knikker',
-        'width' => 300,
-        'height' => 300,
+        'width' => 400,
+        'height' => 400,
         'imageClass' => ''
     ])
     @endcomponent

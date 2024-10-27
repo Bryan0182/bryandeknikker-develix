@@ -1,4 +1,4 @@
-<div class="container mx-auto py-8 px-4">
+<div class="container mx-auto py-5 px-4">
     <div class="flex flex-col md:flex-row items-center md:space-x-8">
         <div class="image-section md:w-1/2 w-full flex justify-center md:justify-end">
             <img src="{{ $imageSrc }}"

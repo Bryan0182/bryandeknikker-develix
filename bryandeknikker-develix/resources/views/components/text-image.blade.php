@@ -1,4 +1,4 @@
-<div class="container mx-auto py-8 px-4">
+<div class="container mx-auto py-5 px-4">
     <div class="flex flex-col md:flex-row items-center md:space-x-8">
         <div class="text-section md:w-1/2 w-full mb-6 md:mb-0">
             <h2 class="text-3xl font-bold mb-4">{{ $title }}</h2>
