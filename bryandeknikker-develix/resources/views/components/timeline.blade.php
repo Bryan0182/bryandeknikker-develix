@@ -1,4 +1,4 @@
-<div class="px-4 py-5 flex flex-col items-center">
+<div class="container mx-auto timeline-section py-5 px-4 flex flex-col items-center">
     <div class="text-center mb-6">
         <h2 class="text-2xl font-semibold">{{ $title }}</h2>
         <p class="mt-2">{{ $description }}</p>
