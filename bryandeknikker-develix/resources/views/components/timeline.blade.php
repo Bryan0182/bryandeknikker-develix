@@ -5,7 +5,7 @@
     </div>
 
     <div class="timeline-scroll-container overflow-x-auto w-full">
-        <div class="timeline-container flex relative pl-4 w-[max-content]">
+        <div class="timeline-container flex relative w-[max-content]">
             <div class="timeline-line"></div>
 
             @foreach ($timelineItems as $timelineItem)
