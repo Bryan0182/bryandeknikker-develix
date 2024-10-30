@@ -15,9 +15,12 @@
                             {{ $timelineItem['number'] }}
                         </div>
                     </div>
-                    <div class="timeline-content text-center mt-4">
-                        <h3 class="text-lg font-semibold">{{ $timelineItem['title'] }}</h3>
-                        <p class="mt-2">{{ $timelineItem['description'] }}</p>
+                    <div class="timeline-content text-center">
+                        <h3 class="timeline-title text-lg font-semibold">{{ $timelineItem['title'] }}</h3>
+                        @if (!empty($timelineItem['date']))
+                            <span class="timeline-date text-md font-semibold px-3 py-1 rounded-md">{{ $timelineItem['date'] }}</span>
+                        @endif
+                        <p class="timeline-description">{{ $timelineItem['description'] }}</p>
                     </div>
                 </div>
             @endforeach

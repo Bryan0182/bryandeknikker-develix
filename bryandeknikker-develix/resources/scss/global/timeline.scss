@@ -58,15 +58,19 @@ body.dark-theme {
         .timeline-content {
             width: 100%;
 
-            h3 {
+            .timeline-title {
                 font-size: 1.125rem;
                 font-weight: 600;
-                margin-top: 0.5rem;
+                margin: 1rem 0;
             }
 
-            p {
+            .timeline-date {
+                background-color: var(--main-color);
+            }
+
+            .timeline-description {
                 color: #6b7280;
-                margin-top: 0.5rem;
+                margin: 1rem 0;
             }
         }
     }

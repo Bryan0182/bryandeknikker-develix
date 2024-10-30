@@ -8,16 +8,23 @@
 
 @section('content')
     @component('components.timeline', [
-        'title' => 'Our Process',
-        'description' => 'Our process is designed to provide you with the best possible results in the most efficient way.',
-        'timelineItems' => [
-            ['number' => 1, 'title' => 'Research', 'description' => 'Researching the initial requirements and setting goals.Researching the initial requirements and setting goals.Researching the initial requirements and setting goals.Researching the initial requirements and setting goals.Researching the initial requirements and setting goals.Researching the initial requirements and setting goals.Researching the initial requirements and setting goals.Researching the initial requirements and setting goals.'],
-            ['number' => 2, 'title' => 'Planning', 'description' => 'Outlining the project timeline and resource allocation.'],
-            ['number' => 3, 'title' => 'Design', 'description' => 'Creating a design prototype and finalizing the visuals.'],
-            ['number' => 4, 'title' => 'Development', 'description' => 'Building the core functionalities and integrating components.'],
-            ['number' => 5, 'title' => 'Testing & Deployment', 'description' => 'Ensuring quality and deploying the final product.'],
-        ]
-    ])
+       'title' => 'De mijlpalen van Develix',
+       'description' => 'Develix heeft in zijn ontwikkeling diverse belangrijke mijlpalen bereikt, elk een stap in de richting van betere ondersteuning voor onze klanten en een sterker online profiel. Onze reis is er een van groei, kwaliteit en klantgerichtheid, met als doel digitale groei mogelijk te maken voor elke ondernemer.',
+       'timelineItems' => [
+           [
+               'number' => 1,
+               'title' => 'Oprichting van Develix',
+               'date' => 'Januari 2025',
+               'description' => 'Het begin van Develix, opgericht met een visie op klantgerichte digitale oplossingen. Vanaf het eerste moment richten we ons op het creëren van sterke, op maat gemaakte websites en applicaties om ondernemers te helpen groeien.'
+           ],
+           [
+               'number' => 2,
+               'title' => 'Lancering van de website',
+               'date' => 'Januari 2025',
+               'description' => 'De ontwikkeling en lancering van de eerste Develix-website markeert een belangrijke stap. Hiermee presenteren we onszelf online en bouwen we aan een sterke merkidentiteit die vertrouwen en professionaliteit uitstraalt naar onze klanten.'
+           ],
+       ]
+   ])
     @endcomponent
 @endsection
 
