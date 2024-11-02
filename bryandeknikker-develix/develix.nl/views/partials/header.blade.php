@@ -82,7 +82,7 @@
                     </a>
                 </div>
             </div>
-            <a href="#" class="menu-item">Over Develix</a>
+            <a href="{{ route('about-develix') }}" class="menu-item">Over Develix</a>
             <a href="#" class="menu-item">Blog</a>
         </nav>
 
@@ -114,7 +114,7 @@
                 <a href="{{ route('hosting') }}" class="block menu-item">Hosting</a>
             </div>
         </div>
-        <a href="#" class="block menu-item">Over Develix</a>
+        <a href="{{ route('about-develix') }}" class="block menu-item">Over Develix</a>
         <a href="#" class="block menu-item">Contact</a>
 
         <button id="theme-switcher-mobile" aria-label="Switch Theme" class="flex items-center">

@@ -13,7 +13,7 @@
         'first_button' => 'Neem contact op',
         'first_button_url' => route('contact'),
         'second_button' => 'Lees meer',
-        'second_button_url' => route('over-develix'),
+        'second_button_url' => route('about-develix'),
         'imageSrc' => asset('images/develix.nl/create-website.svg'),
         'imageSrcDark' => asset('images/develix.nl/create-website-dark.svg'),
         'altText' => 'Foto van Bryan de Knikker',
@@ -102,7 +102,7 @@
         'first_button' => 'Neem contact op',
         'first_button_url' => route('contact'),
         'second_button' => 'Lees meer',
-        'second_button_url' => route('over-develix')
+        'second_button_url' => route('about-develix')
     ])
     @endcomponent
 @endsection

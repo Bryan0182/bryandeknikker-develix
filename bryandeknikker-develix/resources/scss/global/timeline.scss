@@ -2,6 +2,16 @@ body.dark-theme {
     .timeline-line {
         background-color: var(--white-color);
     }
+
+    .timeline-scroll-container {
+        .timeline-item {
+            .timeline-content {
+                .timeline-description {
+                    color: var(--white-color);
+                }
+            }
+        }
+    }
 }
 
 .timeline-scroll-container {
@@ -69,7 +79,7 @@ body.dark-theme {
             }
 
             .timeline-description {
-                color: #6b7280;
+                color: var(--black-color);
                 margin: 1rem 0;
             }
         }

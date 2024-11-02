@@ -19,7 +19,7 @@ Route::domain('develix.nl')->group(function () {
 
     Route::get('/over-develix', function () {
         return view('develix::pages.about-develix');
-    })->name('over-develix');
+    })->name('about-develix');
 
     Route::get('/diensten', function () {
         return view('develix::pages.services');
