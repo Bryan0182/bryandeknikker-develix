@@ -28,35 +28,35 @@
         'description' => 'Ontdek mijn professionele diensten die jouw bedrijf helpen groeien.',
         'services' => [
             [
-                'title' => 'Website Laten Maken',
+                'title' => 'Website',
                 'description' => 'Ik ontwerp en bouw gebruiksvriendelijke, responsive websites die werken op alle apparaten. Of het nu gaat om een eenvoudige site of een uitgebreide webshop, ik zorg voor een unieke online aanwezigheid die past bij jouw merk.',
-                'url' => route('web'),
+                'url' => route('website'),
                 'image' => '/images/global/website-black.svg',
                 'image-dark' => '/images/global/website.svg'
             ],
             [
-                'title' => 'Applicatie Laten Maken',
+                'title' => 'Applicatie',
                 'description' => 'Van mobiele apps tot complexe webapplicaties, ik ontwikkel op maat gemaakte oplossingen die aansluiten op de specifieke behoeften van jouw project. Ik gebruik moderne technologieën en zorg voor een soepele gebruikerservaring.',
                 'url' => route('application'),
                 'image' => '/images/global/application-black.svg',
                 'image-dark' => '/images/global/application.svg'
             ],
             [
-                'title' => 'SEO Werkzaamheden',
+                'title' => 'SEO',
                 'description' => 'Met mijn SEO-diensten zorg ik ervoor dat jouw website beter gevonden wordt in zoekmachines. Van technische optimalisatie tot content creatie – ik help je om hoger te ranken en meer verkeer te genereren.',
                 'url' => route('seo'),
                 'image' => '/images/global/seo-black.svg',
                 'image-dark' => '/images/global/seo.svg'
             ],
             [
-                'title' => 'Social Werkzaamheden',
+                'title' => 'Social',
                 'description' => 'Ik ondersteun je met het beheren van social media-kanalen en het creëren van een effectieve online strategie. Laat je social media een krachtige tool worden om met je doelgroep te communiceren en je merk te versterken.',
                 'url' => route('social'),
                 'image' => '/images/global/social-black.svg',
                 'image-dark' => '/images/global/social.svg'
             ],
             [
-                'title' => 'Design Werkzaamheden',
+                'title' => 'Design',
                 'description' => 'Met oog voor detail creëer ik aantrekkelijke ontwerpen die jouw merk op een professionele manier presenteren. Van logo’s tot complete huisstijlen – ik zorg ervoor dat jouw visuele identiteit perfect aansluit bij je doelgroep.',
                 'url' => route('design'),
                 'image' => '/images/global/design-black.svg',

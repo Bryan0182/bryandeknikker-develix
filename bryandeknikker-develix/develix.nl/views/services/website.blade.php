@@ -1,6 +1,6 @@
 @extends('develix::layouts.base')
 
-@section('title', 'Social Diensten')
+@section('title', 'Website laten maken')
 
 @section('page-specific-scss')
     @vite(['resources/scss/global/hero.scss', 'resources/scss/global/text.scss', 'resources/scss/global/cta.scss', 'resources/scss/global/timeline.scss'])
@@ -8,14 +8,14 @@
 
 @section('content')
     @component('components.hero', [
-        'title' => 'Social media beheer',
+        'title' => 'Website laten maken',
         'description' => 'Een website laten maken? Bij Develix ben je aan het juiste adres voor het creëren van een professionele en gebruiksvriendelijke website die aansluit bij jouw bedrijf en doelgroep. Of het nu gaat om een maatwerk website, een WordPress site of een Laravel applicatie, wij bouwen jouw online visitekaartje op maat.',
         'first_button' => 'Neem contact op',
         'first_button_url' => route('contact'),
         'second_button' => 'Lees meer',
         'second_button_url' => route('over-develix'),
-        'imageSrc' => asset('images/develix.nl/social-activities.svg'),
-        'imageSrcDark' => asset('images/develix.nl/social-activities-dark.svg'),
+        'imageSrc' => asset('images/develix.nl/create-website.svg'),
+        'imageSrcDark' => asset('images/develix.nl/create-website-dark.svg'),
         'altText' => 'Foto van Bryan de Knikker',
         'width' => 400,
         'height' => 400,

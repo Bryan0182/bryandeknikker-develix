@@ -2,11 +2,11 @@
     <div class="flex justify-center">
         <div class="lg:w-2/3 w-full">
             @if(!empty($title))
-                <h2 class="text-3xl font-semibold mb-4">{{ $title }}</h2>
+                <h2 class="text-3xl text-center font-semibold">{{ $title }}</h2>
             @endif
 
             @if(!empty($description))
-                <p class="text-paragraph text-lg">{!! $description !!}</p>
+                <p class="text-paragraph text-center text-lg">{!! $description !!}</p>
             @endif
         </div>
     </div>

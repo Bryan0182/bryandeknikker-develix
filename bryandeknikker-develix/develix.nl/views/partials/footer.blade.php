@@ -71,13 +71,13 @@
         <div class="sm:flex sm:items-center sm:justify-between">
             <span class="text-sm sm:text-center">© {{ date('Y') }} Develix. Alle rechten voorbehouden.</span>
             <div class="flex space-x-5 mt-4 sm:mt-0">
-                <a href="#" class="social-icon facebook" aria-label="Facebook">
+                <a href="https://www.facebook.com/develixofficial/" target="_blank" class="social-icon facebook" aria-label="Facebook">
                     <img src="{{ asset('images/global/facebook-black.svg') }}" data-light="/images/global/facebook-black.svg" data-dark="/images/global/facebook.svg" class="mx-auto img-fluid theme-image" alt="Facebook icon" width="15" height="15" loading="lazy">
                 </a>
-                <a href="#" class="social-icon instagram" aria-label="Instagram">
+                <a href="https://www.instagram.com/develix_official/" target="_blank" class="social-icon instagram" aria-label="Instagram">
                     <img src="{{ asset('images/global/instagram-black.svg') }}" data-light="/images/global/instagram-black.svg" data-dark="/images/global/instagram.svg" class="mx-auto img-fluid theme-image" alt="Instagram icon" width="20" height="20" loading="lazy">
                 </a>
-                <a href="#" class="social-icon linkedin" aria-label="LinkedIn">
+                <a href="https://www.linkedin.com/company/develix-official/" target="_blank" class="social-icon linkedin" aria-label="LinkedIn">
                     <img src="{{ asset('images/global/linkedin-black.svg') }}" data-light="/images/global/linkedin-black.svg" data-dark="/images/global/linkedin.svg" class="mx-auto img-fluid theme-image" alt="LinkedIn icon" width="20" height="20" loading="lazy">
                 </a>
             </div>

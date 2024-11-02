@@ -5,7 +5,7 @@
     </div>
     <div class="flex flex-wrap">
         @foreach ($services as $service)
-            <div class="w-full md:w-1/3 px-4 mb-4">
+            <div class="w-full md:w-1/3 px-4 my-4">
                 <a href="{{ $service['url'] }}" class="block h-full text-center services-card shadow-lg rounded-lg overflow-hidden">
                     <div class="card-image flex justify-center py-4">
                         <img src="{{ asset($service['image']) }}"

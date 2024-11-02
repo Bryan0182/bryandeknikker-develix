@@ -25,27 +25,27 @@ Route::domain('develix.nl')->group(function () {
         return view('develix::pages.services');
     })->name('diensten');
 
-    Route::get('/website-laten-maken', function () {
-        return view('develix::services.web');
-    })->name('web');
+    Route::get('/diensten/website', function () {
+        return view('develix::services.website');
+    })->name('website');
 
-    Route::get('/applicatie-laten-maken', function () {
+    Route::get('/diensten/applicatie', function () {
         return view('develix::services.application');
     })->name('application');
 
-    Route::get('/seo-werkzaamheden', function () {
+    Route::get('/diensten/seo', function () {
         return view('develix::services.seo');
     })->name('seo');
 
-    Route::get('/social-werkzaamheden', function () {
+    Route::get('/diensten/social', function () {
         return view('develix::services.social');
     })->name('social');
 
-    Route::get('/design-werkzaamheden', function () {
+    Route::get('/diensten/design', function () {
         return view('develix::services.design');
     })->name('design');
 
-    Route::get('/hosting', function () {
+    Route::get('/diensten/hosting', function () {
         return view('develix::services.hosting');
     })->name('hosting');
 

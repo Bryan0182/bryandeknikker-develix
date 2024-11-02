@@ -16,7 +16,7 @@
                 <a href="{{ route('diensten') }}" class="focus:outline-none menu-item dropdown-switch">Diensten</a>
                 <div id="dropdown-menu"
                      class="absolute hidden group-hover:block py-2 px-2 w-80">
-                    <a href="#" class="block px-4 py-2 nav-item">
+                    <a href="{{ route('website') }}" class="block px-4 py-2 nav-item">
                         <div class="flex items-center space-x-3">
                             <img src="{{ asset('images/develix.nl/website.svg') }}" alt="Website Icon" width="24"
                                  height="24">
@@ -27,39 +27,7 @@
                         </div>
                     </a>
 
-                    <a href="#" class="block px-4 py-2 nav-item">
-                        <div class="flex items-center space-x-3">
-                            <img src="{{ asset('images/develix.nl/seo.svg') }}" alt="SEO Icon" width="24" height="24">
-                            <div>
-                                <p class="font-semibold menu-item">SEO</p>
-                                <p class="text-sm text-description">Verbeter je vindbaarheid in Google</p>
-                            </div>
-                        </div>
-                    </a>
-
-                    <a href="#" class="block px-4 py-2 nav-item">
-                        <div class="flex items-center space-x-3">
-                            <img src="{{ asset('images/develix.nl/social.svg') }}" alt="Social Icon" width="24"
-                                 height="24">
-                            <div>
-                                <p class="font-semibold menu-item">Social Media</p>
-                                <p class="text-sm text-description">Geef je socials een boost</p>
-                            </div>
-                        </div>
-                    </a>
-
-                    <a href="#" class="block px-4 py-2 nav-item">
-                        <div class="flex items-center space-x-3">
-                            <img src="{{ asset('images/develix.nl/design.svg') }}" alt="Design Icon" width="24"
-                                 height="24">
-                            <div>
-                                <p class="font-semibold menu-item">Design</p>
-                                <p class="text-sm text-description">Laat een professioneel design maken</p>
-                            </div>
-                        </div>
-                    </a>
-
-                    <a href="#" class="block px-4 py-2 nav-item">
+                    <a href="{{ route('application') }}" class="block px-4 py-2 nav-item">
                         <div class="flex items-center space-x-3">
                             <img src="{{ asset('images/develix.nl/application.svg') }}" alt="Applicatie Icon" width="24"
                                  height="24">
@@ -70,7 +38,39 @@
                         </div>
                     </a>
 
-                    <a href="#" class="block px-4 py-2 nav-item">
+                    <a href="{{ route('seo') }}" class="block px-4 py-2 nav-item">
+                        <div class="flex items-center space-x-3">
+                            <img src="{{ asset('images/develix.nl/seo.svg') }}" alt="SEO Icon" width="24" height="24">
+                            <div>
+                                <p class="font-semibold menu-item">SEO</p>
+                                <p class="text-sm text-description">Verbeter je vindbaarheid in Google</p>
+                            </div>
+                        </div>
+                    </a>
+
+                    <a href="{{ route('social') }}" class="block px-4 py-2 nav-item">
+                        <div class="flex items-center space-x-3">
+                            <img src="{{ asset('images/develix.nl/social.svg') }}" alt="Social Icon" width="24"
+                                 height="24">
+                            <div>
+                                <p class="font-semibold menu-item">Social Media</p>
+                                <p class="text-sm text-description">Geef je socials een boost</p>
+                            </div>
+                        </div>
+                    </a>
+
+                    <a href="{{ route('design') }}" class="block px-4 py-2 nav-item">
+                        <div class="flex items-center space-x-3">
+                            <img src="{{ asset('images/develix.nl/design.svg') }}" alt="Design Icon" width="24"
+                                 height="24">
+                            <div>
+                                <p class="font-semibold menu-item">Design</p>
+                                <p class="text-sm text-description">Laat een professioneel design maken</p>
+                            </div>
+                        </div>
+                    </a>
+
+                    <a href="{{ route('hosting') }}" class="block px-4 py-2 nav-item">
                         <div class="flex items-center space-x-3">
                             <img src="{{ asset('images/develix.nl/hosting.svg') }}" alt="Hosting Icon" width="24"
                                  height="24">
@@ -106,12 +106,12 @@
             <button id="mobile-dropdown-btn" class="block menu-item focus:outline-none dropdown-switch">Diensten</button>
             <div id="mobile-dropdown-menu" class="hidden space-y-2 pl-4">
                 <a href="{{ route('diensten') }}" class="block menu-item ">Diensten</a>
-                <a href="#" class="block menu-item">Website</a>
-                <a href="#" class="block menu-item">SEO</a>
-                <a href="#" class="block menu-item">Social</a>
-                <a href="#" class="block menu-item">Design</a>
-                <a href="#" class="block menu-item">Applicatie</a>
-                <a href="#" class="block menu-item">Hosting</a>
+                <a href="{{ route('website') }}" class="block menu-item">Website</a>
+                <a href="{{ route('application') }}" class="block menu-item">Applicatie</a>
+                <a href="{{ route('seo') }}" class="block menu-item">SEO</a>
+                <a href="{{ route('social') }}" class="block menu-item">Social</a>
+                <a href="{{ route('design') }}" class="block menu-item">Design</a>
+                <a href="{{ route('hosting') }}" class="block menu-item">Hosting</a>
             </div>
         </div>
         <a href="#" class="block menu-item">Over Develix</a>
