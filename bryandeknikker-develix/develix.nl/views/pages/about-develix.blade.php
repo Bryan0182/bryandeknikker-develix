@@ -71,7 +71,7 @@
            [
                'number' => 1,
                'title' => 'Oprichting van Develix',
-               'date' => 'Januari 2025',
+               'date' => 'December 2024',
                'description' => 'Het begin van Develix, opgericht met een visie op klantgerichte digitale oplossingen. Vanaf het eerste moment richten we ons op het creëren van sterke, op maat gemaakte websites en applicaties om ondernemers te helpen groeien.'
            ],
            [
@@ -108,5 +108,5 @@
 @endsection
 
 @section('page-specific-js')
-    @vite(['resources/js/timeline.js'])
+    @vite(['resources/js/global/timeline.js'])
 @endsection

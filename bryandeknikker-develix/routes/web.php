@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\BlogController;
 
 Route::domain('bryandeknikker.nl')->group(function () {
     Route::get('/', function () {
@@ -48,6 +49,18 @@ Route::domain('develix.nl')->group(function () {
     Route::get('/diensten/hosting', function () {
         return view('develix::services.hosting');
     })->name('hosting');
+
+    Route::get('/blog',
+        [BlogController::class, 'index']
+    )->name('blog');
+
+    Route::get('/blog/create',
+        [BlogController::class, 'create']
+    )->name('blog-create');
+
+    Route::post('/blog/store',
+        [BlogController::class, 'store']
+    )->name('blog-store');
 
     Route::fallback(function () {
         return response()->view('develix::errors.404', [], 404);
