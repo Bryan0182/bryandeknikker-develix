@@ -11,5 +11,5 @@ class Blog extends Model
 
     protected $table = 'blog-develix';
 
-    protected $fillable = ['title', 'content'];
+    protected $fillable = ['title', 'intro', 'content'];
 }

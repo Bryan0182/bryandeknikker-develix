@@ -83,7 +83,7 @@
                 </div>
             </div>
             <a href="{{ route('about-develix') }}" class="menu-item">Over Develix</a>
-            <a href="#" class="menu-item">Blog</a>
+            <a href="{{ route('blog') }}" class="menu-item">Blog</a>
         </nav>
 
         <!-- Contact en Thema-switcher (desktop) -->
@@ -115,7 +115,7 @@
             </div>
         </div>
         <a href="{{ route('about-develix') }}" class="block menu-item">Over Develix</a>
-        <a href="#" class="block menu-item">Contact</a>
+        <a href="{{ route('blog') }}" class="block menu-item">Contact</a>
 
         <button id="theme-switcher-mobile" aria-label="Switch Theme" class="flex items-center">
             <span id="icon-sun-mobile" style="display: none;">

@@ -62,6 +62,10 @@ Route::domain('develix.nl')->group(function () {
         [BlogController::class, 'store']
     )->name('blog-store');
 
+    Route::get('/blog/{id}',
+        [BlogController::class, 'show']
+    )->name('blog-show');
+
     Route::fallback(function () {
         return response()->view('develix::errors.404', [], 404);
     });

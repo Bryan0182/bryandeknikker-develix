@@ -22,11 +22,19 @@ class BlogController extends Controller
     {
         $request->validate([
             'title' => 'required',
+            'intro' => 'required',
             'content' => 'required'
         ]);
 
         Blog::create($request->all());
 
         return redirect()->route('blog');
+    }
+
+    public function show($id)
+    {
+        $blog = Blog::findOrFail($id);
+
+        return view('develix::blogs.show', compact('blog'));
     }
 }

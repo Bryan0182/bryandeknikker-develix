@@ -35,7 +35,7 @@
                     <h2 class="mb-6 text-lg font-semibold">Develix</h2>
                     <ul>
                         <li class="mb-4">
-                            <a href="" class="menu-item">Over Develix</a>
+                            <a href="{{ route('about-develix') }}" class="menu-item">Over Develix</a>
                         </li>
                         <li class="mb-4">
                             <a href="" class="menu-item">Contact</a>
@@ -44,7 +44,7 @@
                             <a href="" class="menu-item">Missie & Visie</a>
                         </li>
                         <li>
-                            <a href="" class="menu-item">Blog</a>
+                            <a href="{{ route('blog') }}" class="menu-item">Blog</a>
                         </li>
                     </ul>
                 </div>
