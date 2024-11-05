@@ -20,7 +20,8 @@ export default defineConfig({
                 'resources/scss/global/blog-create.scss',
                 'resources/js/global/app.js',
                 'resources/js/global/timeline.js',
-                'resources/js/develix.nl/wysiwyg-editor.js'
+                'resources/js/develix.nl/wysiwyg-editor.js',
+                'resources/js/develix.nl/blog-planner.js'
             ],
             refresh: true,
         }),

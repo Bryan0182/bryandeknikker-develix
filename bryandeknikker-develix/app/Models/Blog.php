@@ -11,5 +11,9 @@ class Blog extends Model
 
     protected $table = 'blog-develix';
 
-    protected $fillable = ['title', 'intro', 'content'];
+    protected $fillable = ['title', 'intro', 'content', 'publication_date', 'author', 'status', 'featured_image', 'meta_title', 'meta_description'];
+
+    protected $casts = [
+        'publication_date' => 'date',
+    ];
 }

@@ -12,5 +12,5 @@
 @endsection
 
 @section('page-specific-js')
-    @vite(['resources/js/develix.nl/wysiwyg-editor.js'])
+    @vite(['resources/js/develix.nl/wysiwyg-editor.js', 'resources/js/develix.nl/blog-planner.js'])
 @endsection
