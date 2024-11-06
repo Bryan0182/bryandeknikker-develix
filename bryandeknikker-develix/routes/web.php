@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\BlogController;
+use App\Http\Controllers\AuthController;
 
 Route::domain('bryandeknikker.nl')->group(function () {
     Route::get('/', function () {
@@ -65,6 +66,26 @@ Route::domain('develix.nl')->group(function () {
     Route::get('/blog/{id}',
         [BlogController::class, 'show']
     )->name('blog-show');
+
+    Route::get('/register',
+        [AuthController::class, 'showRegistrationForm']
+    )->name('register');
+
+    Route::post('/register',
+        [AuthController::class, 'register']
+    );
+
+    Route::get('/login',
+        [AuthController::class, 'showLoginForm']
+    )->name('login');
+
+    Route::post('/login',
+        [AuthController::class, 'login']
+    );
+
+    Route::post('/logout',
+        [AuthController::class, 'logout']
+    )->name('logout');
 
     Route::fallback(function () {
         return response()->view('develix::errors.404', [], 404);

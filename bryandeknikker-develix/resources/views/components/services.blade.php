@@ -19,7 +19,7 @@
                         <p class="card-text">{{ $service['description'] }}</p>
                     </div>
                     <div class="card-button py-4">
-                        <span class="align-items-center d-flex justify-center read-more-services-button">Lees meer</span>
+                        <span class="align-items-center flex justify-center read-more-services-button">Lees meer</span>
                     </div>
                 </a>
             </div>
