@@ -32,7 +32,13 @@
 
         <div class="mb-4">
             <label for="author" class="block font-semibold mb-2">Auteur</label>
-            <input type="text" id="author" name="author" value="{{ old('author', 'Bryan de Knikker') }}" class="w-full px-4 py-2 border rounded-lg focus:outline-none">
+            <select id="author" name="author" class="w-full px-4 py-2 border rounded-lg focus:outline-none">
+                @foreach($users as $user)
+                    <option value="{{ $user->name }}" {{ old('author', 'Bryan de Knikker') == $user->name ? 'selected' : '' }}>
+                        {{ $user->name }}
+                    </option>
+                @endforeach
+            </select>
         </div>
 
         <div class="mb-4">

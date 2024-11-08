@@ -7,7 +7,7 @@
 @endsection
 
 @section('content')
-    @component('components.blog-create')
+    @component('components.blog-create', ['users' => $users])
     @endcomponent
 @endsection
 

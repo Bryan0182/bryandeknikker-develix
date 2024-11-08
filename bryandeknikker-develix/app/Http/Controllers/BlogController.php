@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\Blog;
+use App\Models\User;
 
 class BlogController extends Controller
 {
@@ -15,7 +16,8 @@ class BlogController extends Controller
 
     public function create()
     {
-        return view('develix::blogs.create');
+        $users = User::all();
+        return view('develix::blogs.create', compact('users'));
     }
 
     public function store(Request $request)
@@ -60,7 +62,8 @@ class BlogController extends Controller
     public function edit($id)
     {
         $blog = Blog::findOrFail($id);
-        return view('develix::blogs.edit', compact('blog'));
+        $users = User::all();
+        return view('develix::blogs.edit', compact('blog', 'users'));
     }
 
     public function update(Request $request, $id)
