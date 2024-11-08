@@ -2,40 +2,11 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\User;
 use Illuminate\Http\Request;
-use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Facades\Auth;
 
 class AuthController extends Controller
 {
-    public function showRegistrationForm()
-    {
-        return view('develix::authentication.register');
-    }
-
-    public function register(Request $request)
-    {
-        // Validatie
-        $request->validate([
-            'name' => 'required|string|max:255',
-            'email' => 'required|string|email|max:255|unique:users',
-            'password' => 'required|string|min:8|confirmed',
-        ]);
-
-        // Maak een nieuwe gebruiker aan
-        User::create([
-            'name' => $request->name,
-            'email' => $request->email,
-            'password' => Hash::make($request->password), // Versleutelen met hashing
-        ]);
-
-        // Log de gebruiker automatisch in na registratie
-        Auth::attempt($request->only('email', 'password'));
-
-        return redirect()->intended('dashboard'); // Verander naar de gewenste route
-    }
-
     public function showLoginForm()
     {
         return view('develix::authentication.login');
@@ -51,7 +22,7 @@ class AuthController extends Controller
 
         // Probeer in te loggen
         if (Auth::attempt($request->only('email', 'password'))) {
-            return redirect()->intended('dashboard'); // Verander naar de gewenste route
+            return redirect()->intended('dashboard');
         }
 
         return back()->withErrors([
@@ -63,5 +34,10 @@ class AuthController extends Controller
     {
         Auth::logout();
         return redirect('/');
+    }
+
+    public function getLogout()
+    {
+        return $this->logout(request());
     }
 }

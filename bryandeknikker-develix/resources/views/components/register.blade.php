@@ -2,7 +2,17 @@
     <div class="w-full max-w-md p-8 rounded-lg border">
         <h2 class="text-center text-2xl font-bold mb-6">Registreren</h2>
 
-        <form action="{{ route('register') }}" method="POST">
+        @if ($errors->any())
+            <div class="mb-4 text-red-600">
+                <ul>
+                    @foreach ($errors->all() as $error)
+                        <li>{{ $error }}</li>
+                    @endforeach
+                </ul>
+            </div>
+        @endif
+
+        <form action="{{ route('user-store') }}" method="POST">
             @csrf
             <div class="mb-4">
                 <label for="name" class="block font-semibold mb-2">Naam</label>

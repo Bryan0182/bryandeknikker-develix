@@ -19,6 +19,7 @@ export default defineConfig({
                 'resources/scss/global/timeline.scss',
                 'resources/scss/global/blog-create.scss',
                 'resources/scss/global/authentication.scss',
+                'resources/scss/global/dashboard.scss',
                 'resources/js/global/app.js',
                 'resources/js/global/timeline.js',
                 'resources/js/develix.nl/wysiwyg-editor.js',
