@@ -7,17 +7,16 @@
         <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
             @foreach($blogs as $blog)
                 @if($blog->status === 'gepubliceerd')
-                    <div class="p-6 rounded-lg shadow-lg">
+                    <div class="blog-item p-6">
                         @if($blog->featured_image)
-                            <img src="{{ asset('storage/' . $blog->featured_image) }}" alt="Featured Image"
-                                 class="blog-image">
+                            <div class="featured-image mb-6">
+                                <img src="{{ asset('storage/' . $blog->featured_image) }}" alt="Featured Image" width="auto" height="300" class="blog-image">
+                            </div>
                         @endif
+                        <span class="mb-4 blog-info">{{ $blog->author }} | {{ $blog->publication_date->format('d-m-Y') }}</span>
                         <h3 class="text-xl font-semibold">{{ $blog->title }}</h3>
                         <p class="mt-2">{!! $blog->intro !!}</p>
-                        <p class="mt-2 text-sm">Auteur: {{ $blog->author }}</p>
-                        <p class="mt-2 text-sm">Publicatiedatum: {{ $blog->publication_date->format('d-m-Y') }}</p>
-                        <a href="{{ route('blog-show', $blog->id) }}" class="hover:underline mt-4 inline-block">Lees
-                            meer</a>
+                        <a href="{{ route('blog-show', $blog->slug) }}" class="mt-4 inline-block blog-read-more" style="--icon--angle-right-url: url('/images/develix.nl/develix-angle-right.svg');">Lees meer</a>
                     </div>
                 @endif
             @endforeach

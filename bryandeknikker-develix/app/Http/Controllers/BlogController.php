@@ -11,7 +11,7 @@ class BlogController extends Controller
     public function index()
     {
         $blogs = Blog::all();
-        return view('develix::blogs.index', compact('blogs'));
+        return view('develix::blogs.overview', compact('blogs'));
     }
 
     public function create()
@@ -53,10 +53,18 @@ class BlogController extends Controller
         return redirect()->route('dashboard');
     }
 
-    public function show($id)
+    public function show($slug)
     {
-        $blog = Blog::findOrFail($id);
-        return view('develix::blogs.show', compact('blog'));
+        // Haal de blog op op basis van de slug
+        $blog = Blog::where('slug', $slug)->firstOrFail();
+
+        // Zoek gerelateerde blogs die niet dezelfde ID hebben en gepubliceerd zijn
+        $relatedBlogs = Blog::where('id', '!=', $blog->id)
+            ->where('status', 'gepubliceerd')
+            ->limit(3)
+            ->get();
+
+        return view('develix::blogs.show', compact('blog', 'relatedBlogs'));
     }
 
     public function edit($id)

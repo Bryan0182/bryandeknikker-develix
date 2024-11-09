@@ -7,7 +7,7 @@
 @endsection
 
 @section('content')
-    @component('components.dashboard', ['blogs' => $blogs, 'users' => $users])
+    @component('components.dashboard', ['blogs' => $blogs, 'users' => $users, 'locations' => $locations])
     @endcomponent
 @endsection
 

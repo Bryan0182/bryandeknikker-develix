@@ -5,6 +5,7 @@ use App\Http\Controllers\BlogController;
 use App\Http\Controllers\AuthController;
 use App\Http\Controllers\DashboardController;
 use App\Http\Controllers\UserController;
+use App\Http\Controllers\LocationController;
 
 Route::domain('bryandeknikker.nl')->group(function () {
     Route::get('/', function () {
@@ -17,7 +18,6 @@ Route::domain('develix.nl')->group(function () {
         return view('develix::pages.home');
     })->name('home');
 
-    // Statische Pagina's
     Route::get('/contact', function () {
         return view('develix::pages.contact');
     })->name('contact');
@@ -25,6 +25,10 @@ Route::domain('develix.nl')->group(function () {
     Route::get('/over-develix', function () {
         return view('develix::pages.about-develix');
     })->name('about-develix');
+
+    Route::get('/website-laten-maken-{slug}',
+        [LocationController::class, 'show']
+    )->name('location-show');
 
     Route::get('/diensten', function () {
         return view('develix::pages.services');
@@ -73,7 +77,7 @@ Route::domain('develix.nl')->group(function () {
         ->middleware('auth')
     ->name('blog-store');
 
-    Route::get('/blogs/{id}',
+    Route::get('/blogs/{slug}',
         [BlogController::class, 'show']
     )->name('blog-show');
 
@@ -129,6 +133,31 @@ Route::domain('develix.nl')->group(function () {
         [UserController::class, 'destroy'])
         ->middleware('auth')
     ->name('user-delete');
+
+    Route::get('/locatie/aanmaken',
+        [LocationController::class, 'create'])
+        ->middleware('auth')
+    ->name('location-create');
+
+    Route::post('/locatie/opslaan',
+        [LocationController::class, 'store'])
+        ->middleware('auth')
+    ->name('location-store');
+
+    Route::get('/locatie/{id}/bewerken',
+        [LocationController::class, 'edit'])
+        ->middleware('auth')
+    ->name('location-edit');
+
+    Route::put('/locatie/{id}',
+        [LocationController::class, 'update'])
+        ->middleware('auth')
+    ->name('location-update');
+
+    Route::delete('/locatie/{id}',
+        [LocationController::class, 'destroy'])
+        ->middleware('auth')
+    ->name('location-delete');
 
     Route::fallback(function () {
         return response()->view('develix::errors.404', [], 404);

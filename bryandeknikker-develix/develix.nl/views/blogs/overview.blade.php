@@ -3,7 +3,7 @@
 @section('title', 'Blogs')
 
 @section('page-specific-scss')
-    @vite([])
+    @vite(['resources/scss/global/blogs.scss'])
 @endsection
 
 @section('content')
