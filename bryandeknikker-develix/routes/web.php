@@ -54,32 +54,82 @@ Route::domain('develix.nl')->group(function () {
         return view('develix::services.hosting');
     })->name('hosting');
 
-    Route::get('/dashboard', [DashboardController::class, 'dashboard'])
+    Route::get('/dashboard',
+        [DashboardController::class, 'dashboard'])
         ->middleware('auth')
-        ->name('dashboard');
+    ->name('dashboard');
 
-    // Blog Routes
-    Route::get('/blogs', [BlogController::class, 'index'])->name('blog');
-    Route::get('/blogs/aanmaken', [BlogController::class, 'create'])->name('blog-create');
-    Route::post('/blogs/opslaan', [BlogController::class, 'store'])->name('blog-store');
-    Route::get('/blogs/{id}', [BlogController::class, 'show'])->name('blog-show');
-    Route::get('/blogs/{id}/bewerken', [BlogController::class, 'edit'])->name('blog-edit');
-    Route::put('/blogs/{id}', [BlogController::class, 'update'])->name('blog-update');
-    Route::delete('/blogs/{id}', [BlogController::class, 'destroy'])->name('blog-delete');
+    Route::get('/blogs',
+        [BlogController::class, 'index']
+    )->name('blog');
 
-    // Auth Routes
-    Route::get('/inloggen', [AuthController::class, 'showLoginForm'])->name('login');
-    Route::post('/inloggen', [AuthController::class, 'login']);
-    Route::get('/uitloggen', [AuthController::class, 'getLogout'])->name('logout.get');
+    Route::get('/blogs/aanmaken',
+        [BlogController::class, 'create'])
+        ->middleware('auth')
+    ->name('blog-create');
 
-    // Gebruiker Routes
-    Route::get('/gebruiker/aanmaken', [UserController::class, 'showRegistrationForm'])->name('user-create');
-    Route::post('/gebruiker/opslaan', [UserController::class, 'register'])->name('user-store');
-    Route::get('/gebruiker/{id}/bewerken', [UserController::class, 'edit'])->name('user-edit');
-    Route::put('/gebruiker/{id}', [UserController::class, 'update'])->name('user-update');
-    Route::delete('/gebruiker/{id}', [UserController::class, 'destroy'])->name('user-delete');
+    Route::post('/blogs/opslaan',
+        [BlogController::class, 'store'])
+        ->middleware('auth')
+    ->name('blog-store');
 
-    // Fallback Route
+    Route::get('/blogs/{id}',
+        [BlogController::class, 'show']
+    )->name('blog-show');
+
+    Route::get('/blogs/{id}/bewerken',
+        [BlogController::class, 'edit'])
+        ->middleware('auth')
+    ->name('blog-edit');
+
+    Route::put('/blogs/{id}',
+        [BlogController::class, 'update'])
+        ->middleware('auth')
+    ->name('blog-update');
+
+    Route::delete('/blogs/{id}',
+        [BlogController::class, 'destroy'])
+        ->middleware('auth')
+    ->name('blog-delete');
+
+    Route::get('/inloggen',
+        [AuthController::class, 'showLoginForm']
+    )->name('login');
+
+    Route::post('/inloggen',
+        [AuthController::class, 'login']
+    );
+
+    Route::get('/uitloggen',
+        [AuthController::class, 'getLogout'])
+        ->middleware('auth')
+    ->name('logout.get');
+
+    Route::get('/gebruiker/aanmaken',
+        [UserController::class, 'showRegistrationForm'])
+        ->middleware('auth')
+    ->name('user-create');
+
+    Route::post('/gebruiker/opslaan',
+        [UserController::class, 'register'])
+        ->middleware('auth')
+    ->name('user-store');
+
+    Route::get('/gebruiker/{id}/bewerken',
+        [UserController::class, 'edit'])
+        ->middleware('auth')
+    ->name('user-edit');
+
+    Route::put('/gebruiker/{id}',
+        [UserController::class, 'update'])
+        ->middleware('auth')
+    ->name('user-update');
+
+    Route::delete('/gebruiker/{id}',
+        [UserController::class, 'destroy'])
+        ->middleware('auth')
+    ->name('user-delete');
+
     Route::fallback(function () {
         return response()->view('develix::errors.404', [], 404);
     });
