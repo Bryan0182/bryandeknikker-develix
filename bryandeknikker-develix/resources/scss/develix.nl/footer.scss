@@ -1,8 +1,6 @@
 .dark-theme {
     .custom-flex {
-
         .flex-item {
-
             .menu-item {
                 color: var(--white-color);
             }
@@ -18,7 +16,7 @@
     .flex-item {
         width: fit-content;
         padding: 0 20px;
-        border-radius: 5px;
+        border-radius: var(--border-radius);
 
         .menu-item {
             position: relative;
@@ -37,7 +35,7 @@
                 bottom: 0;
                 left: -100%;
                 background-color: var(--main-color);
-                transition: left 0.4s ease;
+                transition: left var(--transition);
             }
 
             &:hover::after {
@@ -55,113 +53,46 @@
         transition: opacity 0.4s ease;
     }
 
-    &.facebook:hover img {
+    // General hover effect for social icons
+    &:hover img {
         opacity: 0;
     }
 
-    &.facebook::after {
+    &::after {
         content: '';
         position: absolute;
         top: 0;
         left: 0;
         width: 100%;
         height: 100%;
-        background-image: url("/images/develix.nl/facebook-develix.svg");
         background-size: contain;
         background-repeat: no-repeat;
         opacity: 0;
-        transition: opacity 0.4s ease;
+        transition: opacity var(--transition);
     }
 
-    &.facebook:hover::after {
+    &:hover::after {
         opacity: 1;
     }
 
-    &.instagram:hover img {
-        opacity: 0;
+    // Specific background images for each social media icon
+    &.facebook::after {
+        background-image: url("/images/develix.nl/facebook-develix.svg");
     }
 
     &.instagram::after {
-        content: '';
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
         background-image: url("/images/develix.nl/instagram-develix.svg");
-        background-size: contain;
-        background-repeat: no-repeat;
-        opacity: 0;
-        transition: opacity 0.4s ease;
-    }
-
-    &.instagram:hover::after {
-        opacity: 1;
-    }
-
-    &.linkedin:hover img {
-        opacity: 0;
     }
 
     &.linkedin::after {
-        content: '';
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
         background-image: url("/images/develix.nl/linkedin-develix.svg");
-        background-size: contain;
-        background-repeat: no-repeat;
-        opacity: 0;
-        transition: opacity 0.4s ease;
-    }
-
-    &.linkedin:hover::after {
-        opacity: 1;
-    }
-
-    &.pinterest:hover img {
-        opacity: 0;
     }
 
     &.pinterest::after {
-        content: '';
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
         background-image: url("/images/develix.nl/pinterest-develix.svg");
-        background-size: contain;
-        background-repeat: no-repeat;
-        opacity: 0;
-        transition: opacity 0.4s ease;
-    }
-
-    &.pinterest:hover::after {
-        opacity: 1;
-    }
-
-    &.x-twitter:hover img {
-        opacity: 0;
     }
 
     &.x-twitter::after {
-        content: '';
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
         background-image: url("/images/develix.nl/x-twitter-develix.svg");
-        background-size: contain;
-        background-repeat: no-repeat;
-        opacity: 0;
-        transition: opacity 0.4s ease;
-    }
-
-    &.x-twitter:hover::after {
-        opacity: 1;
     }
 }
