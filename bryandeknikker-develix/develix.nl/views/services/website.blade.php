@@ -108,5 +108,5 @@
 @endsection
 
 @section('page-specific-js')
-    @vite(['resources/js/timeline.js'])
+    @vite(['resources/js/global/timeline.js'])
 @endsection

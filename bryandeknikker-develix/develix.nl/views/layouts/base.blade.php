@@ -6,7 +6,7 @@
     <title>@yield('title', 'Develix') - Develix</title>
     <link rel="icon" href="{{ asset('images/develix.nl/develix.svg') }}" type="image/x-icon">
 
-    @vite(['resources/scss/global/app.scss', 'resources/scss/develix.nl/develix.scss', 'resources/scss/develix.nl/header.scss', 'resources/scss/develix.nl/footer.scss', 'resources/js/global/app.js'])
+    @vite(['resources/scss/global/app.scss', 'resources/scss/develix.nl/develix.scss', 'resources/scss/develix.nl/header.scss', 'resources/scss/develix.nl/footer.scss', 'resources/scss/develix.nl/cookie-element.scss'])
 
     @yield('page-specific-scss')
 </head>
@@ -19,7 +19,9 @@
 </div>
 
 @include('develix::partials.footer')
+@include('develix::partials.cookie-consent')
 
+@vite(['resources/js/global/app.js', 'resources/js/develix.nl/cookie-element.js'])
 @yield('page-specific-js')
 
 </body>
