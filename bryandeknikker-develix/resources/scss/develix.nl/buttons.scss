@@ -1,0 +1,112 @@
+.menu-item {
+    position: relative;
+    display: block;
+    text-decoration: none;
+    overflow: hidden;
+    padding: 0;
+    color: var(--black-color);
+    width: fit-content;
+
+    &::after {
+        content: '';
+        position: absolute;
+        width: 100%;
+        height: 2px;
+        bottom: 0;
+        left: -100%;
+        background-color: var(--main-color);
+        transition: left var(--transition);
+    }
+
+    &:hover::after {
+        left: 0;
+    }
+}
+
+.dropdown-switch {
+    cursor: pointer;
+    padding: 0;
+    position: relative;
+    width: 85px;
+    text-align: left;
+
+    &:before {
+        background: url('/images/develix.nl/angle-down.svg') no-repeat 50%;
+        background-size: contain;
+        content: "";
+        height: 16px;
+        position: absolute;
+        right: 0;
+        top: 50%;
+        transform: translateY(-50%);
+        width: 16px;
+        transition: transform 0.4s ease;
+    }
+
+    &:hover::before {
+        transform: translateY(-50%) rotate(180deg);
+    }
+}
+
+.contact-button {
+    background-color: var(--main-color);
+    color: var(--white-color);
+    padding: 10px 20px;
+    border-radius: var(--border-radius);
+    text-decoration: none;
+    transition: background-color 0.4s ease, color 0.4s ease;
+
+    &:hover {
+        background-color: var(--second-color);
+    }
+}
+
+.primary-button {
+    background-color: var(--transparent-color);
+    color: var(--main-color);
+    border: 1px solid var(--main-color);
+    padding: 6px 12px !important;
+    border-radius: var(--border-radius);
+    transition: var(--transition);
+
+    &:hover,
+    &:focus,
+    &:active {
+        background-color: var(--main-color) !important;
+        color: var(--white-color) !important;
+        border: 1px solid var(--main-color) !important;
+    }
+}
+
+.angle-right-button {
+    display: flex;
+    align-items: center;
+    background-color: var(--transparent-color);
+    color: var(--main-color);
+    border: none;
+    padding: 6px 12px !important;
+    border-radius: var(--border-radius);
+    transition: var(--transition);
+    position: relative;
+
+    &:hover,
+    &:focus,
+    &:active {
+        background-color: var(--transparent-color) !important;
+        color: var(--main-color) !important;
+    }
+
+    &::after {
+        content: '';
+        background: var(--icon--angle-right-url) no-repeat;
+        width: 15px;
+        height: 20px;
+        display: inline-block;
+        margin-left: 5px;
+        transition: transform var(--transition);
+    }
+
+    &:hover::after {
+        transform: translateX(8px);
+    }
+}

@@ -17,31 +17,6 @@
         width: fit-content;
         padding: 0 20px;
         border-radius: var(--border-radius);
-
-        .menu-item {
-            position: relative;
-            display: block;
-            text-decoration: none;
-            overflow: hidden;
-            padding: 0;
-            color: var(--black-color);
-            width: fit-content;
-
-            &::after {
-                content: '';
-                position: absolute;
-                width: 100%;
-                height: 2px;
-                bottom: 0;
-                left: -100%;
-                background-color: var(--main-color);
-                transition: left var(--transition);
-            }
-
-            &:hover::after {
-                left: 0;
-            }
-        }
     }
 }
 
@@ -53,7 +28,6 @@
         transition: opacity 0.4s ease;
     }
 
-    // General hover effect for social icons
     &:hover img {
         opacity: 0;
     }
@@ -75,7 +49,6 @@
         opacity: 1;
     }
 
-    // Specific background images for each social media icon
     &.facebook::after {
         background-image: url("/images/develix.nl/facebook-develix.svg");
     }

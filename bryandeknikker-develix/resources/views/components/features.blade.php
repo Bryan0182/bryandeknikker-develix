@@ -4,7 +4,7 @@
             <h2 class="text-center md:text-left text-3xl font-bold">{{ $title }}</h2>
             <p class="text-center md:text-left">{{ $description }}</p>
             @if (!empty($button) && !empty($button_url))
-                <a href="{{ $button_url }}" class="border border-primary text-primary py-2 px-4 rounded-lg">{{ $button }}</a>
+                <a href="{{ $button_url }}" class="border border-primary text-primary py-2 px-4 rounded-lg primary-button">{{ $button }}</a>
             @endif
         </div>
 

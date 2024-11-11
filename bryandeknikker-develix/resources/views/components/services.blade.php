@@ -19,7 +19,7 @@
                         <p class="card-text">{{ $service['description'] }}</p>
                     </div>
                     <div class="card-button py-4">
-                        <span class="align-items-center flex justify-center read-more-services-button">Lees meer</span>
+                        <span class="align-items-center flex justify-center angle-right-button" style="--icon--angle-right-url: url('/images/develix.nl/develix-angle-right.svg');">Lees meer</span>
                     </div>
                 </a>
             </div>

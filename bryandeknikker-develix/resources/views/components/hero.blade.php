@@ -5,11 +5,11 @@
             <p class="text-lg description-paragraph">{{ $description }}</p>
             <div class="flex flex-row space-x-4 button-hero-row">
                 @if (!empty($first_button) && !empty($first_button_url))
-                    <a href="{{ $first_button_url }}" class="btn btn-outline-primary contact-hero-button border py-2 text-center md:w-auto">{{ $first_button }}</a>
+                    <a href="{{ $first_button_url }}" class="btn btn-outline-primary primary-button border py-2 text-center md:w-auto">{{ $first_button }}</a>
                 @endif
 
                 @if (!empty($second_button) && !empty($second_button_url))
-                    <a href="{{ $second_button_url }}" class="btn btn-primary read-more-hero-button py-2 px-6 text-center md:w-auto">{{ $second_button }}</a>
+                    <a href="{{ $second_button_url }}" class="btn btn-primary angle-right-button py-2 px-6 text-center md:w-auto" style="--icon--angle-right-url: url('/images/develix.nl/develix-angle-right.svg');">{{ $second_button }}</a>
                 @endif
             </div>
         </div>

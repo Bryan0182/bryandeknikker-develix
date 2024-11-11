@@ -22,36 +22,3 @@ body.dark-theme {
 .blog-info {
     color: var(--light-black-color);
 }
-
-.blog-read-more {
-    display: flex;
-    align-items: center;
-    background-color: var(--transparent-color);
-    color: var(--main-color);
-    border: none;
-    padding: 6px 12px 6px 0 !important;
-    border-radius: var(--border-radius);
-    transition: var(--transition);
-    position: relative;
-
-    &:hover,
-    &:focus,
-    &:active {
-        background-color: var(--transparent-color) !important;
-        color: var(--main-color) !important;
-    }
-
-    &::after {
-        content: '';
-        background: var(--icon--angle-right-url) no-repeat;
-        width: 15px;
-        height: 20px;
-        display: inline-block;
-        margin-left: 5px;
-        transition: transform var(--transition);
-    }
-
-    &:hover::after {
-        transform: translateX(8px);
-    }
-}

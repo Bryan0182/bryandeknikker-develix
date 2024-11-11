@@ -16,56 +16,6 @@
     padding: 15px 0;
 }
 
-.contact-cta-button {
-    background-color: var(--transparent-color);
-    color: var(--main-color);
-    border: 1px solid var(--main-color);
-    padding: 6px 12px !important;
-    border-radius: var(--border-radius);
-    transition: var(--transition);
-
-    &:hover,
-    &:focus,
-    &:active {
-        background-color: var(--main-color) !important;
-        color: var(--white-color) !important;
-        border: 1px solid var(--main-color) !important;
-    }
-}
-
-.read-more-cta-button {
-    display: flex;
-    align-items: center;
-    background-color: var(--transparent-color);
-    color: var(--main-color);
-    border: none;
-    padding: 6px 12px !important;
-    border-radius: var(--border-radius);
-    transition: var(--transition);
-    position: relative;
-
-    &:hover,
-    &:focus,
-    &:active {
-        background-color: var(--transparent-color) !important;
-        color: var(--main-color) !important;
-    }
-
-    &::after {
-        content: '';
-        background: var(--icon--angle-right-url) no-repeat;
-        width: 15px;
-        height: 20px;
-        display: inline-block;
-        margin-left: 5px;
-        transition: transform var(--transition);
-    }
-
-    &:hover::after {
-        transform: translateX(8px);
-    }
-}
-
 @media screen and (max-width: 768px) {
     .button-cta-row {
         display: flex !important;

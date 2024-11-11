@@ -24,6 +24,7 @@ export default defineConfig({
                 'resources/scss/global/blogs.scss',
                 'resources/scss/global/location-create.scss',
                 'resources/scss/develix.nl/cookie-element.scss',
+                'resources/scss/develix.nl/buttons.scss',
                 'resources/js/global/app.js',
                 'resources/js/global/timeline.js',
                 'resources/js/develix.nl/wysiwyg-editor.js',
