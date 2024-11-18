@@ -1,7 +1,16 @@
 body.dark-theme {
+    .blog-item {
+        border: 1px solid var(--white-color);
+    }
+
     .blog-info {
         color: var(--grey-color);
     }
+}
+
+.blog-item {
+    border: 1px solid var(--black-color);
+    border-radius: var(--border-radius);
 }
 
 .blog-image {
@@ -21,4 +30,8 @@ body.dark-theme {
 
 .blog-info {
     color: var(--light-black-color);
+}
+
+.blog-read-more {
+    padding: 0;
 }

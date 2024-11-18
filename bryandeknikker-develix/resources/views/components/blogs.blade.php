@@ -16,7 +16,7 @@
                         <span class="mb-4 blog-info">{{ $blog->author }} | {{ $blog->publication_date->format('d-m-Y') }}</span>
                         <h3 class="text-xl font-semibold">{{ $blog->title }}</h3>
                         <p class="mt-2">{!! $blog->intro !!}</p>
-                        <a href="{{ route('blog-show', $blog->slug) }}" class="mt-4 inline-block blog-read-more" style="--icon--angle-right-url: url('/images/develix.nl/develix-angle-right.svg');">Lees meer</a>
+                        <a href="{{ route('blog-show', $blog->slug) }}" class="mt-4 inline-block blog-read-more angle-right-button" style="--icon--angle-right-url: url('/images/develix.nl/develix-angle-right.svg');">Lees meer</a>
                     </div>
                 @endif
             @endforeach
