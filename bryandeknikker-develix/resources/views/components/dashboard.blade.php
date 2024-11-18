@@ -120,4 +120,43 @@
             </table>
         @endif
     </div>
+
+    <div class="mb-8">
+        <div class="flex justify-between items-center mb-4">
+            <h2 class="text-2xl font-semibold">Overzicht van veelgestelde vragen</h2>
+            <a href="{{ route('location-create') }}" class="text-sm font-semibold link-shortcuts">Vraag toevoegen</a>
+        </div>
+        @if($faqs->isEmpty())
+            <p>Er zijn nog geen veelgestelde vragen beschikbaar.</p>
+        @else
+            <table class="w-full border-collapse">
+                <thead>
+                <tr>
+                    <th class="border px-4 py-2 text-left">Vraag</th>
+                    <th class="border px-4 py-2 text-left">Antwoord</th>
+                    <th class="border px-4 py-2 text-left">Categorie</th>
+                    <th class="border px-4 py-2 text-left">Acties</th>
+                </tr>
+                </thead>
+                <tbody>
+                @foreach($faqs as $faq)
+                    <tr>
+                        <td class="border px-4 py-2 location-name">{{ $faq->question }}</td>
+                        <td class="border px-4 py-2 location-slug">{{ $faq->answer }}</td>
+                        <td class="border px-4 py-2 location-slug">{{ $faq->category }}</td>
+                        <td class="border px-4 py-2 location-actions">
+                            <a href="{{ route('location-edit', $faq->id) }}" class="location-edit">Wijzig</a>
+                            <span>|</span>
+                            <form action="{{ route('location-delete', $faq->id) }}" method="POST" class="inline">
+                                @csrf
+                                @method('DELETE')
+                                <button type="submit" class="location-delete">Verwijder</button>
+                            </form>
+                        </td>
+                    </tr>
+                @endforeach
+                </tbody>
+            </table>
+        @endif
+    </div>
 </div>

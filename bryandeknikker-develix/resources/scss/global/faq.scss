@@ -1,0 +1,17 @@
+body.dark-theme {
+    .faq-item {
+        border-bottom: 1px solid var(--white-color);
+    }
+}
+
+.faq-item {
+    border-bottom: 1px solid var(--black-color);
+}
+
+.faq-question img {
+    transition: transform var(--transition);
+}
+
+.faq-question img.rotated {
+    transform: rotate(180deg);
+}

@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Models\Blog;
 use App\Models\User;
 use App\Models\Location;
+use App\Models\Faq;
 
 class DashboardController extends Controller
 {
@@ -14,8 +15,9 @@ class DashboardController extends Controller
         $blogs = Blog::all();
         $users = User::all();
         $locations = Location::all();
+        $faqs = Faq::all();
 
         // Stuur data naar de dashboard view
-        return view('develix::backend.dashboard', compact('blogs', 'users', 'locations'));
+        return view('develix::backend.dashboard', compact('blogs', 'users', 'locations', 'faqs'));
     }
 }

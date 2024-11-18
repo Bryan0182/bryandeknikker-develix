@@ -3,7 +3,7 @@
 @section('title', 'Diensten')
 
 @section('page-specific-scss')
-    @vite(['resources/scss/global/hero.scss', 'resources/scss/global/services.scss', 'resources/scss/global/cta.scss', 'resources/scss/global/text.scss', 'resources/scss/global/features.scss'])
+    @vite(['resources/scss/global/hero.scss', 'resources/scss/global/services.scss', 'resources/scss/global/cta.scss', 'resources/scss/global/text.scss', 'resources/scss/global/features.scss', 'resources/scss/global/faq.scss'])
 @endsection
 
 @section('content')
@@ -100,8 +100,16 @@
         'second_button_url' => route('about-develix'),
     ])
     @endcomponent
+
+    @component('components.faq', [
+        'title' => 'Veelgestelde Vragen',
+        'description' => 'Vind hier antwoorden op de meest voorkomende vragen over onze diensten.',
+        'faqs' => \App\Models\Faq::active()->byCategory('general')->get(),
+        'imageSrc' => asset('/images/develix.nl/angle-down.svg'),
+    ])
+    @endcomponent
 @endsection
 
 @section('page-specific-js')
-    @vite([])
+    @vite(['resources/js/global/faq.js'])
 @endsection
