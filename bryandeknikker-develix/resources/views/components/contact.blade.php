@@ -1,5 +1,5 @@
 <div class="contact-page py-12">
-    <div class="container mx-auto px-6 lg:px-20">
+    <div class="container mx-auto">
         <div class="flex flex-wrap -mx-4">
             <!-- Contact Form -->
             <div class="w-full lg:w-7/12 px-4 mb-12 lg:mb-0">
