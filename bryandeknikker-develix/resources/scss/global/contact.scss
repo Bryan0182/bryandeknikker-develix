@@ -1,0 +1,29 @@
+body.dark-theme {
+    input, textarea {
+        background: var(--black-color);
+        border: 1px solid var(--white-color);
+        color: var(--white-color);
+    }
+
+    .submit-contact-button {
+        color: var(--black-color);
+    }
+}
+
+.contact-info-block {
+    border: 1px solid var(--main-color);
+    border-radius: var(--border-radius);
+    position: sticky;
+    top: 100px;
+}
+
+.submit-contact-button {
+    background: var(--main-color);
+    border-radius: var(--border-radius);
+    transition: background-color var(--transition), color var(--transition);
+    color: var(--white-color);
+
+    &:hover {
+        background: var(--second-color);
+    }
+}

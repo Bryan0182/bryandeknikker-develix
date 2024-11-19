@@ -1,4 +1,4 @@
-<header class="header px-4 py-4 sticky top-0 z-50 transition-all duration-300">
+<header class="header px-4 py-4 sticky top-0 z-50">
     <div class="container mx-auto flex justify-between items-center">
 
         <a href="{{ route('home') }}">
@@ -88,7 +88,7 @@
 
         <!-- Contact en Thema-switcher (desktop) -->
         <nav class="hidden lg:flex items-center space-x-4">
-            <a href="#" class="contact-button">Contact</a>
+            <a href="{{ route('contact') }}" class="contact-button">Contact</a>
             <button id="theme-switcher" aria-label="Switch Theme" class="flex items-center">
                 <span id="icon-sun" style="display: none;">
                     <img src="{{ asset('images/global/sun.svg') }}" alt="Light Theme" width="30" height="30">
@@ -115,7 +115,7 @@
             </div>
         </div>
         <a href="{{ route('about-develix') }}" class="block menu-item">Over Develix</a>
-        <a href="{{ route('blog') }}" class="block menu-item">Contact</a>
+        <a href="{{ route('contact') }}" class="block menu-item">Contact</a>
 
         <button id="theme-switcher-mobile" aria-label="Switch Theme" class="flex items-center">
             <span id="icon-sun-mobile" style="display: none;">

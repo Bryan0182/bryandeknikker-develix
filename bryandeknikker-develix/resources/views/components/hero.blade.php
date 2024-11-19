@@ -17,7 +17,7 @@
             <img src="{{ $imageSrc }}"
                  data-light="{{ $imageSrc }}"
                  data-dark="{{ $imageSrcDark }}"
-                 class=" mx-auto img-fluid @if(isset($imageClass)){{ $imageClass }}@endif"
+                 class="mx-auto img-fluid theme-image @if(isset($imageClass)){{ $imageClass }}@endif"
                  alt="{{ $altText }}" width="{{ $width }}" height="{{ $height }}" loading="eager">
         </div>
     </div>

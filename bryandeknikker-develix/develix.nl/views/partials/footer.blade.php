@@ -70,7 +70,7 @@
         <hr class="my-6 sm:mx-auto lg:my-8" />
         <div class="sm:flex sm:items-center sm:justify-between">
             <span class="text-sm sm:text-center">© {{ date('Y') }} Develix. Alle rechten voorbehouden.</span>
-            <div class="flex space-x-5 mt-4 sm:mt-0">
+            <div class="flex space-x-5 mt-4 sm:mt-0 items-center">
                 <a href="https://www.facebook.com/develixofficial/" target="_blank" class="social-icon facebook" aria-label="Facebook">
                     <img src="{{ asset('images/global/facebook-black.svg') }}" data-light="/images/global/facebook-black.svg" data-dark="/images/global/facebook.svg" class="mx-auto img-fluid theme-image" alt="Facebook icon" width="15" height="15" loading="lazy">
                 </a>
