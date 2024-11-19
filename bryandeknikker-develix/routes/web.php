@@ -6,6 +6,7 @@ use App\Http\Controllers\AuthController;
 use App\Http\Controllers\DashboardController;
 use App\Http\Controllers\UserController;
 use App\Http\Controllers\LocationController;
+use App\Http\Controllers\FaqController;
 
 Route::domain('bryandeknikker.nl')->group(function () {
     Route::get('/', function () {
@@ -158,6 +159,31 @@ Route::domain('develix.nl')->group(function () {
         [LocationController::class, 'destroy'])
         ->middleware('auth')
     ->name('location-delete');
+
+    Route::get('/faq/aanmaken',
+        [FaqController::class, 'create'])
+        ->middleware('auth')
+    ->name('faq-create');
+
+    Route::post('/faq/opslaan',
+        [FaqController::class, 'store'])
+        ->middleware('auth')
+    ->name('faq-store');
+
+    Route::get('/faq/{id}/bewerken',
+        [FaqController::class, 'edit'])
+        ->middleware('auth')
+    ->name('faq-edit');
+
+    Route::put('/faq/{id}',
+        [FaqController::class, 'update'])
+        ->middleware('auth')
+    ->name('faq-update');
+
+    Route::delete('/faq/{id}',
+        [FaqController::class, 'destroy'])
+        ->middleware('auth')
+    ->name('faq-delete');
 
     Route::fallback(function () {
         return response()->view('develix::errors.404', [], 404);

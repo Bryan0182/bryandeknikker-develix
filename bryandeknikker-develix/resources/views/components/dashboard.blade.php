@@ -124,7 +124,7 @@
     <div class="mb-8">
         <div class="flex justify-between items-center mb-4">
             <h2 class="text-2xl font-semibold">Overzicht van veelgestelde vragen</h2>
-            <a href="{{ route('location-create') }}" class="text-sm font-semibold link-shortcuts">Vraag toevoegen</a>
+            <a href="{{ route('faq-create') }}" class="text-sm font-semibold link-shortcuts">Vraag toevoegen</a>
         </div>
         @if($faqs->isEmpty())
             <p>Er zijn nog geen veelgestelde vragen beschikbaar.</p>
@@ -145,9 +145,9 @@
                         <td class="border px-4 py-2 location-slug">{{ $faq->answer }}</td>
                         <td class="border px-4 py-2 location-slug">{{ $faq->category }}</td>
                         <td class="border px-4 py-2 location-actions">
-                            <a href="{{ route('location-edit', $faq->id) }}" class="location-edit">Wijzig</a>
+                            <a href="{{ route('faq-edit', $faq->id) }}" class="location-edit">Wijzig</a>
                             <span>|</span>
-                            <form action="{{ route('location-delete', $faq->id) }}" method="POST" class="inline">
+                            <form action="{{ route('faq-delete', $faq->id) }}" method="POST" class="inline">
                                 @csrf
                                 @method('DELETE')
                                 <button type="submit" class="location-delete">Verwijder</button>

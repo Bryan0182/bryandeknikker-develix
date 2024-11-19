@@ -23,6 +23,7 @@ export default defineConfig({
                 'resources/scss/global/blog-show.scss',
                 'resources/scss/global/blogs.scss',
                 'resources/scss/global/location-create.scss',
+                'resources/scss/global/faq-create.scss',
                 'resources/scss/global/faq.scss',
                 'resources/scss/develix.nl/cookie-element.scss',
                 'resources/scss/develix.nl/buttons.scss',
