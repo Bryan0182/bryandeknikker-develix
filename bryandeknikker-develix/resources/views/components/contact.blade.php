@@ -50,18 +50,26 @@
                     <h2 class="text-3xl font-bold mb-4">{{ $contact_info }}</h2>
                     <p class="mb-6">{{ $contact_info_text }}</p>
                     <ul class="mb-6">
+                        @if(!empty($phonenumber) && !empty($phonenumber_link))
                         <li class="mb-4 flex items-center">
                             <img src="{{ asset('images/global/phone-black.svg') }}" data-light="/images/global/phone-black.svg" data-dark="/images/global/phone.svg" class="img-fluid theme-image mr-4" alt="Telefoon icon" width="20" height="20" loading="eager">
-                            <a href="tel:+31682490183" class="menu-item contact-info">+31 06 82490183</a>
+                            <a href="tel:{{ $phonenumber_link }}" class="menu-item contact-info">{{ $phonenumber }}</a>
                         </li>
+                        @endif
+
+                        @if(!empty($email))
                         <li class="mb-4 flex items-center">
                             <img src="{{ asset('images/global/envelope-black.svg') }}" data-light="/images/global/envelope-black.svg" data-dark="/images/global/envelope.svg" class="img-fluid theme-image mr-4" alt="Envelop icon" width="20" height="20" loading="eager">
-                            <a href="mailto:info@develix.nl" class="menu-item contact-info">info@develix.nl</a>
+                            <a href="mailto:{{ $email }}" class="menu-item contact-info">{{ $email }}</a>
                         </li>
-                        <li class="mb-4 flex items-center">
-                            <img src="{{ asset('images/global/location-black.svg') }}" data-light="/images/global/location-black.svg" data-dark="/images/global/location.svg" class="img-fluid theme-image mr-4" alt="Locatie icon" width="20" height="20" loading="eager">
-                            Kaagjesland 34, 2811 KN Reeuwijk
-                        </li>
+                        @endif
+
+                        @if(!empty($address))
+                            <li class="mb-4 flex items-center">
+                                <img src="{{ asset('images/global/location-black.svg') }}" data-light="/images/global/location-black.svg" data-dark="/images/global/location.svg" class="img-fluid theme-image mr-4" alt="Locatie icon" width="20" height="20" loading="eager">
+                                {{ $address }}
+                            </li>
+                        @endif
                     </ul>
                     <div class="flex space-x-4 items-center">
                         <a href="https://www.facebook.com/develixofficial/" target="_blank" class="social-icon facebook" aria-label="Facebook">

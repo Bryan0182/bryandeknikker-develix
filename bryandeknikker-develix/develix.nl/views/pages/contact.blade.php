@@ -13,6 +13,10 @@
         'button_text' => 'Verstuur',
         'contact_info' => 'Contactgegevens',
         'contact_info_text' => 'Neem direct contact met ons op via onderstaande gegevens. We staan voor je klaar!',
+        'phonenumber' => '+31 6 82490183',
+        'phonenumber_link' => '+31682490183',
+        'email' => 'info@develix.nl',
+        'address' => 'Kaagjesland 34, 2811 KN Reeuwijk',
     ])
     @endcomponent
 @endsection
