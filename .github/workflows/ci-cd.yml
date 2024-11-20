@@ -58,45 +58,44 @@ jobs:
           SSH_PRIVATE_KEY: ${{ secrets.SSH_PRIVATE_KEY }}
         run: |
           set -e # Stop bij fouten
-  
+
           echo "=== Setting up SSH ==="
           mkdir -p ~/.ssh
           echo "$SSH_PRIVATE_KEY" > ~/.ssh/id_rsa
           chmod 600 ~/.ssh/id_rsa
           ssh-keyscan -p 7685 -H 185.104.29.158 >> ~/.ssh/known_hosts
-  
+
           echo "=== Testing SSH connection ==="
           ssh -i ~/.ssh/id_rsa -p 7685 -o StrictHostKeyChecking=no u181065p251251@185.104.29.158 "echo 'SSH connection successful'"
-  
-          # Sync Laravel kernbestanden
+
+          # Sync Laravel kernbestanden naar server
           echo "=== Syncing Laravel Core Files ==="
           rsync -avz -e "ssh -i ~/.ssh/id_rsa -p 7685" --exclude "node_modules" --exclude ".git" \
-            ./laravel_app/ u181065p251251@185.104.29.158:/home/u181065p251251/laravel_app/
-  
-          # Specifieke bestanden voor bryandeknikker.nl
+            ./bryandeknikker-develix/ u181065p251251@185.104.29.158:/home/u181065p251251/laravel_app/
+
+          # Stel symlinks in voor de domeinen
           echo "=== Setting Up bryandeknikker.nl ==="
           ssh -i ~/.ssh/id_rsa -p 7685 -o StrictHostKeyChecking=no u181065p251251@185.104.29.158 "
             ln -sf /home/u181065p251251/laravel_app/public /home/u181065p251251/domains/bryandeknikker.nl/public_html
           "
-  
-          # Specifieke bestanden voor develix.nl
+
           echo "=== Setting Up develix.nl ==="
           ssh -i ~/.ssh/id_rsa -p 7685 -o StrictHostKeyChecking=no u181065p251251@185.104.29.158 "
             ln -sf /home/u181065p251251/laravel_app/public /home/u181065p251251/domains/develix.nl/public_html
           "
-  
-          # Machtigingen instellen voor storage en cache
-          echo "=== Setting Permissions ==="
-          ssh -i ~/.ssh/id_rsa -p 7685 -o StrictHostKeyChecking=no u181065p251251@185.104.29.158 "
-            chmod -R 775 /home/u181065p251251/laravel_app/storage
-            chmod -R 775 /home/u181065p251251/laravel_app/bootstrap/cache
-          "
-  
-          # Composer install uitvoeren op de server
+
+          # Composer install uitvoeren
           echo "=== Running Composer Install ==="
           ssh -i ~/.ssh/id_rsa -p 7685 -o StrictHostKeyChecking=no u181065p251251@185.104.29.158 "
             cd /home/u181065p251251/laravel_app
             composer install --no-dev --optimize-autoloader
           "
-  
+
+          # Machtigingen instellen voor opslag en cache
+          echo "=== Setting Permissions ==="
+          ssh -i ~/.ssh/id_rsa -p 7685 -o StrictHostKeyChecking=no u181065p251251@185.104.29.158 "
+            chmod -R 775 /home/u181065p251251/laravel_app/storage
+            chmod -R 775 /home/u181065p251251/laravel_app/bootstrap/cache
+          "
+
           echo "=== Deployment Complete ==="
