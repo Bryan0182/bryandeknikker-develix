@@ -22,7 +22,8 @@ jobs:
           extensions: mbstring, pdo, bcmath, intl
 
       - name: Install Composer Dependencies
-        run: composer install --prefer-dist --no-progress --no-suggest
+        working-directory: ./bryandeknikker-develix
+        run: composer install --prefer-dist --no-progress
 
       - name: Set up Node.js
         uses: actions/setup-node@v3
@@ -30,12 +31,15 @@ jobs:
           node-version: 18
 
       - name: Install NPM Dependencies
+        working-directory: ./bryandeknikker-develix
         run: npm install
 
       - name: Build Assets
+        working-directory: ./bryandeknikker-develix
         run: npm run build
 
       - name: Run Laravel Tests
+        working-directory: ./bryandeknikker-develix
         run: php artisan test
 
   deploy:
@@ -52,7 +56,8 @@ jobs:
           php-version: 8.1
 
       - name: Install Composer Dependencies
-        run: composer install --prefer-dist --no-progress --no-suggest --no-dev
+        working-directory: ./bryandeknikker-develix
+        run: composer install --prefer-dist --no-progress --no-dev
 
       - name: Set up Node.js
         uses: actions/setup-node@v3
@@ -60,9 +65,11 @@ jobs:
           node-version: 18
 
       - name: Install NPM Dependencies
+        working-directory: ./bryandeknikker-develix
         run: npm install
 
       - name: Build Assets
+        working-directory: ./bryandeknikker-develix
         run: npm run build
 
       - name: Deploy to Vimexx Server
@@ -77,7 +84,7 @@ jobs:
           ssh-keyscan -H $SERVER_IP >> ~/.ssh/known_hosts
 
           # Synchroniseer de volledige codebase naar het basispad
-          rsync -avz --delete ./ $SERVER_IP:$BASE_DEPLOY_PATH
+          rsync -avz --delete ./bryandeknikker-develix/ $SERVER_IP:$BASE_DEPLOY_PATH
 
           # Synchroniseer naar specifieke domeinen
           ssh $SERVER_IP "cd $BASE_DEPLOY_PATH && rsync -avz --delete ./ bryandeknikker.nl/"
