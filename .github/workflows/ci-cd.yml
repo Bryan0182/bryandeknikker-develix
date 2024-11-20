@@ -92,9 +92,16 @@ jobs:
           chmod 600 ~/.ssh/id_rsa
           ssh-keyscan -H $SERVER_IP >> ~/.ssh/known_hosts
 
-          # Synchroniseer de volledige codebase naar het basispad
+          # Basis Laravel-applicatie synchroniseren (buiten domeinen)
           rsync -avz --delete ./bryandeknikker-develix/ $SERVER_IP:$BASE_DEPLOY_PATH
 
-          # Synchroniseer naar specifieke domeinen
-          ssh $SERVER_IP "cd $BASE_DEPLOY_PATH && rsync -avz --delete ./ bryandeknikker.nl/"
-          ssh $SERVER_IP "cd $BASE_DEPLOY_PATH && rsync -avz --delete ./ develix.nl/"
+          # Public directories afzonderlijk synchroniseren naar domein specifieke mappen
+          ssh $SERVER_IP "rsync -avz --delete $BASE_DEPLOY_PATH/public/ $BASE_DEPLOY_PATH/domains/bryandeknikker.nl/public_html/"
+          ssh $SERVER_IP "rsync -avz --delete $BASE_DEPLOY_PATH/public/ $BASE_DEPLOY_PATH/domains/develix.nl/public_html/"
+
+          # Domeinspecifieke resources synchroniseren
+          ssh $SERVER_IP "rsync -avz --delete $BASE_DEPLOY_PATH/bryandeknikker.nl/ $BASE_DEPLOY_PATH/domains/bryandeknikker.nl/resources/views/"
+          ssh $SERVER_IP "rsync -avz --delete $BASE_DEPLOY_PATH/develix.nl/ $BASE_DEPLOY_PATH/domains/develix.nl/resources/views/"
+
+          # Controleer permissies en schrijfbaarheid
+          ssh $SERVER_IP "chmod -R 775 $BASE_DEPLOY_PATH/storage $BASE_DEPLOY_PATH/bootstrap/cache"
