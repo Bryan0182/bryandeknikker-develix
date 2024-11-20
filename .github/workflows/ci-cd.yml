@@ -30,6 +30,7 @@ jobs:
 
       # Debug Composer Binaries
       - name: Debug Composer Binaries
+        working-directory: ./bryandeknikker-develix
         run: ls -la vendor/bin
 
       # Laravel Pint uitvoeren
