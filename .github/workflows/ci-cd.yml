@@ -58,47 +58,45 @@ jobs:
           SSH_PRIVATE_KEY: ${{ secrets.SSH_PRIVATE_KEY }}
         run: |
           set -e # Stop bij fouten
-
+  
           echo "=== Setting up SSH ==="
           mkdir -p ~/.ssh
           echo "$SSH_PRIVATE_KEY" > ~/.ssh/id_rsa
           chmod 600 ~/.ssh/id_rsa
           ssh-keyscan -p 7685 -H 185.104.29.158 >> ~/.ssh/known_hosts
-
+  
           echo "=== Testing SSH connection ==="
           ssh -i ~/.ssh/id_rsa -p 7685 -o StrictHostKeyChecking=no u181065p251251@185.104.29.158 "echo 'SSH connection successful'"
-
-          # Syncen van de algemene Laravel-app bestanden naar de gedeelde map
-          echo "=== Syncing General Laravel App Files ==="
-          rsync -avz -e "ssh -i ~/.ssh/id_rsa -p 7685" --delete ./bryandeknikker-develix/app/ u181065p251251@185.104.29.158:/home/u181065p251251/domains/shared/app/
-          rsync -avz -e "ssh -i ~/.ssh/id_rsa -p 7685" --delete ./bryandeknikker-develix/config/ u181065p251251@185.104.29.158:/home/u181065p251251/domains/shared/config/
-          rsync -avz -e "ssh -i ~/.ssh/id_rsa -p 7685" --delete ./bryandeknikker-develix/resources/ u181065p251251@185.104.29.158:/home/u181065p251251/domains/shared/resources/
-          rsync -avz -e "ssh -i ~/.ssh/id_rsa -p 7685" --delete ./bryandeknikker-develix/routes/ u181065p251251@185.104.29.158:/home/u181065p251251/domains/shared/routes/
-
+  
+          # Sync Laravel kernbestanden
+          echo "=== Syncing Laravel Core Files ==="
+          rsync -avz -e "ssh -i ~/.ssh/id_rsa -p 7685" --exclude "node_modules" --exclude ".git" \
+            ./laravel_app/ u181065p251251@185.104.29.158:/home/u181065p251251/laravel_app/
+  
           # Specifieke bestanden voor bryandeknikker.nl
-          echo "=== Syncing bryandeknikker.nl Specific Files ==="
-          rsync -avz -e "ssh -i ~/.ssh/id_rsa -p 7685" --delete ./bryandeknikker-develix/public/ u181065p251251@185.104.29.158:/home/u181065p251251/domains/bryandeknikker.nl/public_html/
-          rsync -avz -e "ssh -i ~/.ssh/id_rsa -p 7685" --delete ./bryandeknikker-develix/bryandeknikker.nl/views/ u181065p251251@185.104.29.158:/home/u181065p251251/domains/bryandeknikker.nl/public_html/views/
-
-          # Specifieke bestanden voor develix.nl
-          echo "=== Syncing develix.nl Specific Files ==="
-          rsync -avz -e "ssh -i ~/.ssh/id_rsa -p 7685" --delete ./bryandeknikker-develix/public/ u181065p251251@185.104.29.158:/home/u181065p251251/domains/develix.nl/public_html/
-          rsync -avz -e "ssh -i ~/.ssh/id_rsa -p 7685" --delete ./bryandeknikker-develix/develix.nl/views/ u181065p251251@185.104.29.158:/home/u181065p251251/domains/develix.nl/public_html/views/
-
-          # Zorg ervoor dat de vereiste mappen bestaan
-          echo "=== Ensure required directories exist ==="
+          echo "=== Setting Up bryandeknikker.nl ==="
           ssh -i ~/.ssh/id_rsa -p 7685 -o StrictHostKeyChecking=no u181065p251251@185.104.29.158 "
-            mkdir -p /home/u181065p251251/domains/bryandeknikker.nl/public_html/storage/logs
-            mkdir -p /home/u181065p251251/domains/bryandeknikker.nl/public_html/bootstrap/cache
-            mkdir -p /home/u181065p251251/domains/develix.nl/public_html/storage/logs
-            mkdir -p /home/u181065p251251/domains/develix.nl/public_html/bootstrap/cache
+            ln -sf /home/u181065p251251/laravel_app/public /home/u181065p251251/domains/bryandeknikker.nl/public_html
           "
-
-          # Machtigingen instellen voor de juiste mappen
+  
+          # Specifieke bestanden voor develix.nl
+          echo "=== Setting Up develix.nl ==="
+          ssh -i ~/.ssh/id_rsa -p 7685 -o StrictHostKeyChecking=no u181065p251251@185.104.29.158 "
+            ln -sf /home/u181065p251251/laravel_app/public /home/u181065p251251/domains/develix.nl/public_html
+          "
+  
+          # Machtigingen instellen voor storage en cache
           echo "=== Setting Permissions ==="
           ssh -i ~/.ssh/id_rsa -p 7685 -o StrictHostKeyChecking=no u181065p251251@185.104.29.158 "
-            chmod -R 775 /home/u181065p251251/domains/bryandeknikker.nl/public_html/storage
-            chmod -R 775 /home/u181065p251251/domains/bryandeknikker.nl/public_html/bootstrap/cache
-            chmod -R 775 /home/u181065p251251/domains/develix.nl/public_html/storage
-            chmod -R 775 /home/u181065p251251/domains/develix.nl/public_html/bootstrap/cache
+            chmod -R 775 /home/u181065p251251/laravel_app/storage
+            chmod -R 775 /home/u181065p251251/laravel_app/bootstrap/cache
           "
+  
+          # Composer install uitvoeren op de server
+          echo "=== Running Composer Install ==="
+          ssh -i ~/.ssh/id_rsa -p 7685 -o StrictHostKeyChecking=no u181065p251251@185.104.29.158 "
+            cd /home/u181065p251251/laravel_app
+            composer install --no-dev --optimize-autoloader
+          "
+  
+          echo "=== Deployment Complete ==="
