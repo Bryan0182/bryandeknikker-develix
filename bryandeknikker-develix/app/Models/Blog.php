@@ -12,7 +12,7 @@ class Blog extends Model
     protected $table = 'blog-develix';
 
     protected $fillable = [
-        'title', 'slug', 'intro', 'content', 'author', 'status', 'featured_image', 'meta_title', 'meta_description'
+        'title', 'slug', 'intro', 'content', 'author', 'status', 'featured_image', 'meta_title', 'meta_description',
     ];
 
     public static function boot()

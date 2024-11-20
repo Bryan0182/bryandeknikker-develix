@@ -2,13 +2,14 @@
 
 namespace App\Console\Commands;
 
-use Illuminate\Console\Command;
 use App\Models\Blog;
 use Carbon\Carbon;
+use Illuminate\Console\Command;
 
 class UpdateBlogStatus extends Command
 {
     protected $signature = 'blogs:update-status';
+
     protected $description = 'Controleer de publicatiedatum en -tijd van blogs en wijzig de status naar "gepubliceerd" als de tijd is bereikt';
 
     public function __construct()
@@ -32,6 +33,7 @@ class UpdateBlogStatus extends Command
         }
 
         $this->info('De status-update is voltooid.');
+
         return 0;
     }
 }

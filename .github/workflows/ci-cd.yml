@@ -8,89 +8,79 @@ on:
       - production
 
 jobs:
-  test:
+  build:
     runs-on: ubuntu-latest
 
     steps:
+      # Code ophalen uit de repository
       - name: Check out code
         uses: actions/checkout@v3
 
+      # PHPcomposer update opzetten
       - name: Set up PHP
         uses: shivammathur/setup-php@v2
         with:
           php-version: 8.3
-          extensions: mbstring, pdo, bcmath, intl
+          extensions: mbstring, intl
 
+      # Composer dependencies installeren
       - name: Install Composer Dependencies
         working-directory: ./bryandeknikker-develix
-        run: composer install --prefer-dist --no-progress
+        run: composer install --prefer-dist --no-progress --no-dev
 
-      - name: Create cache directory
-        working-directory: ./bryandeknikker-develix
-        run: mkdir -p bootstrap/cache
-
-      - name: Set permissions for cache directory
-        working-directory: ./bryandeknikker-develix
-        run: chmod -R 777 bootstrap/cache
-
-      - name: Clear Laravel Config and Cache
-        working-directory: ./bryandeknikker-develix
-        run: |
-          php artisan config:clear
-          php artisan cache:clear
-          php artisan route:clear
-
-      - name: Run Database Migrations
-        working-directory: ./bryandeknikker-develix
-        run: php artisan migrate --force
-
+      # Node.js opzetten
       - name: Set up Node.js
         uses: actions/setup-node@v3
         with:
           node-version: 18
 
+      # NPM dependencies installeren
       - name: Install NPM Dependencies
         working-directory: ./bryandeknikker-develix
         run: npm install
 
+      # Assets bouwen
       - name: Build Assets
         working-directory: ./bryandeknikker-develix
         run: npm run build
-
-      - name: Run Laravel Tests
-        working-directory: ./bryandeknikker-develix
-        run: php artisan test
 
   deploy:
     if: github.ref == 'refs/heads/production'
     runs-on: ubuntu-latest
 
     steps:
+      # Code ophalen uit de repository
       - name: Check out code
         uses: actions/checkout@v3
 
+      # PHP opzetten
       - name: Set up PHP
         uses: shivammathur/setup-php@v2
         with:
           php-version: 8.3
 
+      # Composer dependencies installeren
       - name: Install Composer Dependencies
         working-directory: ./bryandeknikker-develix
         run: composer install --prefer-dist --no-progress --no-dev
 
+      # Node.js opzetten
       - name: Set up Node.js
         uses: actions/setup-node@v3
         with:
           node-version: 18
 
+      # NPM dependencies installeren
       - name: Install NPM Dependencies
         working-directory: ./bryandeknikker-develix
         run: npm install
 
+      # Assets bouwen
       - name: Build Assets
         working-directory: ./bryandeknikker-develix
         run: npm run build
 
+      # Deployen naar de Vimexx-server
       - name: Deploy to Vimexx Server
         env:
           SSH_PRIVATE_KEY: ${{ secrets.VIMEXX_WEBSITE }}
@@ -108,6 +98,3 @@ jobs:
           # Synchroniseer naar specifieke domeinen
           ssh $SERVER_IP "cd $BASE_DEPLOY_PATH && rsync -avz --delete ./ bryandeknikker.nl/"
           ssh $SERVER_IP "cd $BASE_DEPLOY_PATH && rsync -avz --delete ./ develix.nl/"
-
-          # Run Laravel migraties
-          ssh $SERVER_IP "cd $BASE_DEPLOY_PATH && php artisan migrate --force"

@@ -2,21 +2,23 @@
 
 namespace App\Http\Controllers;
 
-use Illuminate\Http\Request;
 use App\Models\Blog;
 use App\Models\User;
+use Illuminate\Http\Request;
 
 class BlogController extends Controller
 {
     public function index()
     {
         $blogs = Blog::all();
+
         return view('develix::blogs.overview', compact('blogs'));
     }
 
     public function create()
     {
         $users = User::all();
+
         return view('develix::blogs.create', compact('users'));
     }
 
@@ -30,7 +32,7 @@ class BlogController extends Controller
             'status' => 'required|in:concept,gepubliceerd',
             'featured_image' => 'nullable|image|max:2048',
             'meta_title' => 'nullable|string|max:60',
-            'meta_description' => 'nullable|string|max:160'
+            'meta_description' => 'nullable|string|max:160',
         ]);
 
         $author = $request->input('author', 'Bryan de Knikker');
@@ -71,6 +73,7 @@ class BlogController extends Controller
     {
         $blog = Blog::findOrFail($id);
         $users = User::all();
+
         return view('develix::blogs.edit', compact('blog', 'users'));
     }
 
@@ -84,7 +87,7 @@ class BlogController extends Controller
             'status' => 'required|in:concept,gepubliceerd',
             'featured_image' => 'nullable|image|max:2048',
             'meta_title' => 'nullable|string|max:60',
-            'meta_description' => 'nullable|string|max:160'
+            'meta_description' => 'nullable|string|max:160',
         ]);
 
         $blog = Blog::findOrFail($id);

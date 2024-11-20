@@ -42,6 +42,7 @@ class LocationController extends Controller
     public function edit($id)
     {
         $location = Location::findOrFail($id);
+
         return view('develix::locations.edit', compact('location'));
     }
 
@@ -52,7 +53,7 @@ class LocationController extends Controller
     {
         $request->validate([
             'location' => 'required|string|max:255',
-            'slug' => 'required|string|max:255|unique:location-develix,slug,' . $id,
+            'slug' => 'required|string|max:255|unique:location-develix,slug,'.$id,
         ]);
 
         $location = Location::findOrFail($id);
