@@ -12,6 +12,7 @@ class Kernel extends HttpKernel
         \App\Http\Middleware\TrimStrings::class,
         \Illuminate\Foundation\Http\Middleware\ConvertEmptyStringsToNull::class,
         \App\Http\Middleware\TrustProxies::class,
+        \App\Http\Middleware\RestrictByIP::class,
     ];
 
     protected $middlewareGroups = [
@@ -29,6 +30,6 @@ class Kernel extends HttpKernel
         // Specifieke middleware
         'auth' => \App\Http\Middleware\Authenticate::class,
         'guest' => \App\Http\Middleware\RedirectIfAuthenticated::class,
-        // Voeg hier andere middleware toe
+        'restrict.ip' => \App\Http\Middleware\RestrictByIP::class,
     ];
 }
