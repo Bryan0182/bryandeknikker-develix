@@ -1,0 +1,87 @@
+name: Multisite CI/CD Workflow
+
+on:
+  push:
+    branches:
+      - develop
+      - main
+      - production
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Check out code
+        uses: actions/checkout@v3
+
+      - name: Set up PHP
+        uses: shivammathur/setup-php@v2
+        with:
+          php-version: 8.1
+          extensions: mbstring, pdo, bcmath, intl
+
+      - name: Install Composer Dependencies
+        run: composer install --prefer-dist --no-progress --no-suggest
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: 18
+
+      - name: Install NPM Dependencies
+        run: npm install
+
+      - name: Build Assets
+        run: npm run build
+
+      - name: Run Laravel Tests
+        run: php artisan test
+
+  deploy:
+    if: github.ref == 'refs/heads/production'
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Check out code
+        uses: actions/checkout@v3
+
+      - name: Set up PHP
+        uses: shivammathur/setup-php@v2
+        with:
+          php-version: 8.1
+
+      - name: Install Composer Dependencies
+        run: composer install --prefer-dist --no-progress --no-suggest --no-dev
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: 18
+
+      - name: Install NPM Dependencies
+        run: npm install
+
+      - name: Build Assets
+        run: npm run build
+
+      - name: Deploy to Vimexx Server
+        env:
+          SSH_PRIVATE_KEY: ${{ secrets.VIMEXX_WEBSITE }}
+          SERVER_IP: ${{ secrets.SERVER_IP }}
+          BASE_DEPLOY_PATH: ${{ secrets.BASE_DEPLOY_PATH }}
+        run: |
+          mkdir -p ~/.ssh
+          echo "$SSH_PRIVATE_KEY" > ~/.ssh/id_rsa
+          chmod 600 ~/.ssh/id_rsa
+          ssh-keyscan -H $SERVER_IP >> ~/.ssh/known_hosts
+
+          # Synchroniseer de volledige codebase naar het basispad
+          rsync -avz --delete ./ $SERVER_IP:$BASE_DEPLOY_PATH
+
+          # Synchroniseer naar specifieke domeinen
+          ssh $SERVER_IP "cd $BASE_DEPLOY_PATH && rsync -avz --delete ./ bryandeknikker.nl/"
+          ssh $SERVER_IP "cd $BASE_DEPLOY_PATH && rsync -avz --delete ./ develix.nl/"
+
+          # Run Laravel migraties
+          ssh $SERVER_IP "cd $BASE_DEPLOY_PATH && php artisan migrate --force"
