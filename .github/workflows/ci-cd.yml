@@ -28,10 +28,10 @@ jobs:
         working-directory: ./bryandeknikker-develix
         run: composer install --prefer-dist --no-progress --no-dev
 
-      # Lint PHP code
-      - name: Run PHP Linter (Laravel Pint)
+      # Laravel Pint uitvoeren
+      - name: Run Laravel Pint
         working-directory: ./bryandeknikker-develix
-        run: vendor/bin/pint
+        run: composer pint
 
       # Node.js opzetten
       - name: Set up Node.js
