@@ -68,17 +68,21 @@ jobs:
           echo "=== Testing SSH connection ==="
           ssh -i ~/.ssh/id_rsa -p 7685 -o StrictHostKeyChecking=no u181065p251251@185.104.29.158 "echo 'SSH connection successful'"
 
+          # Syncen van de algemene componenten naar de gedeelde map
           echo "=== Syncing General Components ==="
           rsync -avz -e "ssh -i ~/.ssh/id_rsa -p 7685" --delete ./bryandeknikker-develix/resources/components/ u181065p251251@185.104.29.158:/home/u181065p251251/domains/shared/components/
 
+          # Specifieke bestanden voor bryandeknikker.nl
           echo "=== Syncing bryandeknikker.nl Specific Files ==="
           rsync -avz -e "ssh -i ~/.ssh/id_rsa -p 7685" --delete ./bryandeknikker-develix/public/ u181065p251251@185.104.29.158:/home/u181065p251251/domains/bryandeknikker.nl/public_html/
           rsync -avz -e "ssh -i ~/.ssh/id_rsa -p 7685" --delete ./bryandeknikker-develix/bryandeknikker.nl/views/ u181065p251251@185.104.29.158:/home/u181065p251251/domains/bryandeknikker.nl/public_html/views/
 
+          # Specifieke bestanden voor develix.nl
           echo "=== Syncing develix.nl Specific Files ==="
           rsync -avz -e "ssh -i ~/.ssh/id_rsa -p 7685" --delete ./bryandeknikker-develix/public/ u181065p251251@185.104.29.158:/home/u181065p251251/domains/develix.nl/public_html/
           rsync -avz -e "ssh -i ~/.ssh/id_rsa -p 7685" --delete ./bryandeknikker-develix/develix.nl/views/ u181065p251251@185.104.29.158:/home/u181065p251251/domains/develix.nl/public_html/views/
 
+          # Zorg ervoor dat de vereiste mappen bestaan
           echo "=== Ensure required directories exist ==="
           ssh -i ~/.ssh/id_rsa -p 7685 -o StrictHostKeyChecking=no u181065p251251@185.104.29.158 "
             mkdir -p /home/u181065p251251/domains/bryandeknikker.nl/public_html/storage/logs
@@ -87,6 +91,7 @@ jobs:
             mkdir -p /home/u181065p251251/domains/develix.nl/public_html/bootstrap/cache
           "
 
+          # Machtigingen instellen voor de juiste mappen
           echo "=== Setting Permissions ==="
           ssh -i ~/.ssh/id_rsa -p 7685 -o StrictHostKeyChecking=no u181065p251251@185.104.29.158 "
             chmod -R 775 /home/u181065p251251/domains/bryandeknikker.nl/public_html/storage
