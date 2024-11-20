@@ -16,7 +16,7 @@ jobs:
       - name: Check out code
         uses: actions/checkout@v3
 
-      # PHPcomposer update opzetten
+      # PHP opzetten
       - name: Set up PHP
         uses: shivammathur/setup-php@v2
         with:
@@ -28,6 +28,11 @@ jobs:
         working-directory: ./bryandeknikker-develix
         run: composer install --prefer-dist --no-progress --no-dev
 
+      # Lint PHP code
+      - name: Run PHP Linter (Laravel Pint)
+        working-directory: ./bryandeknikker-develix
+        run: vendor/bin/pint
+
       # Node.js opzetten
       - name: Set up Node.js
         uses: actions/setup-node@v3
@@ -38,6 +43,11 @@ jobs:
       - name: Install NPM Dependencies
         working-directory: ./bryandeknikker-develix
         run: npm install
+
+      # Lint JavaScript code
+      - name: Run JavaScript Linter (ESLint)
+        working-directory: ./bryandeknikker-develix
+        run: npx eslint resources/js/**/*.js
 
       # Assets bouwen
       - name: Build Assets
