@@ -17,11 +17,11 @@ $allowed_ips = [
 if (!in_array(request()->ip(), $allowed_ips)) {
     $host = request()->getHost(); // Controleer het domein
 
-    if ($host === 'bryandeknikker.nl') {
+    if ($host === 'bryandeknikker.nl' || $host === 'www.bryandeknikker.nl') {
         Route::get('{any}', function () {
             return response()->view('bryandeknikker::pages.maintenance');
         })->where('any', '.*');
-    } elseif ($host === 'develix.nl') {
+    } elseif ($host === 'develix.nl' || $host === 'www.develix.nl') {
         Route::get('{any}', function () {
             return response()->view('develix::pages.maintenance');
         })->where('any', '.*');
