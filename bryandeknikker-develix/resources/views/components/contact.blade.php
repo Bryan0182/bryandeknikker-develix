@@ -1,6 +1,6 @@
 <div class="contact-page py-12">
     <div class="container mx-auto">
-        <div class="flex flex-wrap -mx-4">
+        <div class="flex flex-wrap">
             <!-- Contact Form -->
             <div class="w-full lg:w-7/12 px-4 mb-12 lg:mb-0">
                 <div>
@@ -52,15 +52,15 @@
                     <ul class="mb-6">
                         <li class="mb-4 flex items-center">
                             <img src="{{ asset('images/global/phone-black.svg') }}" data-light="/images/global/phone-black.svg" data-dark="/images/global/phone.svg" class="img-fluid theme-image mr-4" alt="Telefoon icon" width="20" height="20" loading="eager">
-                            +31 123 456 7890
+                            <a href="tel:+31682490183" class="menu-item contact-info">+31 06 82490183</a>
                         </li>
                         <li class="mb-4 flex items-center">
                             <img src="{{ asset('images/global/envelope-black.svg') }}" data-light="/images/global/envelope-black.svg" data-dark="/images/global/envelope.svg" class="img-fluid theme-image mr-4" alt="Envelop icon" width="20" height="20" loading="eager">
-                            info@jouwbedrijf.nl
+                            <a href="mailto:info@develix.nl" class="menu-item contact-info">info@develix.nl</a>
                         </li>
                         <li class="mb-4 flex items-center">
                             <img src="{{ asset('images/global/location-black.svg') }}" data-light="/images/global/location-black.svg" data-dark="/images/global/location.svg" class="img-fluid theme-image mr-4" alt="Locatie icon" width="20" height="20" loading="eager">
-                            Straatnaam 123, 1234 AB Plaats
+                            Kaagjesland 34, 2811 KN Reeuwijk
                         </li>
                     </ul>
                     <div class="flex space-x-4 items-center">
