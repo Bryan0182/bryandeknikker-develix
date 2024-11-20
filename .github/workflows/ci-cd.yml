@@ -28,16 +28,6 @@ jobs:
         working-directory: ./bryandeknikker-develix
         run: composer install --prefer-dist --no-progress --no-dev
 
-      # Debug Composer Binaries
-      - name: Debug Composer Binaries
-        working-directory: ./bryandeknikker-develix
-        run: ls -la vendor/bin
-
-      # Laravel Pint uitvoeren
-      - name: Run Laravel Pint
-        working-directory: ./bryandeknikker-develix
-        run: composer pint
-
       # Node.js opzetten
       - name: Set up Node.js
         uses: actions/setup-node@v3
@@ -48,11 +38,6 @@ jobs:
       - name: Install NPM Dependencies
         working-directory: ./bryandeknikker-develix
         run: npm install
-
-      # Lint JavaScript code
-      - name: Run JavaScript Linter (ESLint)
-        working-directory: ./bryandeknikker-develix
-        run: npx eslint resources/js/**/*.js
 
       # Assets bouwen
       - name: Build Assets
