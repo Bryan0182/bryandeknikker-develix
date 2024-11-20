@@ -33,6 +33,17 @@ jobs:
         working-directory: ./bryandeknikker-develix
         run: chmod -R 777 bootstrap/cache
 
+      - name: Clear Laravel Config and Cache
+        working-directory: ./bryandeknikker-develix
+        run: |
+          php artisan config:clear
+          php artisan cache:clear
+          php artisan route:clear
+
+      - name: Run Database Migrations
+        working-directory: ./bryandeknikker-develix
+        run: php artisan migrate --force
+
       - name: Set up Node.js
         uses: actions/setup-node@v3
         with:
