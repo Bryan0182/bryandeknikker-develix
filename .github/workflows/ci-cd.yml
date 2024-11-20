@@ -68,9 +68,12 @@ jobs:
           echo "=== Testing SSH connection ==="
           ssh -i ~/.ssh/id_rsa -p 7685 -o StrictHostKeyChecking=no u181065p251251@185.104.29.158 "echo 'SSH connection successful'"
 
-          # Syncen van de algemene componenten naar de gedeelde map
-          echo "=== Syncing General Components ==="
-          rsync -avz -e "ssh -i ~/.ssh/id_rsa -p 7685" --delete ./bryandeknikker-develix/resources/views/components/ u181065p251251@185.104.29.158:/home/u181065p251251/domains/shared/components/
+          # Syncen van de algemene Laravel-app bestanden naar de gedeelde map
+          echo "=== Syncing General Laravel App Files ==="
+          rsync -avz -e "ssh -i ~/.ssh/id_rsa -p 7685" --delete ./bryandeknikker-develix/app/ u181065p251251@185.104.29.158:/home/u181065p251251/domains/shared/app/
+          rsync -avz -e "ssh -i ~/.ssh/id_rsa -p 7685" --delete ./bryandeknikker-develix/config/ u181065p251251@185.104.29.158:/home/u181065p251251/domains/shared/config/
+          rsync -avz -e "ssh -i ~/.ssh/id_rsa -p 7685" --delete ./bryandeknikker-develix/resources/ u181065p251251@185.104.29.158:/home/u181065p251251/domains/shared/resources/
+          rsync -avz -e "ssh -i ~/.ssh/id_rsa -p 7685" --delete ./bryandeknikker-develix/routes/ u181065p251251@185.104.29.158:/home/u181065p251251/domains/shared/routes/
 
           # Specifieke bestanden voor bryandeknikker.nl
           echo "=== Syncing bryandeknikker.nl Specific Files ==="
