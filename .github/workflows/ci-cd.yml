@@ -50,11 +50,9 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      # Code ophalen uit de repository
       - name: Check out code
         uses: actions/checkout@v3
 
-      # Deployen naar de server
       - name: Deploy to Vimexx Server
         env:
           SSH_PRIVATE_KEY: ${{ secrets.SSH_PRIVATE_KEY }}
@@ -70,8 +68,17 @@ jobs:
           echo "=== Testing SSH connection ==="
           ssh -i ~/.ssh/id_rsa -p 7685 -o StrictHostKeyChecking=no u181065p251251@185.104.29.158 "echo 'SSH connection successful'"
 
-          echo "=== Syncing Laravel Application ==="
+          echo "=== Syncing Laravel Core Application ==="
           rsync -avz -e "ssh -i ~/.ssh/id_rsa -p 7685" --delete ./bryandeknikker-develix/ u181065p251251@185.104.29.158:/home/u181065p251251/laravel-app/
+
+          echo "=== Syncing bryandeknikker.nl Views ==="
+          rsync -avz -e "ssh -i ~/.ssh/id_rsa -p 7685" --delete ./bryandeknikker-develix/bryandeknikker.nl/views/ u181065p251251@185.104.29.158:/home/u181065p251251/domains/bryandeknikker.nl/views/
+
+          echo "=== Syncing develix.nl Views ==="
+          rsync -avz -e "ssh -i ~/.ssh/id_rsa -p 7685" --delete ./bryandeknikker-develix/develix.nl/views/ u181065p251251@185.104.29.158:/home/u181065p251251/domains/develix.nl/views/
+
+          echo "=== Syncing Public Directory ==="
+          rsync -avz -e "ssh -i ~/.ssh/id_rsa -p 7685" --delete ./bryandeknikker-develix/public/ u181065p251251@185.104.29.158:/home/u181065p251251/public_html/
 
           echo "=== Ensure required directories exist ==="
           ssh -i ~/.ssh/id_rsa -p 7685 -o StrictHostKeyChecking=no u181065p251251@185.104.29.158 "
