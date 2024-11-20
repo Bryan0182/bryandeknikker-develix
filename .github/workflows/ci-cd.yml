@@ -45,6 +45,7 @@ jobs:
         run: npm run build
 
   deploy:
+    needs: build # Zorgt ervoor dat de deploy pas start na een succesvolle build
     if: github.ref == 'refs/heads/production'
     runs-on: ubuntu-latest
 
@@ -65,25 +66,29 @@ jobs:
           echo "$SSH_PRIVATE_KEY" > ~/.ssh/id_rsa
           chmod 600 ~/.ssh/id_rsa
           ssh-keyscan -H $SERVER_IP >> ~/.ssh/known_hosts
-  
+          
           # Test SSH-verbinding
           echo "Testing SSH connection..."
           ssh -i ~/.ssh/id_rsa -o StrictHostKeyChecking=no $SERVER_IP "echo 'SSH connection successful'" || { echo "SSH connection failed"; exit 1; }
-  
+          
           # Basis Laravel-applicatie synchroniseren
           echo "Synchronizing base Laravel application..."
           rsync -avz --delete ./bryandeknikker-develix/ $SERVER_IP:$BASE_DEPLOY_PATH || { echo "Base sync failed"; exit 1; }
-  
+          
           # Public directories afzonderlijk synchroniseren naar domein specifieke mappen
           echo "Synchronizing public directories..."
-          ssh $SERVER_IP "rsync -avz --delete $BASE_DEPLOY_PATH/public/ $BASE_DEPLOY_PATH/domains/bryandeknikker.nl/public_html/" || { echo "Public sync for bryandeknikker.nl failed"; exit 1; }
-          ssh $SERVER_IP "rsync -avz --delete $BASE_DEPLOY_PATH/public/ $BASE_DEPLOY_PATH/domains/develix.nl/public_html/" || { echo "Public sync for develix.nl failed"; exit 1; }
-  
+          ssh $SERVER_IP "mkdir -p $BASE_DEPLOY_PATH/domains/bryandeknikker.nl/public_html" || { echo "Failed to create bryandeknikker.nl public_html directory"; exit 1; }
+          ssh $SERVER_IP "mkdir -p $BASE_DEPLOY_PATH/domains/develix.nl/public_html" || { echo "Failed to create develix.nl public_html directory"; exit 1; }
+          rsync -avz --delete $BASE_DEPLOY_PATH/public/ $SERVER_IP:$BASE_DEPLOY_PATH/domains/bryandeknikker.nl/public_html/ || { echo "Public sync for bryandeknikker.nl failed"; exit 1; }
+          rsync -avz --delete $BASE_DEPLOY_PATH/public/ $SERVER_IP:$BASE_DEPLOY_PATH/domains/develix.nl/public_html/ || { echo "Public sync for develix.nl failed"; exit 1; }
+          
           # Domeinspecifieke resources synchroniseren
           echo "Synchronizing domain-specific resources..."
-          ssh $SERVER_IP "rsync -avz --delete $BASE_DEPLOY_PATH/bryandeknikker.nl/ $BASE_DEPLOY_PATH/domains/bryandeknikker.nl/resources/views/" || { echo "Resource sync for bryandeknikker.nl failed"; exit 1; }
-          ssh $SERVER_IP "rsync -avz --delete $BASE_DEPLOY_PATH/develix.nl/ $BASE_DEPLOY_PATH/domains/develix.nl/resources/views/" || { echo "Resource sync for develix.nl failed"; exit 1; }
-  
+          ssh $SERVER_IP "mkdir -p $BASE_DEPLOY_PATH/domains/bryandeknikker.nl/resources/views" || { echo "Failed to create bryandeknikker.nl resources directory"; exit 1; }
+          ssh $SERVER_IP "mkdir -p $BASE_DEPLOY_PATH/domains/develix.nl/resources/views" || { echo "Failed to create develix.nl resources directory"; exit 1; }
+          rsync -avz --delete $BASE_DEPLOY_PATH/bryandeknikker.nl/ $SERVER_IP:$BASE_DEPLOY_PATH/domains/bryandeknikker.nl/resources/views/ || { echo "Resource sync for bryandeknikker.nl failed"; exit 1; }
+          rsync -avz --delete $BASE_DEPLOY_PATH/develix.nl/ $SERVER_IP:$BASE_DEPLOY_PATH/domains/develix.nl/resources/views/ || { echo "Resource sync for develix.nl failed"; exit 1; }
+          
           # Controleer permissies
           echo "Setting permissions..."
           ssh $SERVER_IP "chmod -R 775 $BASE_DEPLOY_PATH/storage $BASE_DEPLOY_PATH/bootstrap/cache" || { echo "Permission setting failed"; exit 1; }
