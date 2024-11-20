@@ -70,7 +70,7 @@ jobs:
 
           # Syncen van de algemene componenten naar de gedeelde map
           echo "=== Syncing General Components ==="
-          rsync -avz -e "ssh -i ~/.ssh/id_rsa -p 7685" --delete ./bryandeknikker-develix/resources/components/ u181065p251251@185.104.29.158:/home/u181065p251251/domains/shared/components/
+          rsync -avz -e "ssh -i ~/.ssh/id_rsa -p 7685" --delete ./bryandeknikker-develix/resources/views/components/ u181065p251251@185.104.29.158:/home/u181065p251251/domains/shared/components/
 
           # Specifieke bestanden voor bryandeknikker.nl
           echo "=== Syncing bryandeknikker.nl Specific Files ==="
