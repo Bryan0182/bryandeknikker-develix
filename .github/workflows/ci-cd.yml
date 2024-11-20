@@ -71,12 +71,8 @@ jobs:
           ssh -i ~/.ssh/id_rsa -p 7685 -o StrictHostKeyChecking=no u181065p251251@185.104.29.158 "echo 'SSH connection successful'"
 
           echo "=== Syncing Laravel Application ==="
-          rsync -avz -e "ssh -i ~/.ssh/id_rsa -p 7685" --delete ./bryandeknikker-develix/ u181065p251251@185.104.29.158:/home/u181065p251251/www/
-
-          echo "=== Syncing Public Directories ==="
-          rsync -avz -e "ssh -i ~/.ssh/id_rsa -p 7685" --delete ./bryandeknikker.nl/ u181065p251251@185.104.29.158:/home/u181065p251251/www/domains/bryandeknikker.nl/
-          rsync -avz -e "ssh -i ~/.ssh/id_rsa -p 7685" --delete ./develix.nl/ u181065p251251@185.104.29.158:/home/u181065p251251/www/domains/develix.nl/
+          rsync -avz -e "ssh -i ~/.ssh/id_rsa -p 7685" --delete ./bryandeknikker-develix/ u181065p251251@185.104.29.158:/home/u181065p251251/laravel-app/
 
           echo "=== Setting Permissions ==="
           ssh -i ~/.ssh/id_rsa -p 7685 -o StrictHostKeyChecking=no u181065p251251@185.104.29.158 \
-            "chmod -R 775 /home/u181065p251251/www/storage /home/u181065p251251/www/bootstrap/cache"
+            "chmod -R 775 /home/u181065p251251/laravel-app/storage /home/u181065p251251/laravel-app/bootstrap/cache"
