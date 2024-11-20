@@ -68,26 +68,26 @@ jobs:
           echo "=== Testing SSH connection ==="
           ssh -i ~/.ssh/id_rsa -p 7685 -o StrictHostKeyChecking=no u181065p251251@185.104.29.158 "echo 'SSH connection successful'"
 
-          echo "=== Syncing Laravel Core Application ==="
-          rsync -avz -e "ssh -i ~/.ssh/id_rsa -p 7685" --delete ./bryandeknikker-develix/ u181065p251251@185.104.29.158:/home/u181065p251251/laravel-app/
+          echo "=== Syncing bryandeknikker.nl Files ==="
+          rsync -avz -e "ssh -i ~/.ssh/id_rsa -p 7685" --delete ./bryandeknikker-develix/public/ u181065p251251@185.104.29.158:/home/u181065p251251/domains/bryandeknikker.nl/public_html/
+          rsync -avz -e "ssh -i ~/.ssh/id_rsa -p 7685" --delete ./bryandeknikker-develix/bryandeknikker.nl/views/ u181065p251251@185.104.29.158:/home/u181065p251251/domains/bryandeknikker.nl/public_html/views/
 
-          echo "=== Syncing bryandeknikker.nl Views ==="
-          rsync -avz -e "ssh -i ~/.ssh/id_rsa -p 7685" --delete ./bryandeknikker-develix/bryandeknikker.nl/views/ u181065p251251@185.104.29.158:/home/u181065p251251/domains/bryandeknikker.nl/views/
-
-          echo "=== Syncing develix.nl Views ==="
-          rsync -avz -e "ssh -i ~/.ssh/id_rsa -p 7685" --delete ./bryandeknikker-develix/develix.nl/views/ u181065p251251@185.104.29.158:/home/u181065p251251/domains/develix.nl/views/
-
-          echo "=== Syncing Public Directory ==="
-          rsync -avz -e "ssh -i ~/.ssh/id_rsa -p 7685" --delete ./bryandeknikker-develix/public/ u181065p251251@185.104.29.158:/home/u181065p251251/public_html/
+          echo "=== Syncing develix.nl Files ==="
+          rsync -avz -e "ssh -i ~/.ssh/id_rsa -p 7685" --delete ./bryandeknikker-develix/public/ u181065p251251@185.104.29.158:/home/u181065p251251/domains/develix.nl/public_html/
+          rsync -avz -e "ssh -i ~/.ssh/id_rsa -p 7685" --delete ./bryandeknikker-develix/develix.nl/views/ u181065p251251@185.104.29.158:/home/u181065p251251/domains/develix.nl/public_html/views/
 
           echo "=== Ensure required directories exist ==="
           ssh -i ~/.ssh/id_rsa -p 7685 -o StrictHostKeyChecking=no u181065p251251@185.104.29.158 "
-            mkdir -p /home/u181065p251251/laravel-app/storage/logs
-            mkdir -p /home/u181065p251251/laravel-app/bootstrap/cache
+            mkdir -p /home/u181065p251251/domains/bryandeknikker.nl/public_html/storage/logs
+            mkdir -p /home/u181065p251251/domains/bryandeknikker.nl/public_html/bootstrap/cache
+            mkdir -p /home/u181065p251251/domains/develix.nl/public_html/storage/logs
+            mkdir -p /home/u181065p251251/domains/develix.nl/public_html/bootstrap/cache
           "
 
           echo "=== Setting Permissions ==="
           ssh -i ~/.ssh/id_rsa -p 7685 -o StrictHostKeyChecking=no u181065p251251@185.104.29.158 "
-            chmod -R 775 /home/u181065p251251/laravel-app/storage
-            chmod -R 775 /home/u181065p251251/laravel-app/bootstrap/cache
+            chmod -R 775 /home/u181065p251251/domains/bryandeknikker.nl/public_html/storage
+            chmod -R 775 /home/u181065p251251/domains/bryandeknikker.nl/public_html/bootstrap/cache
+            chmod -R 775 /home/u181065p251251/domains/develix.nl/public_html/storage
+            chmod -R 775 /home/u181065p251251/domains/develix.nl/public_html/bootstrap/cache
           "
