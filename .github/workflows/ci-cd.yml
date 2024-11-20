@@ -73,6 +73,14 @@ jobs:
           echo "=== Syncing Laravel Application ==="
           rsync -avz -e "ssh -i ~/.ssh/id_rsa -p 7685" --delete ./bryandeknikker-develix/ u181065p251251@185.104.29.158:/home/u181065p251251/laravel-app/
 
+          echo "=== Ensure required directories exist ==="
+          ssh -i ~/.ssh/id_rsa -p 7685 -o StrictHostKeyChecking=no u181065p251251@185.104.29.158 "
+            mkdir -p /home/u181065p251251/laravel-app/storage/logs
+            mkdir -p /home/u181065p251251/laravel-app/bootstrap/cache
+          "
+
           echo "=== Setting Permissions ==="
-          ssh -i ~/.ssh/id_rsa -p 7685 -o StrictHostKeyChecking=no u181065p251251@185.104.29.158 \
-            "chmod -R 775 /home/u181065p251251/laravel-app/storage /home/u181065p251251/laravel-app/bootstrap/cache"
+          ssh -i ~/.ssh/id_rsa -p 7685 -o StrictHostKeyChecking=no u181065p251251@185.104.29.158 "
+            chmod -R 775 /home/u181065p251251/laravel-app/storage
+            chmod -R 775 /home/u181065p251251/laravel-app/bootstrap/cache
+          "
