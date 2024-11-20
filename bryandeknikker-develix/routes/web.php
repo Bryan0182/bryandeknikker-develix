@@ -12,6 +12,10 @@ Route::domain('bryandeknikker.nl')->group(function () {
     Route::get('/', function () {
         return view('bryandeknikker::pages.home');
     })->name('bryandeknikker.home');
+
+    Route::fallback(function () {
+        return response()->view('bryandeknikker::errors.404', [], 404);
+    });
 });
 
 Route::domain('develix.nl')->group(function () {
