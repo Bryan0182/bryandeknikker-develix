@@ -80,10 +80,10 @@
                 <a href="https://www.linkedin.com/company/develix-official/" target="_blank" class="social-icon linkedin" aria-label="LinkedIn">
                     <img src="{{ asset('images/global/linkedin-black.svg') }}" data-light="/images/global/linkedin-black.svg" data-dark="/images/global/linkedin.svg" class="mx-auto img-fluid theme-image" alt="LinkedIn icon" width="20" height="20" loading="lazy">
                 </a>
-                <a href="https://nl.pinterest.com/develix_official" target="_blank" class="social-icon pinterest" aria-label="LinkedIn">
+                <a href="https://nl.pinterest.com/develix_official/" target="_blank" class="social-icon pinterest" aria-label="LinkedIn">
                     <img src="{{ asset('images/global/pinterest-black.svg') }}" data-light="/images/global/pinterest-black.svg" data-dark="/images/global/pinterest.svg" class="mx-auto img-fluid theme-image" alt="LinkedIn icon" width="20" height="20" loading="lazy">
                 </a>
-                <a href="https://x.com/DevelixOfficial" target="_blank" class="social-icon x-twitter" aria-label="LinkedIn">
+                <a href="https://x.com/DevelixOfficial/" target="_blank" class="social-icon x-twitter" aria-label="LinkedIn">
                     <img src="{{ asset('images/global/x-twitter-black.svg') }}" data-light="/images/global/x-twitter-black.svg" data-dark="/images/global/x-twitter.svg" class="mx-auto img-fluid theme-image" alt="LinkedIn icon" width="20" height="20" loading="lazy">
                 </a>
             </div>
