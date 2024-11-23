@@ -7,6 +7,11 @@ body.dark-theme {
         background: var(--black-color);
         box-shadow: 0 4px 6px rgba(255, 255, 255, 0.1), 0 1px 3px rgba(255, 255, 255, 0.06);
     }
+
+    input, textarea, select {
+        border: 1px solid var(--white-color);
+        background: var(--black-color);
+    }
 }
 
 .alert {
@@ -19,4 +24,52 @@ body.dark-theme {
     background: var(--white-color);
     border-radius: var(--border-radius);
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1), 0 1px 3px rgba(0, 0, 0, 0.06);
+}
+
+input, textarea, select {
+    border-radius: var(--border-radius);
+    border: 1px solid var(--black-color);
+
+    &:focus, &focus-visible {
+        border-color: var(--main-color);
+        outline: none;
+    }
+}
+
+.submit-quote {
+    background: var(--main-color);
+    color: var(--white-color);
+    border-radius: var(--border-radius);
+    cursor: pointer;
+    transition: background var(--transition);
+
+    &:hover {
+        background: var(--second-color);
+    }
+}
+
+input[type="checkbox"] {
+    appearance: none;
+    width: 20px;
+    height: 20px;
+    border: 2px solid #ccc;
+    border-radius: 4px;
+    outline: none;
+    cursor: pointer;
+    transition: background-color 0.2s, border-color 0.2s;
+}
+
+input[type="checkbox"]:checked {
+    background-color: var(--main-color);
+    border-color: var(--main-color);
+}
+
+input[type="checkbox"]:checked::before {
+    content: '';
+    background-image: url("/images/global/check.svg");
+    display: block;
+    width: 15px;
+    height: 15px;
+    margin: auto;
+    background-repeat: no-repeat;
 }

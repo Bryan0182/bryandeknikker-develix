@@ -12,5 +12,5 @@
 @endsection
 
 @section('page-specific-js')
-    @vite([])
+    @vite(['resources/js/global/quote.js'])
 @endsection

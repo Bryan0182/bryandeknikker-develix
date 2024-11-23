@@ -32,6 +32,7 @@ export default defineConfig({
                 'resources/js/global/app.js',
                 'resources/js/global/timeline.js',
                 'resources/js/global/faq.js',
+                'resources/js/global/quote.js',
                 'resources/js/develix.nl/wysiwyg-editor.js',
                 'resources/js/develix.nl/blog-planner.js',
                 'resources/js/develix.nl/cookie-element.js',

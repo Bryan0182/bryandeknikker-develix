@@ -15,7 +15,7 @@
         }
 
         .container {
-            flex: 1; /* Neemt alle ruimte in tussen header en footer */
+            flex: 1;
             width: 90%;
             margin: auto;
             padding: 20px;
@@ -39,18 +39,8 @@
             font-size: 14px;
         }
 
-        .company-info h1 {
-            margin: 0;
-            font-size: 18px;
-        }
-
         .details {
             margin-bottom: 30px;
-        }
-
-        .details .client-info p {
-            margin: 0;
-            font-size: 14px;
         }
 
         .table {
@@ -90,15 +80,11 @@
 </head>
 <body>
 <div class="container">
-    <!-- Header -->
     <table class="header-table">
         <tr>
-            <!-- Logo -->
             <td class="logo">
                 <img src="{{ asset('images/develix.nl/develix.png') }}" alt="Develix Logo" width="150" height="150">
             </td>
-
-            <!-- Company Info -->
             <td class="company-info">
                 <h2>Develix</h2>
                 <p>Kaagjesland 34, 2811 KN Reeuwijk</p>
@@ -108,16 +94,19 @@
         </tr>
     </table>
 
-    <!-- Client Details -->
     <div class="details">
-        <div class="client-info">
-            <p><strong>Naam:</strong> {{ $name }}</p>
-            <p><strong>E-mailadres:</strong> {{ $email }}</p>
-            <p><strong>Datum:</strong> {{ date('d-m-Y') }}</p>
-        </div>
+        <p><strong>Naam:</strong> {{ $name }}</p>
+        <p><strong>E-mailadres:</strong> {{ $email }}</p>
+        <p><strong>Datum:</strong> {{ date('d-m-Y') }}</p>
     </div>
 
-    <!-- Services Table -->
+    <div class="details">
+        <h3>Dienstinformatie</h3>
+        <p><strong>Geselecteerde Dienst:</strong> {{ $service }}</p>
+        <p><strong>Extra Functionaliteiten:</strong> {{ $extra_features }}</p>
+    </div>
+
+    <!-- Pricing Table -->
     <table class="table">
         <thead>
         <tr>
@@ -129,23 +118,29 @@
         </thead>
         <tbody>
         <tr>
-            <td>{{ $service }}</td>
-            <td>{{ $pages ?? 1 }}</td>
-            <td>€{{ number_format(500, 2, ',', '.') }}</td>
-            <td>€{{ number_format($total_price, 2, ',', '.') }}</td>
+            <td>Basisprijs {{ $service }}</td>
+            <td>1</td>
+            <td>€{{ number_format($base_price, 2, ',', '.') }}</td>
+            <td>€{{ number_format($base_price, 2, ',', '.') }}</td>
         </tr>
+        @foreach ($page_details as $page)
+            <tr>
+                <td>Pagina: {{ $page['name'] }}</td>
+                <td>1</td>
+                <td>€{{ number_format($page['price'], 2, ',', '.') }}</td>
+                <td>€{{ number_format($page['price'], 2, ',', '.') }}</td>
+            </tr>
+        @endforeach
         </tbody>
     </table>
 
-    <!-- Totals -->
     <div class="totals">
         <p><strong>Subtotaal:</strong> €{{ number_format($total_price, 2, ',', '.') }}</p>
         <p><strong>BTW (21%):</strong> €{{ number_format($total_price * 0.21, 2, ',', '.') }}</p>
-        <p class="text-xl font-bold"><strong>Totaal:</strong> €{{ number_format($total_price * 1.21, 2, ',', '.') }}</p>
+        <p><strong>Totaal:</strong> €{{ number_format($total_price * 1.21, 2, ',', '.') }}</p>
     </div>
 </div>
 
-<!-- Footer -->
 <div class="footer">
     Bedankt voor uw vertrouwen in Develix. Heeft u vragen over deze factuur? Neem gerust contact met ons op via <a href="mailto:info@develix.nl">info@develix.nl</a>.
 </div>
