@@ -7,6 +7,7 @@ use App\Http\Controllers\FaqController;
 use App\Http\Controllers\LocationController;
 use App\Http\Controllers\UserController;
 use App\Http\Controllers\ContactController;
+use App\Http\Controllers\QuoteController;
 use Illuminate\Support\Facades\Route;
 
 Route::domain('bryandeknikker.nl')->group(function () {
@@ -193,6 +194,14 @@ Route::domain('develix.nl')->group(function () {
         [FaqController::class, 'destroy'])
         ->middleware('auth')
         ->name('faq-delete');
+
+    Route::get('/offerte',
+        [QuoteController::class, 'showForm']
+    )->name('quote.form');
+
+    Route::post('/offerte',
+        [QuoteController::class, 'generate']
+    )->name('quote.generate');
 
     Route::fallback(function () {
         return response()->view('develix::errors.404', [], 404);
