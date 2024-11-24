@@ -45,9 +45,12 @@
                         <label for="service" class="block font-semibold mb-2">Kies een dienst</label>
                         <select id="service" name="service" required
                                 class="w-full px-4 py-2 @error('name') border-red-500 @enderror">
-                            <option value="">Selecteer een dienst</option>
+                            <option value="" disabled selected>Selecteer een dienst</option>
                             <option value="website" {{ old('service') == 'website' ? 'selected' : '' }}>Website Ontwikkeling</option>
+                            <option value="applicatie" {{ old('service') == 'applicatie' ? 'selected' : '' }}>Applicatie  Ontwikkeling</option>
                             <option value="seo" {{ old('service') == 'seo' ? 'selected' : '' }}>SEO Optimalisatie</option>
+                            <option value="social" {{ old('service') == 'seo' ? 'selected' : '' }}>Social Media</option>
+                            <option value="design" {{ old('service') == 'seo' ? 'selected' : '' }}>Design</option>
                             <option value="hosting" {{ old('service') == 'hosting' ? 'selected' : '' }}>Hosting</option>
                         </select>
                         @error('service')

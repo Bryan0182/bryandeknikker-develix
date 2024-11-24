@@ -6,6 +6,7 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Mail;
 use Mpdf\Mpdf;
 use App\Mail\QuoteMail;
+use App\Mail\CustomerQuoteMail;
 
 class QuoteController extends Controller
 {
@@ -65,9 +66,12 @@ class QuoteController extends Controller
 
         // Basisprijs afhankelijk van de dienst
         $base_price = match ($validated['service']) {
-            'website' => 500, // Basisprijs voor een website
-            'seo' => 300,     // SEO startprijs
-            'hosting' => 100, // Hostingprijs
+            'website' => 500,
+            'applicatie' => 600,
+            'seo' => 300,
+            'social' => 200,
+            'design' => 400,
+            'hosting' => 100,
             default => 0,
         };
 
@@ -93,8 +97,9 @@ class QuoteController extends Controller
         $mpdf->WriteHTML($html);
         $pdfOutput = $mpdf->Output('', 'S');
 
-        // Offerte e-mailen
         Mail::to('info@develix.nl')->send(new QuoteMail($quote_data, $pdfOutput));
+
+        Mail::to($validated['email'])->send(new CustomerQuoteMail($quote_data));
 
         return redirect()->back()->with('success', 'Offerte succesvol verzonden!');
     }
