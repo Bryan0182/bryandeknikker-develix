@@ -16,6 +16,11 @@ window.acceptCookies = function() {
     document.body.appendChild(noscript);
 };
 
+window.rejectCookies = function() {
+    setCookie("cookieAccepted", "false", 365);
+    document.getElementById("cookieConsent").style.display = "none";
+};
+
 function setCookie(name, value, days) {
     var expires = "";
     if (days) {
