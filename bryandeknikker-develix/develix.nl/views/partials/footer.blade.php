@@ -52,7 +52,7 @@
                     <h2 class="mb-6 text-lg font-semibold">Bedrijfsinformatie</h2>
                     <ul>
                         <li class="mb-4">
-                            <span>KvK nummer: xxxxxxxx</span>
+                            <span>KvK nummer: 95689788</span>
                         </li>
                         <li class="mb-4">
                             <span>BTW nummer: xxxxxxxx</span>

@@ -8,6 +8,7 @@ use App\Http\Controllers\LocationController;
 use App\Http\Controllers\UserController;
 use App\Http\Controllers\ContactController;
 use App\Http\Controllers\QuoteController;
+use App\Http\Controllers\ReviewController;
 use Illuminate\Support\Facades\Route;
 
 Route::domain('bryandeknikker.nl')->group(function () {
@@ -202,6 +203,10 @@ Route::domain('develix.nl')->group(function () {
     Route::post('/offerte',
         [QuoteController::class, 'generate']
     )->name('quote.generate');
+
+    Route::get('/reviews',
+        [ReviewController::class, 'index']
+    )->name('reviews.index');
 
     Route::fallback(function () {
         return response()->view('develix::errors.404', [], 404);

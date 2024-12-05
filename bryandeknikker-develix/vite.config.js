@@ -27,6 +27,7 @@ export default defineConfig({
                 'resources/scss/global/faq-create.scss',
                 'resources/scss/global/faq.scss',
                 'resources/scss/global/quote.scss',
+                'resources/scss/global/small-testimonial.scss',
                 'resources/scss/develix.nl/cookie-element.scss',
                 'resources/scss/develix.nl/buttons.scss',
                 'resources/js/global/app.js',

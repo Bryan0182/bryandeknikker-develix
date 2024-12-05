@@ -3,7 +3,7 @@
 @section('title', 'Home')
 
 @section('page-specific-scss')
-    @vite(['resources/scss/global/hero.scss', 'resources/scss/global/services.scss', 'resources/scss/global/cta.scss', 'resources/scss/global/text.scss'])
+    @vite(['resources/scss/global/hero.scss', 'resources/scss/global/services.scss', 'resources/scss/global/cta.scss', 'resources/scss/global/text.scss', 'resources/scss/global/small-testimonial.scss'])
 @endsection
 
 @section('content')
@@ -89,6 +89,9 @@
         'height' => 400,
         'imageClass' => ''
     ])
+    @endcomponent
+
+    @component('components.small-testimonial')
     @endcomponent
 
     @component('components.cta', [
