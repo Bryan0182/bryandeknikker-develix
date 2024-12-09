@@ -35,3 +35,9 @@ input:focus {
         border: 1px solid var(--main-color) !important;
     }
 }
+
+.alert-danger {
+    background-color: rgba(255, 0, 0, 0.5);
+    border: 1px solid #ff0000;
+    border-radius: var(--border-radius);
+}

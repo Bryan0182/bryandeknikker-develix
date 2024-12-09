@@ -2,6 +2,14 @@
     <div class="w-full max-w-md p-8 rounded-lg border">
         <h2 class="text-center text-2xl font-bold mb-6">Inloggen</h2>
 
+        @if ($errors->any())
+            <div class="alert alert-danger p-4 mb-4" role="alert">
+                @foreach ($errors->all() as $error)
+                    <p>{{ $error }}</p>
+                @endforeach
+            </div>
+        @endif
+
         <form action="{{ route('login') }}" method="POST">
             @csrf
             <div class="mb-4">

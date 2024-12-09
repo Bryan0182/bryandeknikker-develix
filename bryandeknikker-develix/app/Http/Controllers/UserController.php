@@ -11,7 +11,7 @@ class UserController extends Controller
 {
     public function showRegistrationForm()
     {
-        return view('develix::users.register');
+        return view('develix::authentication.register');
     }
 
     public function register(Request $request)
