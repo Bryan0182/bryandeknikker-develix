@@ -1,7 +1,7 @@
 <footer class="p-4">
     <div class="container mx-auto w-full py-4">
         <div class="md:flex md:justify-between">
-            <div class="mb-6 md:mb-0">
+            <div class="mb-6 md:mb-0 branding">
                 <a href="/" class="flex items-center">
                     <img src="{{ asset('images/develix.nl/develix.svg') }}" class="mr-3" alt="Develix Logo" width="60"
                          height="60">
@@ -10,18 +10,18 @@
             </div>
             <div class="custom-flex">
                 <div class="flex-item">
-                    <h2 class="mb-6 text-lg font-semibold">Develix</h2>
+                    <h2 class="mb-3 text-lg font-semibold">Develix</h2>
                     <ul>
-                        <li class="mb-4">
+                        <li class="mb-2">
                             <a href="{{ route('about-develix') }}" class="menu-item">Over Develix</a>
                         </li>
-                        <li class="mb-4">
+                        <li class="mb-2">
                             <a href="{{ route('contact') }}" class="menu-item">Contact</a>
                         </li>
-                        <li class="mb-4">
+                        <li class="mb-2">
                             <a href="{{ route('mission-vision') }}" class="menu-item">Missie & Visie</a>
                         </li>
-                        <li class="mb-4">
+                        <li class="mb-2">
                             <a href="{{ route('blog') }}" class="menu-item">Blog</a>
                         </li>
                         <li>
@@ -30,21 +30,21 @@
                     </ul>
                 </div>
                 <div class="flex-item">
-                    <h2 class="mb-6 text-lg font-semibold">Diensten</h2>
+                    <h2 class="mb-3 text-lg font-semibold">Diensten</h2>
                     <ul>
-                        <li class="mb-4">
+                        <li class="mb-2">
                             <a href="{{ route('website') }}" class="menu-item">Website op maat</a>
                         </li>
-                        <li class="mb-4">
+                        <li class="mb-2">
                             <a href="{{ route('seo') }}" class="menu-item">SEO optimalisatie</a>
                         </li>
-                        <li class="mb-4">
+                        <li class="mb-2">
                             <a href="{{ route('social') }}" class="menu-item">Social media beheer</a>
                         </li>
-                        <li class="mb-4">
+                        <li class="mb-2">
                             <a href="{{ route('design') }}" class="menu-item">Design op maat</a>
                         </li>
-                        <li class="mb-4">
+                        <li class="mb-2">
                             <a href="{{ route('application') }}" class="menu-item">Applicatie op maat</a>
                         </li>
                         <li>
@@ -53,10 +53,10 @@
                     </ul>
                 </div>
                 <div class="flex-item">
-                    <h2 class="mb-6 text-lg font-semibold">Locaties</h2>
+                    <h2 class="mb-3 text-lg font-semibold">Werkgebied</h2>
                     <ul>
                         @foreach ($footerLocations as $location)
-                            <li class="mb-4">
+                            <li class="mb-2">
                                 <a href="{{ route('location-show', ['slug' => $location->slug]) }}" class="menu-item">
                                     {{ $location->location }}
                                 </a>
@@ -65,18 +65,18 @@
                     </ul>
                 </div>
                 <div class="flex-item">
-                    <h2 class="mb-6 text-lg font-semibold">Bedrijfsinformatie</h2>
+                    <h2 class="mb-3 text-lg font-semibold">Bedrijfsinformatie</h2>
                     <ul>
-                        <li class="mb-4">
+                        <li class="mb-2">
                             <span>KvK nummer: 95689788</span>
                         </li>
-                        <li class="mb-4">
+                        <li class="mb-2">
                             <span>BTW nummer: NL005169053B87</span>
                         </li>
-                        <li class="mb-4">
+                        <li class="mb-2">
                             <a href="{{ route('privacy-policy') }}" class="menu-item">Privacybeleid</a>
                         </li>
-                        <li class="mb-4">
+                        <li class="mb-2">
                             <a href="{{ route('general-terms') }}" class="menu-item">Algemene voorwaarden</a>
                         </li>
                         <li>

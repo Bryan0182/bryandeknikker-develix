@@ -8,6 +8,10 @@
     }
 }
 
+.branding {
+    width: 235px;
+}
+
 .custom-flex {
     display: flex;
     flex-wrap: wrap;
@@ -17,6 +21,14 @@
         width: fit-content;
         padding: 0 30px;
         border-radius: var(--border-radius);
+    }
+
+    @media screen and (max-width: 625px) {
+        display: block;
+
+        .flex-item {
+            margin-bottom: 20px;
+        }
     }
 }
 
