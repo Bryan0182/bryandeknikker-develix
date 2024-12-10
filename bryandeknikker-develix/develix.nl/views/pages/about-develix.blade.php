@@ -91,6 +91,9 @@
    ])
     @endcomponent
 
+    @component('components.small-testimonials')
+    @endcomponent
+
     @component('components.cta', [
         'title' => 'Wil je meer weten over ons?',
         'description' => 'Neem contact op voor meer informatie over onze diensten en ontdek hoe wij jouw bedrijf kunnen helpen groeien. Wij staan klaar om jouw vragen te beantwoorden!',
