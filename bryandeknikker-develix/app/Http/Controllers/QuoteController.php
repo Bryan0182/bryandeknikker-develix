@@ -101,6 +101,6 @@ class QuoteController extends Controller
 
         Mail::to($validated['email'])->send(new CustomerQuoteMail($quote_data));
 
-        return redirect()->back()->with('success', 'Offerte succesvol verzonden!');
+        return redirect()->back()->with('success', 'Offerte aanvraag succesvol verzonden!');
     }
 }
