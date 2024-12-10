@@ -67,7 +67,7 @@
 
     @component('components.text', [
         'title' => 'Wijzigingen in ons cookiebeleid',
-        'description' => 'Wij behouden ons het recht voor om dit cookiebeleid te wijzigen. Wij raden u aan om deze pagina regelmatig te controleren voor de meest recente versie. Dit beleid is voor het laatst bijgewerkt op {{ now()->format("d F Y") }}.',
+        'description' => 'Wij behouden ons het recht voor om dit cookiebeleid te wijzigen. Wij raden u aan om deze pagina regelmatig te controleren voor de meest recente versie. Dit beleid is voor het laatst bijgewerkt op 10 december 2024.',
     ])
     @endcomponent
 
