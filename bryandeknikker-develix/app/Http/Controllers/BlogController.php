@@ -12,7 +12,9 @@ class BlogController extends Controller
 {
     public function index()
     {
-        $blogs = Blog::all();
+        $blogs = Blog::where('status', 'gepubliceerd')
+            ->orderBy('publication_date', 'desc') // Sorteer op publication_date in aflopende volgorde
+            ->get();
 
         return view('develix::blogs.overview', compact('blogs'));
     }
