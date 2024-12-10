@@ -22,7 +22,7 @@
                     <td width="150" style="vertical-align: middle;"><span
                             class="template3__ImageContainer-sc-vj949k-0 dVVOvP"
                             style="margin-right: 20px; display: block;"><img
-                                src="https://cdn2.hubspot.net/hubfs/53/tools/email-signature-generator/placeholders/placeholder-image@2x.png"
+                                src="https://develix.nl/images/develix.nl/profielfoto-develix-circle.png"
                                 role="presentation" width="130" class="image__StyledImage-sc-hupvqm-0 iQUdAH"
                                 style="max-width: 130px;"></span></td>
                     <td style="vertical-align: middle;"><h2 color="#000000"
