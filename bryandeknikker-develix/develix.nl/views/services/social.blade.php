@@ -1,6 +1,13 @@
 @extends('develix::layouts.base')
 
-@section('title', 'Social Diensten')
+@section('title', 'Social Media Diensten')
+@section('subtitle', 'Laat jouw merk groeien')
+@section('meta_description', 'Bereik meer met social media! Develix biedt social media beheer, strategie en content creatie om jouw merk online te versterken. Neem contact op voor een plan op maat.')
+@section('meta_keywords', 'social media beheer, social media strategie, social media diensten, content creatie, social media advertenties')
+@section('og_title', 'Social Media Diensten | Develix')
+@section('og_description', 'Laat jouw social media groeien met professionele diensten van Develix. Van strategie tot uitvoering – wij helpen jouw merk te versterken.')
+@section('og_image', asset('images/develix.nl/social-activities.svg'))
+@section('canonical', route('social'))
 
 @section('page-specific-scss')
     @vite(['resources/scss/global/hero.scss', 'resources/scss/global/text.scss', 'resources/scss/global/cta.scss', 'resources/scss/global/timeline.scss'])
@@ -8,15 +15,15 @@
 
 @section('content')
     @component('components.hero', [
-        'title' => 'Social media beheer',
-        'description' => 'Een website laten maken? Bij Develix ben je aan het juiste adres voor het creëren van een professionele en gebruiksvriendelijke website die aansluit bij jouw bedrijf en doelgroep. Of het nu gaat om een maatwerk website, een WordPress site of een Laravel applicatie, wij bouwen jouw online visitekaartje op maat.',
-        'first_button' => 'Neem contact op',
-        'first_button_url' => route('contact'),
-        'second_button' => 'Lees meer',
+        'title' => 'Professioneel Social Media Beheer',
+        'description' => 'Laat jouw social media groeien met Develix! Wij zorgen voor een effectieve strategie, aantrekkelijke content en consequente interactie om jouw merk te versterken en meer volgers aan te trekken. Van Facebook tot Instagram – wij beheren het met zorg.',
+        'first_button' => 'Start jouw social strategie',
+        'first_button_url' => route('quote'),
+        'second_button' => 'Ontdek onze aanpak',
         'second_button_url' => route('about-develix'),
         'imageSrc' => asset('images/develix.nl/social-activities.svg'),
         'imageSrcDark' => asset('images/develix.nl/social-activities-dark.svg'),
-        'altText' => 'Foto van Bryan de Knikker',
+        'altText' => 'Illustratie van social media beheer',
         'width' => 400,
         'height' => 400,
         'imageClass' => ''
@@ -24,69 +31,49 @@
     @endcomponent
 
     @component('components.text', [
-        'title' => 'Wat maakt mij uniek?',
-        'description' => 'Bij Develix bied ik directe communicatie, een scherpe prijs, en uitgebreide kennis en ervaring. Klanten waarderen mijn flexibiliteit en het vermogen om snel en efficiënt in te spelen op hun behoeften. Met mijn passie voor technologie blijf ik continu leren en verbeteren, zodat ik altijd de beste oplossingen kan bieden.',
+        'title' => 'Waarom kiezen voor social media beheer?',
+        'description' => 'Social media is een krachtig middel om jouw doelgroep te bereiken. Bij Develix zorgen we voor een gerichte aanpak, zodat jouw merk consistent en professioneel wordt gepresenteerd. Of het nu gaat om content creatie, advertenties of community management – wij helpen je groeien.',
     ])
     @endcomponent
 
     @component('components.text', [
-        'title' => 'Expertise & Diensten',
-        'description' => 'Met expertise in webontwikkeling, SEO, social media beheer, en het ontwikkelen van kleine applicaties met Python, helpt Develix bedrijven om online te groeien. Of je nu een nieuwe website wilt, betere zichtbaarheid in zoekresultaten of hulp bij social media, ik lever resultaatgerichte oplossingen die jouw doelen ondersteunen.',
+        'title' => 'Wat wij bieden',
+        'description' => 'Met expertise in social media strategie, content creatie en data-analyse helpen wij bedrijven om meer impact te maken. Of je nu nieuwe volgers wilt aantrekken of een sterke band met jouw bestaande klanten wilt opbouwen, onze diensten zijn volledig afgestemd op jouw doelen.',
     ])
     @endcomponent
 
     @component('components.cards', [
-        'title' => 'Mijn kernwaarden',
-        'subtitle' => 'Bij Develix staan kwaliteit, klantgerichtheid en innovatie centraal. Deze kernwaarden vormen de basis van mijn dienstverlening en helpen mij om klanten te voorzien van hoogwaardige digitale oplossingen die echt het verschil maken. Ontdek hoe ik jou kan helpen groeien.',
+        'title' => 'Onze kernwaarden',
+        'subtitle' => 'Bij Develix staan kwaliteit, klantgerichtheid en innovatie centraal. Deze kernwaarden vormen de basis van onze dienstverlening en helpen ons om klanten te voorzien van hoogwaardige digitale oplossingen die echt het verschil maken.',
         'cards' => [
             [
                 'title' => 'Kwaliteit',
-                'description' => 'Ik lever hoogwaardige digitale oplossingen die voldoen aan de hoogste standaarden. Met oog voor detail en een focus op kwaliteit, zorg ik ervoor dat jouw project een succes wordt.',
+                'description' => 'Wij leveren hoogwaardige social media diensten die jouw merk sterker maken. Met oog voor detail zorgen wij ervoor dat jouw social media strategie impact maakt.',
                 'image' => '/images/global/quality-black.svg',
                 'image-dark' => '/images/global/quality.svg',
-                'imageAlt' => 'Social icon',
+                'imageAlt' => 'Kwaliteitsgarantie icon',
             ],
             [
                 'title' => 'Klantgerichtheid',
-                'description' => 'Bij Develix staat de klant centraal. Ik luister naar jouw wensen en behoeften en lever maatwerkoplossingen die perfect aansluiten op jouw doelen. Jouw tevredenheid is mijn prioriteit.',
+                'description' => 'Bij Develix staat de klant centraal. Wij luisteren naar jouw wensen en leveren maatwerkoplossingen die perfect aansluiten op jouw doelen. Jouw tevredenheid is onze prioriteit.',
                 'image' => '/images/global/customer-focus-black.svg',
                 'image-dark' => '/images/global/customer-focus.svg',
-                'imageAlt' => 'Social icon',
+                'imageAlt' => 'Klantgerichtheid icon',
             ],
             [
                 'title' => 'Innovatie',
-                'description' => 'Ik blijf continu leren en verbeteren om de beste oplossingen te kunnen bieden aan mijn klanten. Met een passie voor technologie en innovatie, help ik jou om voorop te blijven lopen in de digitale wereld.',
+                'description' => 'Wij blijven continu leren en innoveren om onze klanten de beste social media strategieën en tools te bieden. Met een passie voor technologie helpen wij bedrijven vooruit.',
                 'image' => '/images/global/innovation-black.svg',
                 'image-dark' => '/images/global/innovation.svg',
-                'imageAlt' => 'Social icon',
+                'imageAlt' => 'Innovatie icon',
             ]
         ]
     ])
     @endcomponent
 
-    @component('components.timeline', [
-       'title' => 'De mijlpalen van Develix',
-       'description' => 'Develix heeft in zijn ontwikkeling diverse belangrijke mijlpalen bereikt, elk een stap in de richting van betere ondersteuning voor onze klanten en een sterker online profiel. Onze reis is er een van groei, kwaliteit en klantgerichtheid, met als doel digitale groei mogelijk te maken voor elke ondernemer.',
-       'timelineItems' => [
-           [
-               'number' => 1,
-               'title' => 'Oprichting van Develix',
-               'date' => 'Januari 2025',
-               'description' => 'Het begin van Develix, opgericht met een visie op klantgerichte digitale oplossingen. Vanaf het eerste moment richten we ons op het creëren van sterke, op maat gemaakte websites en applicaties om ondernemers te helpen groeien.'
-           ],
-           [
-               'number' => 2,
-               'title' => 'Lancering van de website',
-               'date' => 'Januari 2025',
-               'description' => 'De ontwikkeling en lancering van de eerste Develix-website markeert een belangrijke stap. Hiermee presenteren we onszelf online en bouwen we aan een sterke merkidentiteit die vertrouwen en professionaliteit uitstraalt naar onze klanten.'
-           ],
-       ]
-   ])
-    @endcomponent
-
     @component('components.image-text', [
         'title' => 'Het verhaal van Develix',
-        'description' => 'Develix is opgericht door Bryan de Knikker, een liefhebber van technologie die al vroeg zijn passie vond in het bouwen van websites en het ontdekken van de digitale wereld. Door opleidingen en praktijkervaring begon zijn wens te groeien om zijn kennis in te zetten voor anderen. Hij wilde niet alleen websites bouwen, maar mensen helpen met hun online identiteit en hen de middelen geven om zich te onderscheiden op het internet. Zo ontstond Develix: een bedrijf dat staat voor kwaliteit, klantgerichtheid en een persoonlijke benadering. Met Develix zet Bryan zijn vaardigheden en visie in om ondernemers te ondersteunen bij hun digitale groei en impact.',
+        'description' => 'Develix is opgericht door Bryan de Knikker, een specialist in technologie en marketing. Met een passie voor sociale strategieën helpt hij bedrijven om een sterke online aanwezigheid op te bouwen. Van kleine bedrijven tot grotere merken – Develix biedt maatwerkoplossingen voor elk doel.',
         'imageSrc' => asset('images/develix.nl/developer-story.svg'),
         'imageSrcDark' => asset('images/develix.nl/developer-story-dark.svg'),
         'altText' => 'Foto van Bryan de Knikker',
@@ -97,12 +84,12 @@
     @endcomponent
 
     @component('components.cta', [
-        'title' => 'Benieuwd geworden?',
-        'description' => 'Wil je meer weten over wat Develix voor jouw bedrijf kan betekenen? Neem contact op voor een vrijblijvend gesprek en ontdek hoe ik je kan helpen jouw digitale doelen te bereiken.',
-        'first_button' => 'Neem contact op',
-        'first_button_url' => route('contact'),
-        'second_button' => 'Lees meer',
-        'second_button_url' => route('about-develix')
+        'title' => 'Klaar om jouw social media te laten groeien?',
+        'description' => 'Wil je weten hoe Develix jouw merk op social media kan versterken? Neem contact op voor een vrijblijvend gesprek en ontdek hoe wij jouw online aanwezigheid kunnen verbeteren.',
+        'first_button' => 'Gebruik onze social media diensten',
+        'first_button_url' => route('quote'),
+        'second_button' => 'Meer weten over social media?',
+        'second_button_url' => route('contact')
     ])
     @endcomponent
 @endsection

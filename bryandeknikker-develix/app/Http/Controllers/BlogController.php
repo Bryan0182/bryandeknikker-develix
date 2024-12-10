@@ -5,6 +5,8 @@ namespace App\Http\Controllers;
 use App\Models\Blog;
 use App\Models\User;
 use Illuminate\Http\Request;
+use Carbon\Carbon;
+use Illuminate\Support\Facades\Log;
 
 class BlogController extends Controller
 {
@@ -40,13 +42,18 @@ class BlogController extends Controller
             ? $request->file('featured_image')->store('uploads/blog_images', 'public')
             : null;
 
+        // Converteer publication_date naar MySQL-formaat
+        $publicationDate = $request->input('publication_date')
+            ? Carbon::createFromFormat('Y-m-d\TH:i', $request->input('publication_date'))
+            : null;
+
         Blog::create([
             'title' => $request->title,
             'intro' => $request->intro,
             'content' => $request->input('content'),
-            'publication_date' => $request->publication_date,
+            'publication_date' => $publicationDate,
             'author' => $author,
-            'status' => $request->publication_date && $request->publication_date > now() ? 'concept' : $request->status,
+            'status' => $request->input('status'),
             'featured_image' => $featuredImagePath,
             'meta_title' => $request->meta_title,
             'meta_description' => $request->meta_description,
@@ -57,10 +64,7 @@ class BlogController extends Controller
 
     public function show($slug)
     {
-        // Haal de blog op op basis van de slug
         $blog = Blog::where('slug', $slug)->firstOrFail();
-
-        // Zoek gerelateerde blogs die niet dezelfde ID hebben en gepubliceerd zijn
         $relatedBlogs = Blog::where('id', '!=', $blog->id)
             ->where('status', 'gepubliceerd')
             ->limit(3)
@@ -73,6 +77,11 @@ class BlogController extends Controller
     {
         $blog = Blog::findOrFail($id);
         $users = User::all();
+
+        // Formatteer de publicatiedatum correct als deze bestaat
+        $blog->publication_date = $blog->publication_date
+            ? \Carbon\Carbon::parse($blog->publication_date)->format('Y-m-d\TH:i')
+            : null;
 
         return view('develix::blogs.edit', compact('blog', 'users'));
     }
@@ -91,17 +100,23 @@ class BlogController extends Controller
         ]);
 
         $blog = Blog::findOrFail($id);
+
         $featuredImagePath = $request->file('featured_image')
             ? $request->file('featured_image')->store('uploads/blog_images', 'public')
             : $blog->featured_image;
+
+        $publicationDate = $request->input('publication_date')
+            ? Carbon::createFromFormat('Y-m-d\TH:i', $request->input('publication_date'))->format('Y-m-d H:i:s')
+            : $blog->publication_date;
+
 
         $blog->update([
             'title' => $request->title,
             'intro' => $request->intro,
             'content' => $request->input('content'),
-            'publication_date' => $request->publication_date,
+            'publication_date' => $publicationDate,
             'author' => $request->input('author', $blog->author),
-            'status' => $request->publication_date && $request->publication_date > now() ? 'concept' : $request->status,
+            'status' => $request->input('status'),
             'featured_image' => $featuredImagePath,
             'meta_title' => $request->meta_title,
             'meta_description' => $request->meta_description,

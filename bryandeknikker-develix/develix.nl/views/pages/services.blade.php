@@ -1,6 +1,13 @@
 @extends('develix::layouts.base')
 
 @section('title', 'Diensten')
+@section('subtitle', 'Digitale oplossingen op maat')
+@section('meta_description', 'Ontdek de diensten van Develix. Van webontwikkeling en SEO tot applicaties en hosting. Alles voor jouw digitale groei.')
+@section('meta_keywords', 'diensten Develix, webontwikkeling, SEO, hosting, applicaties, digitale oplossingen')
+@section('og_title', 'Diensten | Develix')
+@section('og_description', 'Develix biedt webontwikkeling, SEO, hosting, applicaties en meer. Ontdek onze digitale oplossingen voor jouw bedrijf.')
+@section('og_image', asset('images/develix.nl/software-code.svg'))
+@section('canonical', route('services'))
 
 @section('page-specific-scss')
     @vite(['resources/scss/global/hero.scss', 'resources/scss/global/services.scss', 'resources/scss/global/cta.scss', 'resources/scss/global/text.scss', 'resources/scss/global/features.scss', 'resources/scss/global/faq.scss'])
@@ -12,11 +19,11 @@
         'description' => 'Bij Develix bied ik een breed scala aan digitale diensten, afgestemd op jouw unieke doelen en ambities. Van strategisch ontworpen websites en effectieve SEO-oplossingen tot op maat gemaakte applicaties en krachtige social media campagnes – alles wat je nodig hebt om online te groeien en je te onderscheiden. Ontdek hoe ik jouw bedrijf naar een hoger digitaal niveau kan tillen met op maat gemaakte oplossingen die echt impact maken.',
         'first_button' => 'Neem contact op',
         'first_button_url' => route('contact'),
-        'second_button' => 'Lees meer',
-        'second_button_url' => route('about-develix'),
+        'second_button' => 'Bekijk wat klanten zeggen',
+        'second_button_url' => route('testimonials'),
         'imageSrc' => asset('images/develix.nl/software-code.svg'),
         'imageSrcDark' => asset('images/develix.nl/software-code-dark.svg'),
-        'altText' => 'Foto van Bryan de Knikker',
+        'altText' => 'Illustratie van digitale diensten',
         'width' => 400,
         'height' => 400,
         'imageClass' => ''
@@ -75,7 +82,7 @@
 
     @component('components.text', [
         'title' => 'Een betrouwbare partner voor digitale groei',
-        'description' => 'Bij Develix draait alles om kwaliteit en klantgerichtheid. Met mijn ervaring en een passie voor technologie, ondersteunen ik ondernemers om digitaal te groeien en zich te onderscheiden. Ik luisteren naar jouw wensen, denken proactief mee en leveren oplossingen die écht aansluiten bij jouw doelen. Of het nu gaat om een sterke online aanwezigheid, betere vindbaarheid of een unieke visuele identiteit – Develix biedt maatwerk met aandacht voor detail en resultaatgerichtheid, zodat jouw bedrijf zich optimaal kan profileren in de digitale wereld.',
+        'description' => 'Bij Develix draait alles om kwaliteit en klantgerichtheid. Met mijn ervaring en een passie voor technologie, ondersteun ik ondernemers om digitaal te groeien en zich te onderscheiden. Ik luister naar jouw wensen, denk proactief mee en lever oplossingen die écht aansluiten bij jouw doelen. Of het nu gaat om een sterke online aanwezigheid, betere vindbaarheid of een unieke visuele identiteit – Develix biedt maatwerk met aandacht voor detail en resultaatgerichtheid, zodat jouw bedrijf zich optimaal kan profileren in de digitale wereld.',
     ])
     @endcomponent
 
@@ -84,7 +91,7 @@
         'description' => 'Bij Develix gaan we verder dan alleen technische oplossingen. We creëren digitale ervaringen die jouw merk versterken en jouw doelen ondersteunen. Met een scherp oog voor detail en innovatie helpen we jouw bedrijf om zichtbaar te worden en te groeien in een digitale wereld die continu verandert. Vertrouw op ons voor strategisch advies, betrouwbare technologie en een aanpak die echt werkt voor jouw onderneming.',
         'imageSrc' => asset('images/develix.nl/code-languages.svg'),
         'imageSrcDark' => asset('images/develix.nl/code-languages-dark.svg'),
-        'altText' => 'Foto van Bryan de Knikker',
+        'altText' => 'Illustratie van digitale strategieën',
         'width' => 400,
         'height' => 400,
         'imageClass' => ''
@@ -92,12 +99,12 @@
     @endcomponent
 
     @component('components.cta', [
-        'title' => 'Twijfel je nog?',
-        'description' => 'Heb je nog vragen of twijfel je over de mogelijkheden? Neem gerust contact op en ik help je graag verder. Samen bespreken we jouw wensen en bekijken we hoe ik je het beste kan ondersteunen.',
-        'first_button' => 'Neem contact op',
-        'first_button_url' => route('contact'),
-        'second_button' => 'Lees meer',
-        'second_button_url' => route('about-develix'),
+        'title' => 'Klaar om je bedrijf te laten groeien?',
+        'description' => 'Wil je meer weten over mijn diensten of bespreken hoe ik jouw bedrijf kan ondersteunen? Neem gerust contact op en ontdek wat mogelijk is.',
+        'first_button' => 'Vraag een offerte aan',
+        'first_button_url' => route('quote'),
+        'second_button' => 'Neem contact op',
+        'second_button_url' => route('contact'),
     ])
     @endcomponent
 
@@ -112,4 +119,4 @@
 
 @section('page-specific-js')
     @vite(['resources/js/global/faq.js'])
-@endsection
+        @endsection

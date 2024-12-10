@@ -12,7 +12,7 @@
 <div class="container mx-auto py-5 px-4 my-5 shadow-container">
     <form action="{{ route('blog-update', $blog->id) }}" method="POST" enctype="multipart/form-data" class="p-6 rounded">
         @csrf
-        @method('PUT') <!-- Voegt de PUT method toe voor het updaten -->
+        @method('PUT')
 
         <div class="mb-4">
             <label for="title" class="block font-semibold mb-2">Titel</label>
@@ -46,7 +46,7 @@
         <div class="mb-4">
             <label for="publication_date" class="block font-semibold mb-2">Publicatiedatum en Tijd</label>
             <input type="datetime-local" id="publication_date" name="publication_date"
-                   value="{{ old('publication_date', optional($blog->publication_date)->format('Y-m-d\TH:i')) }}"
+                   value="{{ old('publication_date', $blog->publication_date) }}"
                    class="w-full px-4 py-2 border rounded-lg focus:outline-none">
         </div>
 

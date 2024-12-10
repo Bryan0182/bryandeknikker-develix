@@ -12,10 +12,10 @@ class Review extends Model
     protected $table = 'review-develix';
 
     protected $fillable = [
-        'review',
-        'auteur',
-        'functie',
-        'bedrijf',
-        'website',
+        'content',
+        'author',
+        'role',
+        'company',
+        'website_url',
     ];
 }

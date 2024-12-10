@@ -4,6 +4,7 @@ namespace App\Models;
 
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Support\Str;
 
 class Blog extends Model
 {
@@ -12,7 +13,16 @@ class Blog extends Model
     protected $table = 'blog-develix';
 
     protected $fillable = [
-        'title', 'slug', 'intro', 'content', 'author', 'status', 'featured_image', 'meta_title', 'meta_description',
+        'title',
+        'slug',
+        'intro',
+        'content',
+        'author',
+        'status',
+        'featured_image',
+        'meta_title',
+        'meta_description',
+        'publication_date',
     ];
 
     public static function boot()

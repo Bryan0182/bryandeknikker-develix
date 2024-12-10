@@ -6,18 +6,18 @@ use App\Models\Blog;
 use App\Models\Faq;
 use App\Models\Location;
 use App\Models\User;
+use App\Models\Review;
 
 class DashboardController extends Controller
 {
     public function dashboard()
     {
-        // Haal alle blogs en gebruikers op
         $blogs = Blog::all();
         $users = User::all();
         $locations = Location::all();
         $faqs = Faq::all();
+        $reviews = Review::all();
 
-        // Stuur data naar de dashboard view
-        return view('develix::backend.dashboard', compact('blogs', 'users', 'locations', 'faqs'));
+        return view('develix::backend.dashboard', compact('blogs', 'users', 'locations', 'faqs', 'reviews'));
     }
 }

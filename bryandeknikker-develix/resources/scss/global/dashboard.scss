@@ -2,7 +2,7 @@
     text-transform: capitalize;
 }
 
-.blog-edit, .blog-delete, .user-edit, .user-delete {
+.blog-edit, .blog-delete, .user-edit, .user-delete, .review-website, .review-edit, .review-delete {
     &:hover {
         color: var(--main-color);
         transition: color ease-in-out 0.4s;

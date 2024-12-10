@@ -8,16 +8,13 @@
 
     @if($blog->featured_image)
         <div class="mb-6 featured-image">
-            <img src="{{ asset('storage/' . $blog->featured_image) }}" alt="Featured Image" width="auto" height="400">
+            <img src="{{ asset('storage/' . $blog->featured_image) }}" alt="Featured Image" height="300" width="auto">
         </div>
     @endif
 
     <div class="prose max-w-none mb-8">
         {!! $blog->content !!}
     </div>
-
-    @section('meta_title', $blog->meta_title)
-    @section('meta_description', $blog->meta_description)
 
     @if($relatedBlogs->isNotEmpty())
         <div class="border-t pt-6 mt-8">

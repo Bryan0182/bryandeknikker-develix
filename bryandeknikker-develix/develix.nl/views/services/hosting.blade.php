@@ -1,6 +1,13 @@
 @extends('develix::layouts.base')
 
-@section('title', 'Hosting')
+@section('title', 'Hosting Diensten')
+@section('subtitle', 'Snelle en betrouwbare hosting voor jouw website')
+@section('meta_description', 'Ontdek hoe Develix jouw website snel en veilig online houdt met betrouwbare hostingdiensten. Laat jouw website optimaal presteren!')
+@section('meta_keywords', 'hosting diensten, betrouwbare hosting, veilige hosting, snelle hosting, Develix')
+@section('og_title', 'Hosting Diensten | Develix')
+@section('og_description', 'Houd jouw website snel en veilig online met de hostingdiensten van Develix. Ontdek onze hostingoplossingen op maat.')
+@section('og_image', asset('images/develix.nl/hosting-activities.svg'))
+@section('canonical', route('hosting'))
 
 @section('page-specific-scss')
     @vite(['resources/scss/global/hero.scss', 'resources/scss/global/text.scss', 'resources/scss/global/cta.scss', 'resources/scss/global/timeline.scss'])
@@ -8,15 +15,15 @@
 
 @section('content')
     @component('components.hero', [
-        'title' => 'Hosting',
-        'description' => 'Een website laten maken? Bij Develix ben je aan het juiste adres voor het creëren van een professionele en gebruiksvriendelijke website die aansluit bij jouw bedrijf en doelgroep. Of het nu gaat om een maatwerk website, een WordPress site of een Laravel applicatie, wij bouwen jouw online visitekaartje op maat.',
-        'first_button' => 'Neem contact op',
-        'first_button_url' => route('contact'),
-        'second_button' => 'Lees meer',
+        'title' => 'Hosting Diensten',
+        'description' => 'Houd jouw website snel en veilig online met de hostingdiensten van Develix. Wij bieden betrouwbare en snelle hostingoplossingen, inclusief technische ondersteuning. Laat jouw website optimaal presteren zonder zorgen.',
+        'first_button' => 'Maak jouw website veilig',
+        'first_button_url' => route('quote'),
+        'second_button' => 'Meer over onze hosting',
         'second_button_url' => route('about-develix'),
         'imageSrc' => asset('images/develix.nl/hosting-activities.svg'),
         'imageSrcDark' => asset('images/develix.nl/hosting-activities-dark.svg'),
-        'altText' => 'Foto van Bryan de Knikker',
+        'altText' => 'Illustratie van hostingdiensten',
         'width' => 400,
         'height' => 400,
         'imageClass' => ''
@@ -24,69 +31,49 @@
     @endcomponent
 
     @component('components.text', [
-        'title' => 'Wat maakt mij uniek?',
-        'description' => 'Bij Develix bied ik directe communicatie, een scherpe prijs, en uitgebreide kennis en ervaring. Klanten waarderen mijn flexibiliteit en het vermogen om snel en efficiënt in te spelen op hun behoeften. Met mijn passie voor technologie blijf ik continu leren en verbeteren, zodat ik altijd de beste oplossingen kan bieden.',
+        'title' => 'Waarom kiezen voor hosting van Develix?',
+        'description' => 'Een snelle en betrouwbare website is essentieel voor succes. Bij Develix zorgen wij voor hostingoplossingen die altijd up-to-date, veilig en snel zijn. Of je nu een kleine website hebt of een uitgebreide webshop – wij bieden een hostingpakket dat aansluit bij jouw behoeften.',
     ])
     @endcomponent
 
     @component('components.text', [
-        'title' => 'Expertise & Diensten',
-        'description' => 'Met expertise in webontwikkeling, SEO, social media beheer, en het ontwikkelen van kleine applicaties met Python, helpt Develix bedrijven om online te groeien. Of je nu een nieuwe website wilt, betere zichtbaarheid in zoekresultaten of hulp bij social media, ik lever resultaatgerichte oplossingen die jouw doelen ondersteunen.',
+        'title' => 'Wat wij bieden',
+        'description' => 'Onze hostingdiensten omvatten alles wat je nodig hebt om jouw website optimaal te laten presteren. Van dagelijkse back-ups en SSL-certificaten tot snelle laadtijden en uitgebreide technische ondersteuning – wij hebben het allemaal in huis.',
     ])
     @endcomponent
 
     @component('components.cards', [
-        'title' => 'Mijn kernwaarden',
-        'subtitle' => 'Bij Develix staan kwaliteit, klantgerichtheid en innovatie centraal. Deze kernwaarden vormen de basis van mijn dienstverlening en helpen mij om klanten te voorzien van hoogwaardige digitale oplossingen die echt het verschil maken. Ontdek hoe ik jou kan helpen groeien.',
+        'title' => 'Onze kernwaarden',
+        'subtitle' => 'Bij Develix staan kwaliteit, klantgerichtheid en innovatie centraal. Deze kernwaarden vormen de basis van onze dienstverlening en helpen ons om klanten te voorzien van hostingoplossingen die écht het verschil maken.',
         'cards' => [
             [
-                'title' => 'Kwaliteit',
-                'description' => 'Ik lever hoogwaardige digitale oplossingen die voldoen aan de hoogste standaarden. Met oog voor detail en een focus op kwaliteit, zorg ik ervoor dat jouw project een succes wordt.',
-                'image' => '/images/global/quality-black.svg',
-                'image-dark' => '/images/global/quality.svg',
-                'imageAlt' => 'Social icon',
-            ],
-            [
-                'title' => 'Klantgerichtheid',
-                'description' => 'Bij Develix staat de klant centraal. Ik luister naar jouw wensen en behoeften en lever maatwerkoplossingen die perfect aansluiten op jouw doelen. Jouw tevredenheid is mijn prioriteit.',
+                'title' => 'Betrouwbaarheid',
+                'description' => 'Onze hostingdiensten zorgen ervoor dat jouw website altijd bereikbaar is. Met robuuste servers en up-to-date technologie houden wij jouw website online.',
                 'image' => '/images/global/customer-focus-black.svg',
                 'image-dark' => '/images/global/customer-focus.svg',
-                'imageAlt' => 'Social icon',
+                'imageAlt' => 'Betrouwbaarheid icon',
             ],
             [
-                'title' => 'Innovatie',
-                'description' => 'Ik blijf continu leren en verbeteren om de beste oplossingen te kunnen bieden aan mijn klanten. Met een passie voor technologie en innovatie, help ik jou om voorop te blijven lopen in de digitale wereld.',
-                'image' => '/images/global/innovation-black.svg',
-                'image-dark' => '/images/global/innovation.svg',
-                'imageAlt' => 'Social icon',
+                'title' => 'Veiligheid',
+                'description' => 'Met SSL-certificaten en regelmatige beveiligingsupdates beschermen wij jouw website tegen dreigingen. Bij Develix is jouw data in veilige handen.',
+                'image' => '/images/global/safety-black.svg',
+                'image-dark' => '/images/global/safety.svg',
+                'imageAlt' => 'Veiligheid icon',
+            ],
+            [
+                'title' => 'Snelheid',
+                'description' => 'Wij optimaliseren de laadtijden van jouw website, zodat bezoekers een snelle en soepele ervaring hebben. Perfect voor conversies en gebruikerservaring.',
+                'image' => '/images/global/fast-black.svg',
+                'image-dark' => '/images/global/fast.svg',
+                'imageAlt' => 'Snelheid icon',
             ]
         ]
     ])
     @endcomponent
 
-    @component('components.timeline', [
-       'title' => 'De mijlpalen van Develix',
-       'description' => 'Develix heeft in zijn ontwikkeling diverse belangrijke mijlpalen bereikt, elk een stap in de richting van betere ondersteuning voor onze klanten en een sterker online profiel. Onze reis is er een van groei, kwaliteit en klantgerichtheid, met als doel digitale groei mogelijk te maken voor elke ondernemer.',
-       'timelineItems' => [
-           [
-               'number' => 1,
-               'title' => 'Oprichting van Develix',
-               'date' => 'Januari 2025',
-               'description' => 'Het begin van Develix, opgericht met een visie op klantgerichte digitale oplossingen. Vanaf het eerste moment richten we ons op het creëren van sterke, op maat gemaakte websites en applicaties om ondernemers te helpen groeien.'
-           ],
-           [
-               'number' => 2,
-               'title' => 'Lancering van de website',
-               'date' => 'Januari 2025',
-               'description' => 'De ontwikkeling en lancering van de eerste Develix-website markeert een belangrijke stap. Hiermee presenteren we onszelf online en bouwen we aan een sterke merkidentiteit die vertrouwen en professionaliteit uitstraalt naar onze klanten.'
-           ],
-       ]
-   ])
-    @endcomponent
-
     @component('components.image-text', [
         'title' => 'Het verhaal van Develix',
-        'description' => 'Develix is opgericht door Bryan de Knikker, een liefhebber van technologie die al vroeg zijn passie vond in het bouwen van websites en het ontdekken van de digitale wereld. Door opleidingen en praktijkervaring begon zijn wens te groeien om zijn kennis in te zetten voor anderen. Hij wilde niet alleen websites bouwen, maar mensen helpen met hun online identiteit en hen de middelen geven om zich te onderscheiden op het internet. Zo ontstond Develix: een bedrijf dat staat voor kwaliteit, klantgerichtheid en een persoonlijke benadering. Met Develix zet Bryan zijn vaardigheden en visie in om ondernemers te ondersteunen bij hun digitale groei en impact.',
+        'description' => 'Develix is opgericht door Bryan de Knikker, een specialist in technologie en digitale oplossingen. Met een passie voor innovatie biedt Develix hostingoplossingen die betrouwbaar, snel en veilig zijn. Wij helpen bedrijven om online te groeien zonder zorgen over hun websiteprestaties.',
         'imageSrc' => asset('images/develix.nl/developer-story.svg'),
         'imageSrcDark' => asset('images/develix.nl/developer-story-dark.svg'),
         'altText' => 'Foto van Bryan de Knikker',
@@ -97,12 +84,12 @@
     @endcomponent
 
     @component('components.cta', [
-        'title' => 'Benieuwd geworden?',
-        'description' => 'Wil je meer weten over wat Develix voor jouw bedrijf kan betekenen? Neem contact op voor een vrijblijvend gesprek en ontdek hoe ik je kan helpen jouw digitale doelen te bereiken.',
-        'first_button' => 'Neem contact op',
-        'first_button_url' => route('contact'),
-        'second_button' => 'Lees meer',
-        'second_button_url' => route('about-develix')
+        'title' => 'Klaar voor snelle hosting?',
+        'description' => 'Wil je jouw website snel en veilig online houden? Neem contact op voor een vrijblijvend gesprek en ontdek hoe Develix jouw hosting kan verzorgen.',
+        'first_button' => 'Maak jouw website snel',
+        'first_button_url' => route('quote'),
+        'second_button' => 'Meer weten over hosting?',
+        'second_button_url' => route('contact')
     ])
     @endcomponent
 @endsection

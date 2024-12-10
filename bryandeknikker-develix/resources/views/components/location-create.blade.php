@@ -27,6 +27,13 @@
                    class="w-full px-4 py-2 border rounded-lg focus:outline-none">
         </div>
 
+        <div class="mb-4">
+            <label for="show_in_footer" class="block font-semibold mb-2">Toon in footer?</label>
+            <input type="checkbox" id="show_in_footer" name="show_in_footer" value="1"
+                   {{ old('show_in_footer') ? 'checked' : '' }} class="mr-2">
+            <span>Ja</span>
+        </div>
+
         <button type="submit" class="font-bold py-2 px-4 rounded-lg transition duration-200">
             Locatie Opslaan
         </button>

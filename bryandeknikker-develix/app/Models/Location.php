@@ -8,5 +8,5 @@ class Location extends Model
 {
     protected $table = 'location-develix';
 
-    protected $fillable = ['location', 'slug'];
+    protected $fillable = ['location', 'slug', 'show_in_footer'];
 }

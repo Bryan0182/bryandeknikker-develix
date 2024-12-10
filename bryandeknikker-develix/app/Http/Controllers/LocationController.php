@@ -9,10 +9,8 @@ class LocationController extends Controller
 {
     public function show($slug)
     {
-        // Haal de locatie op op basis van de slug
         $location = Location::where('slug', $slug)->firstOrFail();
 
-        // Render de view en stuur de locatiegegevens mee
         return view('develix::locations.show', compact('location'));
     }
 
@@ -29,9 +27,10 @@ class LocationController extends Controller
         $request->validate([
             'location' => 'required|string|max:255',
             'slug' => 'required|string|max:255|unique:location-develix,slug',
+            'show_in_footer' => 'nullable|boolean',
         ]);
 
-        Location::create($request->only(['location', 'slug']));
+        Location::create($request->only(['location', 'slug', 'show_in_footer']));
 
         return redirect()->route('dashboard')->with('success', 'Locatie succesvol toegevoegd.');
     }
@@ -53,11 +52,16 @@ class LocationController extends Controller
     {
         $request->validate([
             'location' => 'required|string|max:255',
-            'slug' => 'required|string|max:255|unique:location-develix,slug,'.$id,
+            'slug' => 'required|string|max:255|unique:location-develix,slug,' . $id,
         ]);
 
         $location = Location::findOrFail($id);
-        $location->update($request->only(['location', 'slug']));
+
+        $location->update([
+            'location' => $request->input('location'),
+            'slug' => $request->input('slug'),
+            'show_in_footer' => $request->has('show_in_footer') ? true : false, // Zet expliciet false als niet aangevinkt
+        ]);
 
         return redirect()->route('dashboard')->with('success', 'Locatie succesvol bijgewerkt.');
     }

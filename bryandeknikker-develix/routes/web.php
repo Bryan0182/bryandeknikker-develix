@@ -38,13 +38,29 @@ Route::domain('develix.nl')->group(function () {
         return view('develix::pages.about-develix');
     })->name('about-develix');
 
-    Route::get('/website-laten-maken-{slug}',
+    Route::get('/missie-visie', function () {
+        return view('develix::pages.mission_vision');
+    })->name('mission-vision');
+
+    Route::get('/privacybeleid', function () {
+        return view('develix::pages.privacy-policy');
+    })->name('privacy-policy');
+
+    Route::get('/algemene-voorwaarden', function () {
+        return view('develix::pages.general-terms');
+    })->name('general-terms');
+
+    Route::get('/cookiebeleid', function () {
+        return view('develix::pages.cookie-policy');
+    })->name('cookie-policy');
+
+    Route::get('/locatie/{slug}',
         [LocationController::class, 'show']
     )->name('location-show');
 
     Route::get('/diensten', function () {
         return view('develix::pages.services');
-    })->name('diensten');
+    })->name('services');
 
     Route::get('/diensten/website', function () {
         return view('develix::services.website');
@@ -69,6 +85,10 @@ Route::domain('develix.nl')->group(function () {
     Route::get('/diensten/hosting', function () {
         return view('develix::services.hosting');
     })->name('hosting');
+
+    Route::get('/klantbeoordelingen',
+        [ReviewController::class, 'index']
+    )->name('testimonials');
 
     Route::get('/dashboard',
         [DashboardController::class, 'dashboard'])
@@ -146,7 +166,7 @@ Route::domain('develix.nl')->group(function () {
         ->middleware('auth')
         ->name('user-delete');
 
-    Route::get('/locatie/aanmaken',
+    Route::get('/locaties/aanmaken',
         [LocationController::class, 'create'])
         ->middleware('auth')
         ->name('location-create');
@@ -196,9 +216,34 @@ Route::domain('develix.nl')->group(function () {
         ->middleware('auth')
         ->name('faq-delete');
 
+    Route::get('/review/aanmaken',
+        [ReviewController::class, 'create'])
+        ->middleware('auth')
+        ->name('review-create');
+
+    Route::post('/review/opslaan',
+        [ReviewController::class, 'store'])
+        ->middleware('auth')
+        ->name('review-store');
+
+    Route::get('/review/{id}/bewerken',
+        [ReviewController::class, 'edit'])
+        ->middleware('auth')
+        ->name('review-edit');
+
+    Route::put('/review/{id}',
+        [ReviewController::class, 'update'])
+        ->middleware('auth')
+        ->name('review-update');
+
+    Route::delete('/review/{id}',
+        [ReviewController::class, 'destroy'])
+        ->middleware('auth')
+        ->name('review-delete');
+
     Route::get('/offerte',
         [QuoteController::class, 'showForm']
-    )->name('quote.form');
+    )->name('quote');
 
     Route::post('/offerte',
         [QuoteController::class, 'generate']

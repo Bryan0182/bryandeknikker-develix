@@ -1,9 +1,16 @@
 @extends('develix::layouts.base')
 
 @section('title', 'Home')
+@section('subtitle', 'Digitale Partner voor Succes')
+@section('meta_description', 'Welkom bij Develix – jouw partner voor webdesign, SEO en digitale applicaties. Ontdek hoe wij jouw bedrijf digitaal laten groeien.')
+@section('meta_keywords', 'webdesign, SEO, applicaties, digitale groei, Develix')
+@section('og_title', 'Home | Develix')
+@section('og_description', 'Develix helpt jouw bedrijf groeien met op maat gemaakte digitale oplossingen, van webdesign tot SEO en meer.')
+@section('og_image', asset('images/develix.nl/operating-system-vector.svg'))
+@section('canonical', route('home'))
 
 @section('page-specific-scss')
-    @vite(['resources/scss/global/hero.scss', 'resources/scss/global/services.scss', 'resources/scss/global/cta.scss', 'resources/scss/global/text.scss', 'resources/scss/global/small-testimonial.scss'])
+    @vite(['resources/scss/global/hero.scss', 'resources/scss/global/services.scss', 'resources/scss/global/cta.scss', 'resources/scss/global/text.scss', 'resources/scss/global/testimonial.scss'])
 @endsection
 
 @section('content')
@@ -89,9 +96,6 @@
         'height' => 400,
         'imageClass' => ''
     ])
-    @endcomponent
-
-    @component('components.small-testimonial')
     @endcomponent
 
     @component('components.cta', [

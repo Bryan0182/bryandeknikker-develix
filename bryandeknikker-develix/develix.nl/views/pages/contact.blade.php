@@ -16,7 +16,7 @@
         'phonenumber' => '+31 6 82490183',
         'phonenumber_link' => '+31682490183',
         'email' => 'info@develix.nl',
-        'address' => 'Kaagjesland 34, 2811 KN Reeuwijk',
+        'address' => 'Reeuwijk',
     ])
     @endcomponent
 @endsection

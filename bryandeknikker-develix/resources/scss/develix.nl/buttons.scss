@@ -4,9 +4,7 @@
     text-decoration: none;
     overflow: hidden;
     padding: 0;
-    color: var(--black-color);
     width: fit-content;
-    transition: var(--transition);
 
     &::after {
         content: '';
