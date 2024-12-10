@@ -12,7 +12,7 @@ class QuoteController extends Controller
 {
     public function showForm()
     {
-        return view('develix::pages.offerte'); // Verwijst naar resources/views/quote/form.blade.php
+        return view('develix::pages.offerte');
     }
 
     public function generate(Request $request)
