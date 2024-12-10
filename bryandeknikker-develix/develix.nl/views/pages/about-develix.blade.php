@@ -10,7 +10,7 @@
 @section('canonical', route('about-develix'))
 
 @section('page-specific-scss')
-    @vite(['resources/scss/global/hero.scss', 'resources/scss/global/text.scss', 'resources/scss/global/cta.scss', 'resources/scss/global/timeline.scss'])
+    @vite(['resources/scss/global/hero.scss', 'resources/scss/global/text.scss', 'resources/scss/global/cta.scss', 'resources/scss/global/timeline.scss', 'resources/scss/global/testimonial.scss'])
 @endsection
 
 @section('content')
@@ -91,7 +91,7 @@
    ])
     @endcomponent
 
-    @component('components.small-testimonials')
+    @component('components.small-testimonial')
     @endcomponent
 
     @component('components.cta', [
