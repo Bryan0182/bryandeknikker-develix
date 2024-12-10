@@ -11,6 +11,22 @@ use App\Http\Controllers\QuoteController;
 use App\Http\Controllers\ReviewController;
 use Illuminate\Support\Facades\Route;
 
+$allowed_ips = [
+    '185.132.108.142', // Voeg jouw IP-adres toe
+];
+
+// Check of het IP van de bezoeker toegestaan is
+if (!in_array(request()->ip(), $allowed_ips)) {
+    // Als het niet toegestaan is, en we op het bryandeknikker.nl domein zijn, toon maintenance
+    $host = request()->getHost();
+
+    if ($host === 'bryandeknikker.nl' || $host === 'www.bryandeknikker.nl') {
+        Route::get('{any}', function () {
+            return response()->view('bryandeknikker::pages.maintenance');
+        })->where('any', '.*');
+    }
+}
+
 Route::domain('bryandeknikker.nl')->group(function () {
     Route::get('/', function () {
         return view('bryandeknikker::pages.home');
