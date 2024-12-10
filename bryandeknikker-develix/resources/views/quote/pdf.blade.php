@@ -88,8 +88,8 @@
             <td class="company-info">
                 <h2>Develix</h2>
                 <p>Kaagjesland 34, 2811 KN Reeuwijk</p>
-                <p>KvK: 12345678 | BTW: NL123456789B01</p>
-                <p>Bank: NL80 TEST 0252 7894 66</p>
+                <p>KvK: 95689788 | BTW: NL005169053B87</p>
+                <p>Bank: NL23 RABO 0388 1676 45</p>
             </td>
         </tr>
     </table>
