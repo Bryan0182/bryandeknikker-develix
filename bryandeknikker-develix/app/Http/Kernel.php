@@ -16,7 +16,7 @@ class Kernel extends HttpKernel
 
     protected $middlewareGroups = [
         'web' => [
-            // Middleware voor webverkeer
+            \App\Http\Middleware\RedirectWwwToNonWww::class,
         ],
 
         'api' => [

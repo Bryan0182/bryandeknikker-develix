@@ -11,10 +11,6 @@ use App\Http\Controllers\QuoteController;
 use App\Http\Controllers\ReviewController;
 use Illuminate\Support\Facades\Route;
 
-if (request()->getHost() === 'www.develix.nl') {
-    return redirect()->to('https://develix.nl' . request()->getRequestUri(), 301);
-}
-
 $allowed_ips = [
     '185.132.108.142', // Voeg jouw IP-adres toe
 ];
