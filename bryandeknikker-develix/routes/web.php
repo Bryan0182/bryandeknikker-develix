@@ -37,6 +37,10 @@ Route::domain('bryandeknikker.nl')->group(function () {
     });
 });
 
+if (request()->getHost() === 'www.develix.nl') {
+    return redirect()->to('https://develix.nl' . request()->getRequestUri(), 301);
+}
+
 Route::domain('develix.nl')->group(function () {
     Route::get('/', function () {
         return view('develix::pages.home');
