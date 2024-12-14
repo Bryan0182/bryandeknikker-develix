@@ -21,7 +21,7 @@
 
 
     <!-- Favicon -->
-    <link rel="icon" href="{{ asset('images/develix.nl/develix.svg') }}" type="image/x-icon">
+    <link rel="icon" href="{{ asset('images/develix.nl/favicon.png') }}" type="image/png">
 
     <!-- Structured Data -->
     <script type="application/ld+json">
