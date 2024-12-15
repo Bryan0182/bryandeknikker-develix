@@ -275,7 +275,11 @@ Route::domain('develix.nl')->group(function () {
     });
 
     Route::get('/api/schedule', function () {
-        Artisan::call('schedule:run');
-        return response('Scheduled tasks executed.', 200);
+        Artisan::call('blog:publish');
+
+        return response()->json([
+            'message' => 'Blog publish command executed.',
+            'timestamp' => now()
+        ]);
     });
 });
