@@ -7,7 +7,7 @@
 @section('og_title', $blog->meta_title ?? $blog->title)
 @section('og_description', $blog->meta_description ?? 'Bij Develix draait alles om kwaliteit, klantgerichtheid en innovatie. Ontdek hoe wij bedrijven helpen groeien met maatwerk digitale oplossingen.')
 @section('og_image', $blog->featured_image ? asset('storage/' . $blog->featured_image) : asset('images/develix.nl/operating-system-vector.svg'))
-@section('canonical', route('blogs.show', $blog->slug))
+@section('canonical', route('blog', $blog->slug))
 
 @section('page-specific-scss')
     @vite(['resources/scss/global/blog-show.scss'])

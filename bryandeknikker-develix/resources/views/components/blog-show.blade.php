@@ -6,12 +6,6 @@
         <span>Gepubliceerd op: {{ $blog->publication_date->format('d-m-Y') }}</span>
     </div>
 
-    @if($blog->featured_image)
-        <div class="mb-6 featured-image">
-            <img src="{{ asset('storage/' . $blog->featured_image) }}" alt="Featured Image" height="300" width="auto">
-        </div>
-    @endif
-
     <div class="prose max-w-none mb-8">
         {!! $blog->content !!}
     </div>
