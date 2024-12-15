@@ -29,15 +29,18 @@ class PublishScheduledBlogs extends Command
      */
     public function handle()
     {
-        $now = Carbon::now();
+        $now = Carbon::now('Europe/Amsterdam')->toDateTimeString();
 
-        // Update blogs where the publication time has been reached
+        // Haal blogs op die gepubliceerd moeten worden
         $blogs = Blog::where('status', 'concept')
             ->where('publication_date', '<=', $now)
-            ->update(['status' => 'gepubliceerd']);
+            ->get();
 
-        $this->info("$blogs blogs zijn gepubliceerd.");
+        foreach ($blogs as $blog) {
+            $blog->status = 'gepubliceerd';
+            $blog->save();
 
-        return 0;
+            $this->info("Blog ID {$blog->id} is gepubliceerd.");
+        }
     }
 }
