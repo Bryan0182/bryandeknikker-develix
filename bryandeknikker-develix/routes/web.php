@@ -10,6 +10,7 @@ use App\Http\Controllers\ContactController;
 use App\Http\Controllers\QuoteController;
 use App\Http\Controllers\ReviewController;
 use Illuminate\Support\Facades\Route;
+use Illuminate\Support\Facades\Artisan;
 
 $allowed_ips = [
     '185.132.108.142', // Voeg jouw IP-adres toe
@@ -271,5 +272,10 @@ Route::domain('develix.nl')->group(function () {
 
     Route::fallback(function () {
         return response()->view('develix::errors.404', [], 404);
+    });
+
+    Route::get('/api/schedule', function () {
+        Artisan::call('schedule:run');
+        return response('Scheduled tasks executed.', 200);
     });
 });
