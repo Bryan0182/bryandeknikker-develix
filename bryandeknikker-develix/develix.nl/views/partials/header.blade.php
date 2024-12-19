@@ -115,6 +115,7 @@
             </div>
         </div>
         <a href="{{ route('about-develix') }}" class="block menu-item">Over Develix</a>
+        <a href="{{ route('blog') }}" class="block menu-item">Blog</a>
         <a href="{{ route('contact') }}" class="block menu-item">Contact</a>
 
         <button id="theme-switcher-mobile" aria-label="Switch Theme" class="flex items-center">
