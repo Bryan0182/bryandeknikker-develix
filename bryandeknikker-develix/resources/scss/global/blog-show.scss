@@ -1,9 +1,24 @@
-@media screen and (max-width: 768px) {
-    .featured-image img {
-        margin: auto;
+.featured-image {
+    img {
+        height: 300px;
+
+        @media screen and (max-width: 768px) {
+            margin: auto;
+        }
     }
 }
 
-.featured-image img {
-    height: 300px;
+h2 {
+    font-size: 1.875rem; // 30px
+    line-height: 2.25rem; // 36px
+
+    @media (max-width: 768px) { // Tablet
+        font-size: 1.5rem; // 24px
+        line-height: 2rem; // 32px
+    }
+
+    @media (max-width: 480px) { // Mobile
+        font-size: 1.25rem; // 20px
+        line-height: 1.75rem; // 28px
+    }
 }
