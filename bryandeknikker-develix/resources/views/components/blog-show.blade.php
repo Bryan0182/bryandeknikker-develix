@@ -15,7 +15,7 @@
             <h2 class="text-2xl font-semibold mb-4">Gerelateerde Blogs</h2>
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
                 @foreach($relatedBlogs as $relatedBlog)
-                    <div class="p-4 rounded-lg shadow">
+                    <div class="p-4">
                         @if($blog->featured_image)
                             <div class="featured-image mb-6">
                                 <img src="{{ asset('storage/' . $blog->featured_image) }}" alt="Featured Image" width="auto" height="300" class="blog-image">
