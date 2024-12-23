@@ -1,0 +1,174 @@
+{
+  "resources/js/develix.nl/blog-planner.js": {
+    "file": "assets/blog-planner-DA1SY1Ib.js",
+    "name": "blog-planner",
+    "src": "resources/js/develix.nl/blog-planner.js",
+    "isEntry": true
+  },
+  "resources/js/develix.nl/cookie-element.js": {
+    "file": "assets/cookie-element-C7sBLlRl.js",
+    "name": "cookie-element",
+    "src": "resources/js/develix.nl/cookie-element.js",
+    "isEntry": true
+  },
+  "resources/js/develix.nl/wysiwyg-editor.js": {
+    "file": "assets/wysiwyg-editor-BZhSgyB3.js",
+    "name": "wysiwyg-editor",
+    "src": "resources/js/develix.nl/wysiwyg-editor.js",
+    "isEntry": true
+  },
+  "resources/js/global/app.js": {
+    "file": "assets/app-DLXH3zTl.js",
+    "name": "app",
+    "src": "resources/js/global/app.js",
+    "isEntry": true
+  },
+  "resources/js/global/faq.js": {
+    "file": "assets/faq-DUXXFm7l.js",
+    "name": "faq",
+    "src": "resources/js/global/faq.js",
+    "isEntry": true
+  },
+  "resources/js/global/quote.js": {
+    "file": "assets/quote-CeD0wp2B.js",
+    "name": "quote",
+    "src": "resources/js/global/quote.js",
+    "isEntry": true
+  },
+  "resources/js/global/timeline.js": {
+    "file": "assets/timeline-CTZGtS7p.js",
+    "name": "timeline",
+    "src": "resources/js/global/timeline.js",
+    "isEntry": true
+  },
+  "resources/scss/bryandeknikker.nl/bryandeknikker.scss": {
+    "file": "assets/bryandeknikker-CD2pXGSs.css",
+    "src": "resources/scss/bryandeknikker.nl/bryandeknikker.scss",
+    "isEntry": true
+  },
+  "resources/scss/develix.nl/buttons.scss": {
+    "file": "assets/buttons-C9ObIyEP.css",
+    "src": "resources/scss/develix.nl/buttons.scss",
+    "isEntry": true
+  },
+  "resources/scss/develix.nl/cookie-element.scss": {
+    "file": "assets/cookie-element-BKZ2ndIE.css",
+    "src": "resources/scss/develix.nl/cookie-element.scss",
+    "isEntry": true
+  },
+  "resources/scss/develix.nl/develix.scss": {
+    "file": "assets/develix-C4T27WsP.css",
+    "src": "resources/scss/develix.nl/develix.scss",
+    "isEntry": true
+  },
+  "resources/scss/develix.nl/footer.scss": {
+    "file": "assets/footer-EV95auuQ.css",
+    "src": "resources/scss/develix.nl/footer.scss",
+    "isEntry": true
+  },
+  "resources/scss/develix.nl/header.scss": {
+    "file": "assets/header-DnZgWGRK.css",
+    "src": "resources/scss/develix.nl/header.scss",
+    "isEntry": true
+  },
+  "resources/scss/global/404.scss": {
+    "file": "assets/404-C2tEN5-s.css",
+    "src": "resources/scss/global/404.scss",
+    "isEntry": true
+  },
+  "resources/scss/global/app.scss": {
+    "file": "assets/app-a7eb1VAF.css",
+    "src": "resources/scss/global/app.scss",
+    "isEntry": true
+  },
+  "resources/scss/global/authentication.scss": {
+    "file": "assets/authentication-CLD4EQHA.css",
+    "src": "resources/scss/global/authentication.scss",
+    "isEntry": true
+  },
+  "resources/scss/global/blog-create.scss": {
+    "file": "assets/blog-create-D8C-GFSK.css",
+    "src": "resources/scss/global/blog-create.scss",
+    "isEntry": true
+  },
+  "resources/scss/global/blog-show.scss": {
+    "file": "assets/blog-show-DE2CRypK.css",
+    "src": "resources/scss/global/blog-show.scss",
+    "isEntry": true
+  },
+  "resources/scss/global/blogs.scss": {
+    "file": "assets/blogs-kjZZg8tf.css",
+    "src": "resources/scss/global/blogs.scss",
+    "isEntry": true
+  },
+  "resources/scss/global/contact.scss": {
+    "file": "assets/contact-DFtNKrAI.css",
+    "src": "resources/scss/global/contact.scss",
+    "isEntry": true
+  },
+  "resources/scss/global/cta.scss": {
+    "file": "assets/cta-DSbPN-Ms.css",
+    "src": "resources/scss/global/cta.scss",
+    "isEntry": true
+  },
+  "resources/scss/global/dashboard.scss": {
+    "file": "assets/dashboard-0P2ntbyx.css",
+    "src": "resources/scss/global/dashboard.scss",
+    "isEntry": true
+  },
+  "resources/scss/global/faq-create.scss": {
+    "file": "assets/faq-create-CXQh1WXt.css",
+    "src": "resources/scss/global/faq-create.scss",
+    "isEntry": true
+  },
+  "resources/scss/global/faq.scss": {
+    "file": "assets/faq-DsWE7kaE.css",
+    "src": "resources/scss/global/faq.scss",
+    "isEntry": true
+  },
+  "resources/scss/global/features.scss": {
+    "file": "assets/features-B7jUBo2U.css",
+    "src": "resources/scss/global/features.scss",
+    "isEntry": true
+  },
+  "resources/scss/global/hero.scss": {
+    "file": "assets/hero-DSl27c2u.css",
+    "src": "resources/scss/global/hero.scss",
+    "isEntry": true
+  },
+  "resources/scss/global/location-create.scss": {
+    "file": "assets/location-create-Qi32hVrf.css",
+    "src": "resources/scss/global/location-create.scss",
+    "isEntry": true
+  },
+  "resources/scss/global/quote.scss": {
+    "file": "assets/quote-DLw_E08A.css",
+    "src": "resources/scss/global/quote.scss",
+    "isEntry": true
+  },
+  "resources/scss/global/review-create.scss": {
+    "file": "assets/faq-create-CXQh1WXt.css",
+    "src": "resources/scss/global/faq-create.scss",
+    "isEntry": true
+  },
+  "resources/scss/global/services.scss": {
+    "file": "assets/services-Dtekc-ox.css",
+    "src": "resources/scss/global/services.scss",
+    "isEntry": true
+  },
+  "resources/scss/global/testimonial.scss": {
+    "file": "assets/testimonial-BVMQEOIC.css",
+    "src": "resources/scss/global/testimonial.scss",
+    "isEntry": true
+  },
+  "resources/scss/global/text.scss": {
+    "file": "assets/text-CH3cfUCH.css",
+    "src": "resources/scss/global/text.scss",
+    "isEntry": true
+  },
+  "resources/scss/global/timeline.scss": {
+    "file": "assets/timeline-D3W_nJss.css",
+    "src": "resources/scss/global/timeline.scss",
+    "isEntry": true
+  }
+}
