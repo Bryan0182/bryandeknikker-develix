@@ -8,6 +8,19 @@
     }
 }
 
+.blog-image {
+    display: block;
+    width: auto;
+    height: 300px;
+    margin: auto;
+
+    @media screen and (max-width: 768px) {
+        width: auto;
+        max-height: 300px;
+        height: auto;
+    }
+}
+
 h2 {
     font-size: 1.875rem; // 30px
     line-height: 2.25rem; // 36px
@@ -21,4 +34,8 @@ h2 {
         font-size: 1.25rem; // 20px
         line-height: 1.75rem; // 28px
     }
+}
+
+.blog-read-more {
+    padding: 0;
 }

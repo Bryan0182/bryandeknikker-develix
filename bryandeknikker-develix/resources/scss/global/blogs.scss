@@ -18,10 +18,8 @@ body.dark-theme {
     width: auto;
     height: 300px;
     margin: auto;
-}
 
-@media screen and (max-width: 768px) {
-    .blog-image {
+    @media screen and (max-width: 768px) {
         width: auto;
         max-height: 300px;
         height: auto;
