@@ -17,8 +17,8 @@
                 @foreach($relatedBlogs as $relatedBlog)
                     <div class="p-4 rounded-lg shadow">
                         <h3 class="text-lg font-semibold">{{ $relatedBlog->title }}</h3>
-                        <p class="mt-2">{{ Str::limit($relatedBlog->intro, 100) }}</p>
-                        <a href="{{ route('blog-show', $relatedBlog->slug) }}" class="text-sm underline mt-2 inline-block">Lees meer</a>
+                        <span class="mt-2">{!! $relatedBlog->intro !!}</span>
+                        <a href="{{ route('blog-show', $relatedBlog->slug) }}" class="mt-4 inline-block blog-read-more angle-right-button" style="--icon--angle-right-url: url('/images/develix.nl/develix-angle-right.svg');">Lees meer</a>
                     </div>
                 @endforeach
             </div>
