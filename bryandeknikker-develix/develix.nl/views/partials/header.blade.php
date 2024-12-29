@@ -13,6 +13,7 @@
         <!-- Navigatiebalk (desktop) -->
         <nav id="menu" class="space-x-4 hidden lg:flex">
             <div class="relative group">
+                <a href="{{ route('diensten') }}" class="focus:outline-none menu-item dropdown-switch">Diensten</a>
                 <a href="{{ route('services') }}" class="focus:outline-none menu-item dropdown-switch">Diensten</a>
                 <div id="dropdown-menu"
                      class="absolute hidden group-hover:block py-2 px-2 w-80">
@@ -105,6 +106,7 @@
         <div class="relative">
             <button id="mobile-dropdown-btn" class="block menu-item focus:outline-none dropdown-switch">Diensten</button>
             <div id="mobile-dropdown-menu" class="hidden space-y-2 pl-4">
+                <a href="{{ route('diensten') }}" class="block menu-item ">Diensten</a>
                 <a href="{{ route('services') }}" class="block menu-item ">Diensten</a>
                 <a href="{{ route('website') }}" class="block menu-item">Website</a>
                 <a href="{{ route('application') }}" class="block menu-item">Applicatie</a>
@@ -115,7 +117,6 @@
             </div>
         </div>
         <a href="{{ route('about-develix') }}" class="block menu-item">Over Develix</a>
-        <a href="{{ route('blog') }}" class="block menu-item">Blog</a>
         <a href="{{ route('contact') }}" class="block menu-item">Contact</a>
 
         <button id="theme-switcher-mobile" aria-label="Switch Theme" class="flex items-center">
