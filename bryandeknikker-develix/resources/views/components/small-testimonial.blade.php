@@ -9,7 +9,7 @@
                 <div class="flex items-center divide-x-2">
                     <div class="pr-3 font-medium">{{ $randomReview->author }}</div>
                     <div class="pl-3 font-light">
-                        <span class="flex">
+                        <span class="xs:block flex">
                             {{ $randomReview->role }} van&nbsp;
                             <a class="menu-item" href="{{ $randomReview->website_url }}"
                                target="_blank">{{ $randomReview->company }}</a>

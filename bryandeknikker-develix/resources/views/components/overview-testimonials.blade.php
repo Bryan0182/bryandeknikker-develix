@@ -16,7 +16,7 @@
                     <div class="space-y-0.5 font-medium text-left">
                         <div>{{ $review->author }}</div>
                         <div class="text-sm font-light">
-                            <span class="flex"> {{ $review->role }} van&nbsp;
+                            <span class="xs:block flex"> {{ $review->role }} van&nbsp;
                             <a class="menu-item" href="{{ $review->website_url }}"
                                target="_blank">{{ $review->company }}</a>
                         </span></div>
