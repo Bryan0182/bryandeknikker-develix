@@ -3,6 +3,12 @@
     --second-color: #5C91B0;
 }
 
+@media (max-width: 640px) {
+    .container {
+        max-width: -webkit-fill-available !important;
+    }
+}
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
