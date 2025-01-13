@@ -3,6 +3,10 @@
     --second-color: #5C91B0;
 }
 
+.container {
+    max-width: 1028px !important;
+}
+
 @media (max-width: 640px) {
     .container {
         max-width: -webkit-fill-available !important;
