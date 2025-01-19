@@ -18,7 +18,7 @@
                     <div class="p-4">
                         @if($blog->featured_image)
                             <div class="featured-image mb-6">
-                                <img src="{{ asset('storage/' . $blog->featured_image) }}" alt="Featured Image" width="auto" height="300" class="blog-image">
+                                <img src="{{ asset('storage/' . $relatedBlog->featured_image) }}" alt="Featured Image" width="auto" height="300" class="blog-image">
                             </div>
                         @endif
                         <h3 class="text-lg font-semibold">{{ $relatedBlog->title }}</h3>
