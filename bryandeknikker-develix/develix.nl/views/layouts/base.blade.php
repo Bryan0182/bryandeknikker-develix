@@ -90,5 +90,7 @@
 <!-- Scripts -->
 @vite(['resources/js/global/app.js', 'resources/js/develix.nl/cookie-element.js'])
 @yield('page-specific-js')
+<!-- LeadBot Script-->
+<script id="ldbtscrpt" src="https://d2qh0sy46xxq25.cloudfront.net/leadbot.min.js?apiKey=7f2bc3e89199d33f7d300600"></script>
 </body>
 </html>
