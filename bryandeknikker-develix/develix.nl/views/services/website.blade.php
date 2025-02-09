@@ -17,8 +17,8 @@
     @component('components.hero', [
         'title' => 'Website laten maken',
         'description' => 'Een website laten maken? Bij Develix ben je aan het juiste adres voor het creëren van een professionele en gebruiksvriendelijke website die aansluit bij jouw bedrijf en doelgroep. Of het nu gaat om een maatwerk website, een WordPress site of een Laravel applicatie, wij bouwen jouw online visitekaartje op maat.',
-        'first_button' => 'Neem contact op',
-        'first_button_url' => route('contact'),
+        'first_button' => 'Offerte aanvragen',
+        'first_button_url' => route('offerte'),
         'second_button' => 'Bekijk diensten',
         'second_button_url' => route('services'),
         'imageSrc' => asset('images/develix.nl/create-website.svg'),
