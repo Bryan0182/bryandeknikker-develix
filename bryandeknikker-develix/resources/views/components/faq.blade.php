@@ -4,9 +4,9 @@
             <div class="w-full md:w-3/4">
                 <h2 class="faq-title font-bold text-3xl">{{ $title }}</h2>
                 <p class="faq-text">{{ $description }}</p>
-                <div class="faq-list grid gap-4 mt-5" id="faq-container">
+                <div class="faq-list grid mt-5" id="faq-container">
                     @foreach ($faqs as $index => $faq)
-                        <div class="faq-item p-4">
+                        <div class="faq-item pt-4">
                             <button
                                 class="faq-question w-full text-left font-semibold text-lg flex justify-between items-center"
                                 data-index="{{ $index }}">
