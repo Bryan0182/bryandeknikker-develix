@@ -79,7 +79,7 @@
 
     @component('components.faq', [
         'title' => 'Veelgestelde Vragen',
-        'description' => 'Vind hier antwoorden op de meest voorkomende vragen over website laten maken.',
+        'description' => 'Bekijk de antwoorden op de meest gestelde vragen over het laten maken van een website.',
         'faqs' => \App\Models\Faq::active()->byCategory('website')->get(),
         'imageSrc' => asset('/images/develix.nl/angle-down.svg'),
     ])
