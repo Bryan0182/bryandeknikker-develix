@@ -11,7 +11,7 @@
 
             @if (!empty($usps))
                 <div class="mt-6 flex flex-col items-center">
-                    <div class="grid grid-cols-1 md:grid-cols-2 gap-x-16 gap-y-3 w-full">
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-x-16 gap-y-3 w-full usps-grid">
                         @foreach ($usps as $index => $usp)
                             <div class="flex items-center gap-3">
                                 <img src="https://develix.nl/images/develix.nl/check.svg"
