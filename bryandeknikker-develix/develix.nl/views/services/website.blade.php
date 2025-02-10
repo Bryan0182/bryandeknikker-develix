@@ -15,12 +15,12 @@
 
 @section('content')
     @component('components.hero', [
-        'title' => 'Website laten maken',
-        'description' => 'Een website laten maken? Bij Develix ben je aan het juiste adres voor het creëren van een professionele en gebruiksvriendelijke website die aansluit bij jouw bedrijf en doelgroep. Of het nu gaat om een maatwerk website, een WordPress site of een Laravel applicatie, wij bouwen jouw online visitekaartje op maat.',
+        'title' => 'Website laten maken, professioneel, betaalbaar & conversiegericht',
+        'description' => "Wil jij een professionele website die klanten aantrekt en omzet verhoogt? Bij Develix bouwen we snelle, conversiegerichte websites op maat – perfect voor zzp'ers en kleine ondernemers. Wij regelen alles, zodat jij je kunt focussen op je bedrijf. Binnen 2 tot 4 weken heb je een SEO-geoptimaliseerde, mobielvriendelijke en eenvoudig te beheren website, zonder verborgen kosten. We bieden professioneel design, directe communicatie en transparante prijzen. Ons proces is simpel: we starten met een gratis kennismaking, ontwerpen een concept op basis van jouw wensen, bouwen en optimaliseren de site en ondersteunen je ook na de livegang. Wil je direct weten wat het kost? Vraag een vrijblijvende offerte aan!",
         'first_button' => 'Offerte aanvragen',
         'first_button_url' => route('quote'),
-        'second_button' => 'Bekijk diensten',
-        'second_button_url' => route('services'),
+        'second_button' => 'Plan jouw gratis kennismaking',
+        'second_button_url' => route('contact'),
         'imageSrc' => asset('images/develix.nl/create-website.svg'),
         'imageSrcDark' => asset('images/develix.nl/create-website-dark.svg'),
         'altText' => 'Illustratie van website creatie',
@@ -32,13 +32,19 @@
 
     @component('components.text', [
         'title' => 'Waarom kiezen voor Develix?',
-        'description' => 'Bij Develix bied ik directe communicatie, een scherpe prijs en uitgebreide kennis en ervaring. Klanten waarderen mijn flexibiliteit en het vermogen om snel en efficiënt in te spelen op hun behoeften. Met mijn passie voor technologie blijf ik continu leren en verbeteren, zodat ik altijd de beste oplossingen kan bieden.',
+        'description' => 'Bij Develix geloven we in een persoonlijke aanpak waarbij we jouw wensen en doelen centraal stellen. We zorgen ervoor dat je een website krijgt die niet alleen visueel aantrekkelijk is, maar ook functioneel en gebruiksvriendelijk. Door onze ervaring in webontwikkeling en digitale strategie kunnen we je helpen om een sterke online positie op te bouwen. We luisteren naar jouw ideeën en vertalen deze naar een website die echt werkt voor jouw bedrijf. Transparantie en samenwerking staan bij ons voorop, zodat je altijd weet waar je aan toe bent.',
+    ])
+    @endcomponent
+
+    @component('components.text', [
+        'title' => 'Hoe werkt het?',
+        'description' => 'Het proces van een website laten maken bij Develix begint met een kennismakingsgesprek waarin we jouw wensen en doelen bespreken. Vervolgens maken we een concept en werken we dit uit tot een volledig ontwerp. Zodra het ontwerp akkoord is, beginnen we met de ontwikkeling van de website en zorgen we ervoor dat alles goed functioneert en geoptimaliseerd is. Na de oplevering bieden we ondersteuning en begeleiding, zodat je het maximale uit je website kunt halen. Of het nu gaat om kleine aanpassingen of toekomstige uitbreidingen, wij staan voor je klaar om je website verder te laten groeien.',
     ])
     @endcomponent
 
     @component('components.text', [
         'title' => 'Mijn expertise',
-        'description' => 'Met jarenlange ervaring in webontwikkeling, SEO, social media beheer en het ontwikkelen van kleine applicaties met Python, helpt Develix bedrijven om online te groeien. Of je nu een nieuwe website wilt, betere zichtbaarheid in zoekresultaten of hulp bij social media, ik lever resultaatgerichte oplossingen die jouw doelen ondersteunen.',
+        'description' => 'Met jarenlange ervaring in webontwikkeling, SEO en digitale zichtbaarheid help ik bedrijven om online te groeien. Ik ontwikkel websites met een focus op gebruiksvriendelijkheid en prestaties, zodat bedrijven een sterke online aanwezigheid kunnen opbouwen. Daarnaast zorg ik ervoor dat websites goed vindbaar zijn in zoekmachines en optimaal presteren op verschillende apparaten. Door een combinatie van design, techniek en strategische optimalisatie help ik ondernemers bij het bereiken van hun digitale doelen.',
     ])
     @endcomponent
 
@@ -71,24 +77,12 @@
     ])
     @endcomponent
 
-    @component('components.timeline', [
-       'title' => 'De mijlpalen van Develix',
-       'description' => 'Develix heeft diverse belangrijke mijlpalen bereikt, elk een stap in de richting van betere ondersteuning voor klanten en een sterker online profiel. Onze reis is er een van groei, kwaliteit en klantgerichtheid, met als doel digitale groei mogelijk te maken voor elke ondernemer.',
-       'timelineItems' => [
-           [
-               'number' => 1,
-               'title' => 'Oprichting van Develix',
-               'date' => 'December 2024',
-               'description' => 'Het begin van Develix, opgericht met een visie op klantgerichte digitale oplossingen. Vanaf het eerste moment richten we ons op het creëren van sterke, op maat gemaakte websites en applicaties om ondernemers te helpen groeien.'
-           ],
-           [
-               'number' => 2,
-               'title' => 'Lancering van de website',
-               'date' => 'December 2024',
-               'description' => 'De ontwikkeling en lancering van de eerste Develix-website markeert een belangrijke stap. Hiermee presenteren we onszelf online en bouwen we aan een sterke merkidentiteit die vertrouwen en professionaliteit uitstraalt naar onze klanten.'
-           ],
-       ]
-   ])
+    @component('components.faq', [
+        'title' => 'Veelgestelde Vragen',
+        'description' => 'Vind hier antwoorden op de meest voorkomende vragen over website laten maken.',
+        'faqs' => \App\Models\Faq::active()->byCategory('website')->get(),
+        'imageSrc' => asset('/images/develix.nl/angle-down.svg'),
+    ])
     @endcomponent
 
     @component('components.image-text', [
@@ -106,7 +100,7 @@
     @component('components.cta', [
         'title' => 'Klaar om te beginnen?',
         'description' => 'Wil je meer weten over wat Develix voor jouw bedrijf kan betekenen? Neem contact op voor een vrijblijvend gesprek en ontdek hoe ik je kan helpen jouw digitale doelen te bereiken.',
-        'first_button' => 'Start met jouw nieuwe website!',
+        'first_button' => 'Klaar om jouw bedrijf online te laten groeien?',
         'first_button_url' => route('quote'),
         'second_button' => 'Vragen over jouw nieuwe website?',
         'second_button_url' => route('contact')
