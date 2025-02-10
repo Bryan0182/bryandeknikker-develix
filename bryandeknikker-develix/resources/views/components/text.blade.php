@@ -13,11 +13,11 @@
                 <div class="mt-6 flex flex-col items-center">
                     <div class="grid grid-cols-1 md:grid-cols-2 gap-x-16 gap-y-3 w-full">
                         @foreach ($usps as $index => $usp)
-                            <div class="flex items-center gap-3 {{ $index % 2 == 1 ? 'justify-end' : '' }}">
+                            <div class="flex items-center gap-3 {{ $index % 2 == 1 ? 'text-right ml-auto' : '' }}">
                                 <img src="https://develix.nl/images/develix.nl/check.svg"
                                      alt="Check"
                                      class="w-5 h-5">
-                                <span>{{ $usp }}</span>
+                                <span class="text-lg">{{ $usp }}</span>
                             </div>
                         @endforeach
                     </div>
