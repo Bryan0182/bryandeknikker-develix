@@ -17,7 +17,6 @@
     @component('components.hero', [
         'title' => 'Website laten maken, professioneel, betaalbaar & conversiegericht',
         'description' => "Wil jij een professionele website die klanten aantrekt en omzet verhoogt? Bij Develix bouwen we snelle, conversiegerichte websites op maat – perfect voor zzp'ers en kleine ondernemers. Wij regelen alles, zodat jij je kunt focussen op je bedrijf.",
-        'uspsIcon' => asset('images/develix.nl/check.svg'),
         'usps' => [
             "Voor zzp'ers & kleine bedrijven",
             "Mobielvriendelijk & supersnel",
