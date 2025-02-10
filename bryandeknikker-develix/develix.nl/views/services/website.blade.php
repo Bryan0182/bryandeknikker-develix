@@ -16,7 +16,13 @@
 @section('content')
     @component('components.hero', [
         'title' => 'Website laten maken, professioneel, betaalbaar & conversiegericht',
-        'description' => "Wil jij een professionele website die klanten aantrekt en omzet verhoogt? Bij Develix bouwen we snelle, conversiegerichte websites op maat – perfect voor zzp'ers en kleine ondernemers. Wij regelen alles, zodat jij je kunt focussen op je bedrijf. Binnen 2 tot 4 weken heb je een SEO-geoptimaliseerde, mobielvriendelijke en eenvoudig te beheren website, zonder verborgen kosten. We bieden professioneel design, directe communicatie en transparante prijzen. Ons proces is simpel: we starten met een gratis kennismaking, ontwerpen een concept op basis van jouw wensen, bouwen en optimaliseren de site en ondersteunen je ook na de livegang. Wil je direct weten wat het kost? Vraag een vrijblijvende offerte aan!",
+        'description' => "Wil jij een professionele website die klanten aantrekt en omzet verhoogt? Bij Develix bouwen we snelle, conversiegerichte websites op maat – perfect voor zzp'ers en kleine ondernemers. Wij regelen alles, zodat jij je kunt focussen op je bedrijf.",
+        'usps' => [
+            "Voor zzp'ers & kleine bedrijven",
+            "Mobielvriendelijk & supersnel",
+            "SEO-geoptimaliseerd voor betere vindbaarheid",
+            "Inclusief gratis kennismakingsgesprek"
+        ],
         'first_button' => 'Offerte aanvragen',
         'first_button_url' => route('quote'),
         'second_button' => 'Plan jouw gratis kennismaking',

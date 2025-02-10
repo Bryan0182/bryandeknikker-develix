@@ -3,6 +3,16 @@
         <div class="lg:w-1/2 w-full">
             <h1 class="font-bold leading-tight text-4xl">{{ $title }}</h1>
             <p class="text-lg description-paragraph">{{ $description }}</p>
+            @if (!empty($usps))
+                <div class="space-y-2">
+                    @foreach ($usps as $usp)
+                        <div class="flex items-center gap-2">
+                            <img src="{{ asset('images/develix.nl/check.svg') }}" alt="Check" class="w-5 h-5">
+                            <span>{{ $usp }}</span>
+                        </div>
+                    @endforeach
+                </div>
+            @endif
             <div class="flex flex-row space-x-4 button-hero-row">
                 @if (!empty($first_button) && !empty($first_button_url))
                     <a href="{{ $first_button_url }}" class="btn btn-outline-primary primary-button border py-2 text-center md:w-auto">{{ $first_button }}</a>
