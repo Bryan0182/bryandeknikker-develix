@@ -4,9 +4,6 @@
             <h1 class="font-bold leading-tight text-4xl">{{ $title }}</h1>
             <p class="text-lg description-paragraph">{{ $description }}</p>
             @if (!empty($usps))
-                @php
-                    $icon = asset('images/develix.nl/check.svg');
-                @endphp
                 <div class="space-y-1 mb-6">
                     @foreach ($usps as $usp)
                         <div class="flex items-center gap-2">
