@@ -38,19 +38,37 @@
 
     @component('components.text', [
         'title' => 'Waarom kiezen voor Develix?',
-        'description' => 'Bij Develix geloven we in een persoonlijke aanpak waarbij we jouw wensen en doelen centraal stellen. We zorgen ervoor dat je een website krijgt die niet alleen visueel aantrekkelijk is, maar ook functioneel en gebruiksvriendelijk. Door onze ervaring in webontwikkeling en digitale strategie kunnen we je helpen om een sterke online positie op te bouwen. We luisteren naar jouw ideeën en vertalen deze naar een website die echt werkt voor jouw bedrijf. Transparantie en samenwerking staan bij ons voorop, zodat je altijd weet waar je aan toe bent.',
+        'description' => 'Bij Develix geloven we in een persoonlijke aanpak waarbij we jouw wensen en doelen centraal stellen. We zorgen ervoor dat je een website krijgt die niet alleen visueel aantrekkelijk is, maar ook functioneel en gebruiksvriendelijk.',
+        'usps' => [
+            "SEO-geoptimaliseerd – Beter vindbaar in Google",
+            "Eenvoudig te beheren – Makkelijk zelf aan te passen",
+            "Betaalbaar & transparant – Geen verborgen kosten",
+            "Professioneel design – Sterk, gebruiksvriendelijk en conversiegericht"
+        ],
     ])
     @endcomponent
 
     @component('components.text', [
         'title' => 'Hoe werkt het?',
-        'description' => 'Het proces van een website laten maken bij Develix begint met een kennismakingsgesprek waarin we jouw wensen en doelen bespreken. Vervolgens maken we een concept en werken we dit uit tot een volledig ontwerp. Zodra het ontwerp akkoord is, beginnen we met de ontwikkeling van de website en zorgen we ervoor dat alles goed functioneert en geoptimaliseerd is. Na de oplevering bieden we ondersteuning en begeleiding, zodat je het maximale uit je website kunt halen. Of het nu gaat om kleine aanpassingen of toekomstige uitbreidingen, wij staan voor je klaar om je website verder te laten groeien.',
+        'description' => 'Het proces van een website laten maken bij Develix begint met een kennismakingsgesprek waarin we jouw wensen en doelen bespreken. Vervolgens maken we een concept en werken we dit uit tot een volledig ontwerp. Zodra het ontwerp akkoord is, beginnen we met de ontwikkeling van de website en zorgen we ervoor dat alles goed functioneert en geoptimaliseerd is.',
+        'usps' => [
+            "Gratis kennismaking – We bespreken jouw wensen en doelen",
+            "Concept en ontwerp – Een eerste ontwerp op basis van jouw input",
+            "Ontwikkeling en optimalisatie – De website wordt gebouwd en getest",
+            "Livegang en ondersteuning – Wij blijven beschikbaar voor support"
+        ],
     ])
     @endcomponent
 
     @component('components.text', [
         'title' => 'Mijn expertise',
-        'description' => 'Met jarenlange ervaring in webontwikkeling, SEO en digitale zichtbaarheid help ik bedrijven om online te groeien. Ik ontwikkel websites met een focus op gebruiksvriendelijkheid en prestaties, zodat bedrijven een sterke online aanwezigheid kunnen opbouwen. Daarnaast zorg ik ervoor dat websites goed vindbaar zijn in zoekmachines en optimaal presteren op verschillende apparaten. Door een combinatie van design, techniek en strategische optimalisatie help ik ondernemers bij het bereiken van hun digitale doelen.',
+        'description' => 'Met mijn ervaring in webontwikkeling, SEO en digitale zichtbaarheid help ik bedrijven om online te groeien. Of je nu een nieuwe website wilt, beter zichtbaar wilt zijn in zoekmachines of social media wilt inzetten, ik lever effectieve oplossingen.',
+        'usps' => [
+            "WordPress & Laravel webontwikkeling",
+            "SEO en online marketing",
+            "Gebruiksvriendelijk en mobielvriendelijk design",
+            "Conversiegericht webdesign"
+        ],
     ])
     @endcomponent
 
