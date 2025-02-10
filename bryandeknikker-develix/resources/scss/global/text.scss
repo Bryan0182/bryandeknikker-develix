@@ -12,7 +12,10 @@
     }
 
     .usps-grid {
-        width: fit-content;
         column-gap: 1.5rem;
+
+        .left {
+            justify-content: end;
+        }
     }
 }
