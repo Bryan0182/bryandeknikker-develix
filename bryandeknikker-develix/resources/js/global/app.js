@@ -51,7 +51,9 @@ document.addEventListener('DOMContentLoaded', function () {
             heroImage.src = theme === 'dark' ? heroImage.getAttribute('data-dark') : heroImage.getAttribute('data-light');
         }
         document.querySelectorAll('.theme-image').forEach((img) => {
-            img.src = theme === 'dark' ? img.getAttribute('data-dark') : img.getAttribute('data-light');
+            if (img.hasAttribute('data-dark') && img.hasAttribute('data-light')) {
+                img.src = theme === 'dark' ? img.getAttribute('data-dark') : img.getAttribute('data-light');
+            }
         });
     }
 
