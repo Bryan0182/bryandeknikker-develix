@@ -3,14 +3,12 @@
         <div class="lg:w-1/2 w-full">
             <h1 class="font-bold leading-tight text-4xl">{{ $title }}</h1>
             <p class="text-lg description-paragraph">{{ $description }}</p>
-            @if (!empty($usps))
+            @if (!empty($usp))
                 <div class="space-y-1 mb-6">
-                    @foreach ($usps as $usp)
                         <div class="flex items-center gap-2">
                             <img src="{{ asset('images/develix.nl/check.svg') }}" alt="Check" class="w-5 h-5">
                             <span>{{ $usp }}</span>
                         </div>
-                    @endforeach
                 </div>
             @endif
             <div class="flex flex-row space-x-4 button-hero-row">
