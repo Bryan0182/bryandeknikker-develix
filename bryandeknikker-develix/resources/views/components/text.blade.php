@@ -13,7 +13,7 @@
                 <div class="mt-6 flex flex-col items-center">
                     <div class="grid grid-cols-1 md:grid-cols-2 gap-x-16 gap-y-3 w-full usps-grid">
                         @foreach ($usps as $index => $usp)
-                            <div class="flex items-center gap-3 md:justify-end {{ $index % 2 == 0 ? 'md:left' : '' }}">
+                            <div class="flex items-center gap-3 {{ $index % 2 == 0 ? 'md:left' : '' }}">
                                 <img src="https://develix.nl/images/develix.nl/check.svg"
                                      alt="Check"
                                      class="w-5 h-5">
