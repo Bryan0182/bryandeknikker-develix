@@ -111,7 +111,7 @@
     @component('components.faq', [
         'title' => 'Veelgestelde Vragen',
         'description' => 'Vind hier antwoorden op de meest voorkomende vragen over onze diensten.',
-        'faqs' => \App\Models\Faq::active()->byCategory('general')->get(),
+        'faqs' => \App\Models\Faq::active()->byCategory('algemeen')->get(),
         'imageSrc' => asset('/images/develix.nl/angle-down.svg'),
     ])
     @endcomponent
