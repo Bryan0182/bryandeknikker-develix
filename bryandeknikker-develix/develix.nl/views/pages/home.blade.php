@@ -10,17 +10,17 @@
 @section('canonical', route('home'))
 
 @section('page-specific-scss')
-    @vite(['resources/scss/global/hero.scss', 'resources/scss/global/services.scss', 'resources/scss/global/cta.scss', 'resources/scss/global/text.scss'])
+    @vite(['resources/scss/global/hero.scss', 'resources/scss/global/services.scss', 'resources/scss/global/cta.scss', 'resources/scss/global/text.scss', 'resources/scss/global/testimonial.scss'])
 @endsection
 
 @section('content')
     @component('components.hero', [
-        'title' => 'Jouw complete digitale partner voor succes',
-        'description' => 'Welkom bij Develix – de plek waar we jouw digitale visie realiseren. Van websites die opvallen, SEO-strategieën die vindbaarheid verbeteren, en social media-boosts tot op maat gemaakte applicaties, professioneel design, en betrouwbare hosting. Met Develix heb je een partner die alles in huis heeft om jouw bedrijf online te laten groeien en bloeien.',
+        'title' => 'Digitale oplossingen die jouw bedrijf laten groeien',
+        'description' => 'Wil jij een professionele website, beter vindbaar zijn in Google of je bedrijf digitaal laten groeien? Bij Develix bouwen we maatwerkoplossingen die aansluiten op jouw doelen. Van conversiegerichte websites tot SEO en applicaties – wij zorgen dat jouw bedrijf online écht impact maakt.',
         'first_button' => 'Neem contact op',
         'first_button_url' => route('contact'),
-        'second_button' => 'Lees meer',
-        'second_button_url' => route('about-develix'),
+        'second_button' => 'Ontdek hoe wij jou helpen',
+        'second_button_url' => route('services'),
         'imageSrc' => asset('images/develix.nl/operating-system-vector.svg'),
         'imageSrcDark' => asset('images/develix.nl/operating-system-vector-dark.svg'),
         'altText' => 'Foto van Bryan de Knikker',
@@ -36,42 +36,42 @@
         'services' => [
             [
                 'title' => 'Website',
-                'description' => 'Ik ontwerp en bouw gebruiksvriendelijke, responsive websites die werken op alle apparaten. Of het nu gaat om een eenvoudige site of een uitgebreide webshop, ik zorg voor een unieke online aanwezigheid die past bij jouw merk.',
+                'description' => 'Laat een professionele, snelle en SEO-geoptimaliseerde website maken die klanten aantrekt en omzet verhoogt. Wij ontwerpen websites die jouw bedrijf online laten groeien – met een sterk design en de nieuwste technieken.',
                 'url' => route('website'),
                 'image' => '/images/global/website-black.svg',
                 'image-dark' => '/images/global/website.svg'
             ],
             [
                 'title' => 'Applicatie',
-                'description' => 'Van mobiele apps tot complexe webapplicaties, ik ontwikkel op maat gemaakte oplossingen die aansluiten op de specifieke behoeften van jouw project. Ik gebruik moderne technologieën en zorg voor een soepele gebruikerservaring.',
+                'description' => 'Automatiseer processen en werk efficiënter met een op maat gemaakte applicatie. Van interne tools tot klantgerichte webapplicaties – wij ontwikkelen slimme en schaalbare oplossingen die perfect aansluiten op jouw bedrijfsdoelen. Onze applicaties verbeteren workflows, verhogen productiviteit en zorgen voor een soepele gebruikerservaring.',
                 'url' => route('application'),
                 'image' => '/images/global/application-black.svg',
                 'image-dark' => '/images/global/application.svg'
             ],
             [
                 'title' => 'SEO',
-                'description' => 'Met mijn SEO-diensten zorg ik ervoor dat jouw website beter gevonden wordt in zoekmachines. Van technische optimalisatie tot content creatie – ik help je om hoger te ranken en meer verkeer te genereren.',
+                'description' => 'Sta bovenaan in Google en trek meer klanten aan met een doordachte SEO-strategie. Wij optimaliseren jouw website technisch en inhoudelijk, zodat je beter vindbaar wordt en meer leads genereert. Van snelle laadtijden tot sterke content – wij zorgen dat jouw bedrijf opvalt in de zoekresultaten.',
                 'url' => route('seo'),
                 'image' => '/images/global/seo-black.svg',
                 'image-dark' => '/images/global/seo.svg'
             ],
             [
                 'title' => 'Social',
-                'description' => 'Ik ondersteun je met het beheren van social media-kanalen en het creëren van een effectieve online strategie. Laat je social media een krachtige tool worden om met je doelgroep te communiceren en je merk te versterken.',
+                'description' => 'Bouw een sterk merk op social media en vergroot je zichtbaarheid. Wij creëren content, beheren advertenties en ontwikkelen strategieën die jouw doelgroep aanspreken en betrokken houden. Laat social media voor je werken met een consistente, professionele uitstraling die jouw bedrijf versterkt.',
                 'url' => route('social'),
                 'image' => '/images/global/social-black.svg',
                 'image-dark' => '/images/global/social.svg'
             ],
             [
                 'title' => 'Design',
-                'description' => 'Met oog voor detail creëer ik aantrekkelijke ontwerpen die jouw merk op een professionele manier presenteren. Van logo’s tot complete huisstijlen – ik zorg ervoor dat jouw visuele identiteit perfect aansluit bij je doelgroep.',
+                'description' => 'Maak indruk met een uniek en professioneel design dat jouw merk versterkt. Wij ontwerpen alles van logo’s tot complete huisstijlen, zodat jouw bedrijf herkenbaar en onderscheidend blijft. Met een sterk visueel concept zorg je voor een consistente merkbeleving die vertrouwen en professionaliteit uitstraalt.',
                 'url' => route('design'),
                 'image' => '/images/global/design-black.svg',
                 'image-dark' => '/images/global/design.svg'
             ],
             [
                 'title' => 'Hosting',
-                'description' => 'Ik bied betrouwbare en snelle hostingpakketten, inclusief technische ondersteuning, zodat je website altijd online is en optimaal presteert. Ontzorg jezelf en laat het beheer van je hosting aan mij over.',
+                'description' => 'Zorg voor een snelle, veilige en stabiele website zonder zorgen. Wij bieden betrouwbare hosting met 24/7 uptime monitoring, automatische back-ups en technische ondersteuning. Focus op je bedrijf, terwijl wij zorgen voor de prestaties en beveiliging van jouw website.',
                 'url' => route('hosting'),
                 'image' => '/images/global/hosting-black.svg',
                 'image-dark' => '/images/global/hosting.svg'
@@ -82,16 +82,25 @@
 
     @component('components.text', [
         'title' => 'Een betrouwbare partner voor digitale groei',
-        'description' => 'Bij Develix draait alles om kwaliteit en klantgerichtheid. Met mijn ervaring en een passie voor technologie, ondersteunen ik ondernemers om digitaal te groeien en zich te onderscheiden. Ik luisteren naar jouw wensen, denken proactief mee en leveren oplossingen die écht aansluiten bij jouw doelen. Of het nu gaat om een sterke online aanwezigheid, betere vindbaarheid of een unieke visuele identiteit – Develix biedt maatwerk met aandacht voor detail en resultaatgerichtheid, zodat jouw bedrijf zich optimaal kan profileren in de digitale wereld.',
+        'description' => 'Bij Develix draait alles om kwaliteit, klantgerichtheid en resultaat. Wij helpen ondernemers met op maat gemaakte digitale oplossingen die niet alleen mooi zijn, maar ook effectief werken. Of je nu een sterke online aanwezigheid wilt opbouwen, je vindbaarheid in zoekmachines wilt verbeteren of efficiënter wilt werken met slimme applicaties – wij bieden maatwerk dat écht impact maakt.',
+        'usps' => [
+            "100% Maatwerk & Persoonlijk – Oplossingen afgestemd op jouw bedrijf en doelen.",
+            "SEO & Conversiegericht – Websites en strategieën die klanten opleveren.",
+            "Technisch Sterk & Veilig – De nieuwste technologieën en optimale prestaties.",
+            "Volledige Ondersteuning – Van strategie tot onderhoud, wij staan klaar."
+        ],
     ])
+    @endcomponent
+
+    @component('components.small-testimonial')
     @endcomponent
 
     @component('components.text-image', [
         'title' => 'Digitale strategieën die werken',
-        'description' => 'Bij Develix gaan we verder dan alleen technische oplossingen. We creëren digitale ervaringen die jouw merk versterken en jouw doelen ondersteunen. Met een scherp oog voor detail en innovatie helpen we jouw bedrijf om zichtbaar te worden en te groeien in een digitale wereld die continu verandert. Vertrouw op ons voor strategisch advies, betrouwbare technologie en een aanpak die echt werkt voor jouw onderneming.',
+        'description' => 'Bij Develix combineren we techniek en strategie om bedrijven online te laten groeien. Van conversiegerichte websites tot slimme automatiseringen – wij helpen ondernemers met digitale oplossingen die écht impact maken. Met een datagedreven aanpak zorgen we dat jouw bedrijf zichtbaar wordt, beter scoort in Google en klaar is voor de toekomst.',
         'imageSrc' => asset('images/develix.nl/code-languages.svg'),
         'imageSrcDark' => asset('images/develix.nl/code-languages-dark.svg'),
-        'altText' => 'Foto van Bryan de Knikker',
+        'altText' => 'Foto ter illustratie.',
         'width' => 400,
         'height' => 400,
         'imageClass' => ''
@@ -99,12 +108,12 @@
     @endcomponent
 
     @component('components.cta', [
-        'title' => 'Twijfel je nog?',
-        'description' => 'Heb je nog vragen of twijfel je over de mogelijkheden? Neem gerust contact op en ik help je graag verder. Samen bespreken we jouw wensen en bekijken we hoe ik je het beste kan ondersteunen.',
-        'first_button' => 'Neem contact op',
+        'title' => 'Twijfel je nog? Wij helpen je graag verder!',
+        'description' => 'Wil je een website laten maken of je online vindbaarheid verbeteren? Laten we samen kijken naar de beste oplossing voor jouw bedrijf!',
+        'first_button' => 'Vraag een gratis adviesgesprek aan',
         'first_button_url' => route('contact'),
-        'second_button' => 'Lees meer',
-        'second_button_url' => route('about-develix'),
+        'second_button' => 'Bekijk hoe wij helpen',
+        'second_button_url' => route('services'),
     ])
     @endcomponent
 @endsection

@@ -119,4 +119,4 @@
 
 @section('page-specific-js')
     @vite(['resources/js/global/faq.js'])
-        @endsection
+@endsection
