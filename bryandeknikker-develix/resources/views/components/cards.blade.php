@@ -2,7 +2,7 @@
     <h2 class="text-3xl font-bold text-center mb-8">
         {{ $title }}
     </h2>
-    <p class="text-center mb-12">
+    <p class="text-center mb-6 lg:w-2/3 w-full mx-auto">
         {{ $subtitle }}
     </p>
 
