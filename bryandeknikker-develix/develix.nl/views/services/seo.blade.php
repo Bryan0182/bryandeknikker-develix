@@ -95,6 +95,14 @@
     ])
     @endcomponent
 
+    @component('components.faq', [
+        'title' => 'Veelgestelde Vragen',
+        'description' => 'Vind hier antwoorden op de meest voorkomende vragen over onze diensten.',
+        'faqs' => \App\Models\Faq::active()->byCategory('seo')->get(),
+        'imageSrc' => asset('/images/develix.nl/angle-down.svg'),
+    ])
+    @endcomponent
+
     @component('components.image-text', [
         'title' => 'Het verhaal van Develix',
         'description' => 'Develix is opgericht door Bryan de Knikker, een specialist in technologie en marketing. Met een passie voor digitale groei helpt hij bedrijven om online succesvol te worden. Van kleine ondernemers tot grotere bedrijven, Develix biedt de juiste strategieën voor elk doel.',
@@ -114,14 +122,6 @@
         'first_button_url' => route('quote'),
         'second_button' => 'Vragen over onze SEO-strategie',
         'second_button_url' => route('contact')
-    ])
-    @endcomponent
-
-    @component('components.faq', [
-        'title' => 'Veelgestelde Vragen',
-        'description' => 'Vind hier antwoorden op de meest voorkomende vragen over onze diensten.',
-        'faqs' => \App\Models\Faq::active()->byCategory('seo')->get(),
-        'imageSrc' => asset('/images/develix.nl/angle-down.svg'),
     ])
     @endcomponent
 @endsection
