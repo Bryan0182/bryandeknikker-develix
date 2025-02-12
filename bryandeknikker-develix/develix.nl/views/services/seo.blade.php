@@ -10,17 +10,23 @@
 @section('canonical', route('seo'))
 
 @section('page-specific-scss')
-    @vite(['resources/scss/global/hero.scss', 'resources/scss/global/text.scss', 'resources/scss/global/cta.scss', 'resources/scss/global/timeline.scss'])
+    @vite(['resources/scss/global/hero.scss', 'resources/scss/global/text.scss', 'resources/scss/global/cta.scss', 'resources/scss/global/timeline.scss', 'resources/scss/global/faq.scss'])
 @endsection
 
 @section('content')
     @component('components.hero', [
-        'title' => 'SEO verbeteren',
-        'description' => 'Wil je jouw website hoger laten ranken in zoekmachines? Bij Develix bieden we resultaatgerichte SEO-diensten die jouw online zichtbaarheid verbeteren. Van technische SEO-optimalisatie tot waardevolle content creatie – wij zorgen ervoor dat jouw website beter presteert en meer bezoekers aantrekt.',
+        'title' => 'Jouw Website Hoger in Google & Meer Bezoekers',
+        'description' => 'Wil je dat jouw website beter gevonden wordt door potentiële klanten? Bij Develix bieden we resultaatgerichte SEO-diensten die jouw online zichtbaarheid vergroten. Van technische optimalisatie tot waardevolle contentcreatie – wij zorgen ervoor dat jouw website hoger scoort in zoekmachines en meer relevant verkeer aantrekt.',
+        'usps' => [
+            "Voor zzp'ers & kleine bedrijven",
+            "Technische & contentoptimalisatie",
+            "SEO-geoptimaliseerd voor betere vindbaarheid",
+            "Inclusief gratis kennismakingsgesprek"
+        ],
         'first_button' => 'Vraag een SEO-advies',
         'first_button_url' => route('contact'),
-        'second_button' => 'Bekijk onze aanpak',
-        'second_button_url' => route('about-develix'),
+        'second_button' => 'Plan jouw gratis kennismaking',
+        'second_button_url' => route('contact'),
         'imageSrc' => asset('images/develix.nl/seo-activities.svg'),
         'imageSrcDark' => asset('images/develix.nl/seo-activities-dark.svg'),
         'altText' => 'Illustratie van SEO-activiteiten',
@@ -31,14 +37,20 @@
     @endcomponent
 
     @component('components.text', [
-        'title' => 'Waarom investeren in SEO?',
-        'description' => 'SEO is essentieel om jouw bedrijf zichtbaar te maken in zoekmachines zoals Google. Met een doordachte SEO-strategie trek je meer potentiële klanten naar jouw website en vergroot je jouw online autoriteit. Bij Develix zorgen we voor een meetbare aanpak, zodat jij resultaten ziet.',
+        'title' => 'Waarom kiezen voor Develix voor SEO?',
+        'description' => 'Bij Develix draait alles om maatwerk en klantgerichtheid. We zorgen ervoor dat jouw SEO-strategie niet alleen effectief is, maar ook perfect aansluit bij jouw bedrijfsdoelen. Dankzij onze ervaring in SEO en digitale marketing krijg je een aanpak die zowel technisch sterk is als gericht op jouw doelgroep.',
+        'usps' => [
+            "Maatwerk SEO-strategieën – Afgestemd op jouw specifieke doelen",
+            "Transparante werkwijze – Heldere communicatie en rapportages",
+            "Blijvende resultaten – Duurzame verbeteringen in zoekresultaten",
+            "Persoonlijke begeleiding – Direct contact en korte lijnen"
+        ],
     ])
     @endcomponent
 
     @component('components.text', [
-        'title' => 'Onze expertise in SEO',
-        'description' => 'Met jarenlange ervaring in technische SEO, on-page optimalisatie en contentstrategie helpen wij bedrijven om online te groeien. Of je nu meer verkeer wilt genereren, beter wilt converteren of jouw domein autoriteit wilt verhogen, Develix heeft de kennis en tools om jouw doelen te bereiken.',
+        'title' => 'Mijn expertise in SEO',
+        'description' => 'Met een sterke achtergrond in technische SEO, contentcreatie en linkbuilding help ik bedrijven hun online doelen te bereiken. Ik optimaliseer websites voor betere vindbaarheid, hogere rankings en meer conversies. Of het nu gaat om lokale SEO, e-commerce of contentmarketing, ik zorg voor een strategie die werkt.',
     ])
     @endcomponent
 
@@ -71,6 +83,18 @@
     ])
     @endcomponent
 
+    @component('components.text', [
+        'title' => 'Hoe werkt het?',
+        'description' => 'Het proces van SEO bij Develix begint met een grondige analyse van jouw website en doelen. We voeren een uitgebreide SEO-audit uit, bepalen de beste strategie en implementeren de optimalisaties. Vervolgens monitoren en verbeteren we continu om duurzame resultaten te behalen.',
+        'usps' => [
+            "Gratis kennismaking – We analyseren jouw website en SEO-doelen",
+            "SEO-audit en strategie – Een plan op maat voor maximale vindbaarheid",
+            "Optimalisatie en uitvoering – Technische verbeteringen en contentaanpassingen",
+            "Monitoring en bijsturing – Doorlopende analyses en rapportages voor blijvend succes"
+        ],
+    ])
+    @endcomponent
+
     @component('components.image-text', [
         'title' => 'Het verhaal van Develix',
         'description' => 'Develix is opgericht door Bryan de Knikker, een specialist in technologie en marketing. Met een passie voor digitale groei helpt hij bedrijven om online succesvol te worden. Van kleine ondernemers tot grotere bedrijven, Develix biedt de juiste strategieën voor elk doel.',
@@ -84,12 +108,20 @@
     @endcomponent
 
     @component('components.cta', [
-        'title' => 'Boost jouw vindbaarheid vandaag!',
-        'description' => 'Wil je jouw SEO verbeteren en meer klanten aantrekken? Neem contact op voor een gratis SEO-scan en ontdek hoe Develix jouw website naar een hoger niveau tilt.',
-        'first_button' => 'Vraag SEO-advies aan',
+        'title' => 'Boost je vindbaarheid vandaag!',
+        'description' => 'Wil je hoger in Google en meer klanten aantrekken? Vraag een gratis SEO-scan aan en ontdek hoe wij jouw online groei kunnen versnellen!',
+        'first_button' => 'Gratis SEO-Scan aanvragen',
         'first_button_url' => route('quote'),
-        'second_button' => 'Meer weten over SEO?',
+        'second_button' => 'Vragen over onze SEO-strategie',
         'second_button_url' => route('contact')
+    ])
+    @endcomponent
+
+    @component('components.faq', [
+        'title' => 'Veelgestelde Vragen',
+        'description' => 'Vind hier antwoorden op de meest voorkomende vragen over onze diensten.',
+        'faqs' => \App\Models\Faq::active()->byCategory('seo')->get(),
+        'imageSrc' => asset('/images/develix.nl/angle-down.svg'),
     ])
     @endcomponent
 @endsection
