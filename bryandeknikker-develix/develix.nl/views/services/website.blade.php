@@ -38,13 +38,7 @@
 
     @component('components.text', [
         'title' => 'Waarom kiezen voor Develix?',
-        'description' => 'Bij Develix geloven we in een persoonlijke aanpak waarbij we jouw wensen en doelen centraal stellen. We zorgen ervoor dat je een website krijgt die niet alleen visueel aantrekkelijk is, maar ook functioneel en gebruiksvriendelijk.',
-        'usps' => [
-            "SEO-geoptimaliseerd – Beter vindbaar in Google",
-            "Eenvoudig te beheren – Makkelijk zelf aan te passen",
-            "Betaalbaar & transparant – Geen verborgen kosten",
-            "Professioneel design – Sterk, gebruiksvriendelijk en conversiegericht"
-        ],
+        'description' => 'Bij Develix draait alles om maatwerk en klantgerichtheid. We zorgen ervoor dat jouw website niet alleen professioneel oogt, maar ook strategisch is opgebouwd om klanten aan te trekken en je bedrijf te laten groeien. Dankzij onze ervaring in webontwikkeling en SEO krijg je een website die technisch sterk en goed vindbaar is. We denken met je mee, bieden transparantie in kosten en leveren een website die eenvoudig te beheren is. Zo houd jij de controle en kun je met een solide online aanwezigheid direct aan de slag.',
     ])
     @endcomponent
 
@@ -62,13 +56,7 @@
 
     @component('components.text', [
         'title' => 'Mijn expertise',
-        'description' => 'Met mijn ervaring in webontwikkeling, SEO en digitale zichtbaarheid help ik bedrijven om online te groeien. Of je nu een nieuwe website wilt, beter zichtbaar wilt zijn in zoekmachines of social media wilt inzetten, ik lever effectieve oplossingen.',
-        'usps' => [
-            "WordPress & Laravel webontwikkeling",
-            "SEO en online marketing",
-            "Gebruiksvriendelijk en mobielvriendelijk design",
-            "Conversiegericht webdesign"
-        ],
+        'description' => 'Met een sterke achtergrond in webontwikkeling en digitale strategie help ik bedrijven hun online doelen te bereiken. Ik bouw websites die gebruiksvriendelijk en visueel aantrekkelijk zijn, maar ook technisch geoptimaliseerd voor snelheid en vindbaarheid. Of het nu gaat om een WordPress-site, een op maat gemaakte Laravel-oplossing of een conversiegerichte SEO-strategie, ik zorg ervoor dat je website niet alleen goed functioneert, maar ook bijdraagt aan de groei van jouw bedrijf.',
     ])
     @endcomponent
 
