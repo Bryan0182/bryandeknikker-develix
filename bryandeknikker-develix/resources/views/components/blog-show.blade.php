@@ -16,7 +16,7 @@
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
                 @foreach($relatedBlogs as $relatedBlog)
                     <div class="p-4">
-                        @if($blog->featured_image)
+                        @if($relatedBlog->featured_image)
                             <div class="featured-image mb-6">
                                 <img src="{{ asset('storage/' . $relatedBlog->featured_image) }}" alt="Featured Image" width="auto" height="300" class="blog-image">
                             </div>

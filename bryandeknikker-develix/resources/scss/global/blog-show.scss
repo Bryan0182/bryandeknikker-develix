@@ -89,3 +89,15 @@ h6 {
 .blog-read-more {
     padding: 0;
 }
+
+ul, ol {
+    margin-left: 20px;
+}
+
+ul {
+    list-style: disc;
+}
+
+ol {
+    list-style: decimal;
+}
