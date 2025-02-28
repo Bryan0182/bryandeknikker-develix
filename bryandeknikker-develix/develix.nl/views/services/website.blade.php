@@ -1,8 +1,8 @@
 @extends('develix::layouts.base')
 
-@section('title', 'Website laten maken')
-@section('subtitle', 'Professionele websites op maat')
-@section('meta_description', 'Wil je een website laten maken? Bij Develix zorgen we voor professionele, gebruiksvriendelijke websites die aansluiten bij jouw merk en doelgroep. Neem contact op voor jouw online succes.')
+@section('title', 'Website laten maken | Professionele websites op maat')
+@section('subtitle', 'Develix')
+@section('meta_description', 'Op zoek naar een professionele website die converteert? Develix ontwikkelt maatwerk WordPress websites met focus op resultaat. Vraag een gratis adviesgesprek aan.')
 @section('meta_keywords', 'website laten maken, maatwerk websites, professionele websites, WordPress, Laravel, Develix')
 @section('og_title', 'Website laten maken | Develix')
 @section('og_description', 'Een website laten maken? Bij Develix krijg je maatwerk en professionele ondersteuning voor jouw online aanwezigheid. Ontdek wat wij voor jou kunnen doen!')
@@ -15,12 +15,13 @@
 
 @section('content')
     @component('components.hero', [
-        'title' => 'Website laten maken, professioneel, betaalbaar & conversiegericht',
-        'description' => "Wil jij een professionele website die klanten aantrekt en omzet verhoogt? Bij Develix bouwen we snelle, conversiegerichte websites op maat – perfect voor zzp'ers en kleine ondernemers. Wij regelen alles, zodat jij je kunt focussen op je bedrijf.",
+        'title' => 'Website laten maken? Conversiegericht en op maat gemaakt',
+        'description' => "In de huidige digitale wereld is jouw website het visitekaartje van uw onderneming. Onderzoek toont aan dat bezoekers binnen seconden beslissen of ze jouw bedrijf vertrouwen op basis van jouw online presentatie. Een professionele website is geen luxe meer, maar een noodzaak voor groeiende ondernemingen. Bij Develix combineren we website ontwikkeling met strategisch inzicht om websites te bouwen die niet alleen mooi zijn, maar ook doelgericht conversies genereren en jouw bedrijf laten groeien.",
         'usps' => [
             "Voor zzp'ers & kleine bedrijven",
-            "Mobielvriendelijk & supersnel",
+            "Persoonlijke aanpak & technische expertise",
             "SEO-geoptimaliseerd voor betere vindbaarheid",
+            "WordPress specialist met focus op conversie",
             "Inclusief gratis kennismakingsgesprek"
         ],
         'first_button' => 'Offerte aanvragen',
@@ -37,26 +38,73 @@
     @endcomponent
 
     @component('components.text', [
-        'title' => 'Waarom kiezen voor Develix?',
-        'description' => 'Bij Develix draait alles om maatwerk en klantgerichtheid. We zorgen ervoor dat jouw website niet alleen professioneel oogt, maar ook strategisch is opgebouwd om klanten aan te trekken en je bedrijf te laten groeien. Dankzij onze ervaring in webontwikkeling en SEO krijg je een website die technisch sterk en goed vindbaar is. We denken met je mee, bieden transparantie in kosten en leveren een website die eenvoudig te beheren is. Zo houd jij de controle en kun je met een solide online aanwezigheid direct aan de slag.',
-    ])
-    @endcomponent
-
-    @component('components.text', [
-        'title' => 'Hoe werkt het?',
-        'description' => 'Het proces van een website laten maken bij Develix begint met een kennismakingsgesprek waarin we jouw wensen en doelen bespreken. Vervolgens maken we een concept en werken we dit uit tot een volledig ontwerp. Zodra het ontwerp akkoord is, beginnen we met de ontwikkeling van de website en zorgen we ervoor dat alles goed functioneert en geoptimaliseerd is.',
+        'title' => 'Waarom een professionele website laten maken?',
         'usps' => [
-            "Gratis kennismaking – We bespreken jouw wensen en doelen",
-            "Concept en ontwerp – Een eerste ontwerp op basis van jouw input",
-            "Ontwikkeling en optimalisatie – De website wordt gebouwd en getest",
-            "Livegang en ondersteuning – Wij blijven beschikbaar voor support"
+            "Versterk jouw online aanwezigheid en bereik meer potentiële klanten",
+            "Converteer bezoekers naar klanten met doelgerichte call-to-actions",
+            "Bouw autoriteit op in jouw branche met een professionele uitstraling",
+            "Verbeter jouw vindbaarheid in Google met een <a href='/diensten/seo'>technisch geoptimaliseerde website</a>",
+            "Automatiseer bedrijfsprocessen en bespaar kostbare tijd"
         ],
     ])
     @endcomponent
 
     @component('components.text', [
-        'title' => 'Mijn expertise',
-        'description' => 'Met een sterke achtergrond in webontwikkeling en digitale strategie help ik bedrijven hun online doelen te bereiken. Ik bouw websites die gebruiksvriendelijk en visueel aantrekkelijk zijn, maar ook technisch geoptimaliseerd voor snelheid en vindbaarheid. Of het nu gaat om een WordPress-site, een op maat gemaakte Laravel-oplossing of een conversiegerichte SEO-strategie, ik zorg ervoor dat je website niet alleen goed functioneert, maar ook bijdraagt aan de groei van jouw bedrijf.',
+        'title' => 'Zo maken wij jouw website succesvol',
+        'description' => 'Bij Develix geloven we in websites die werken. Onze aanpak combineert:',
+        'usps' => [
+            "Data-gedreven design voor maximale gebruiksvriendelijkheid",
+            "Conversion Rate Optimization (CRO) technieken",
+            "Mobiel-eerst ontwikkeling voor perfecte weergave op alle apparaten",
+            "Snelle laadtijden voor betere gebruikerservaring en SEO",
+            "Gebruiksvriendelijk content management systeem",
+            "<a href='/diensten/hosting'>Betrouwbare hosting</a> met 24/7 monitoring"
+        ],
+    ])
+    @endcomponent
+
+    @component('components.text', [
+        'title' => 'WordPress websites op maat',
+        'description' => 'WordPress is wereldwijd het meest gebruikte platform voor professionele websites - en met reden. Als WordPress specialist ontwikkelt Develix:',
+        'usps' => [
+            "Volledig maatwerk thema afgestemd op jouw <a href='/diensten/design'>huisstijl</a>",
+            "Gebruiksvriendelijke beheeromgeving",
+            "Veilige en schaalbare oplossingen",
+            "SEO-geoptimaliseerde structuur",
+            "Integraties met uw bedrijfssoftware",
+            "<a href='/diensten/applicaties'>Maatwerk applicaties</a> wanneer nodig"
+        ],
+    ])
+    @endcomponent
+
+    @component('components.timeline', [
+       'title' => 'Het proces van website ontwikkeling',
+       'timelineItems' => [
+           [
+               'number' => 1,
+               'title' => 'Vrijblijvend adviesgesprek en analyse van jouw wensen',
+           ],
+           [
+               'number' => 2,
+               'title' => 'Strategisch plan en wireframes',
+           ],
+           [
+               'number' => 3,
+               'title' => 'Design en feedback rondes',
+           ],
+           [
+               'number' => 4,
+               'title' => 'Professionele ontwikkeling en testing',
+           ],
+           [
+               'number' => 5,
+               'title' => 'Content implementatie en optimalisatie',
+           ],
+           [
+               'number' => 6,
+               'title' => 'Launch en nazorg',
+           ],
+       ]
     ])
     @endcomponent
 
@@ -66,7 +114,7 @@
         'cards' => [
             [
                 'title' => 'Kwaliteit',
-                'description' => 'Ik lever hoogwaardige digitale oplossingen die voldoen aan de hoogste standaarden. Met oog voor detail en een focus op kwaliteit, zorg ik ervoor dat jouw project een succes wordt.',
+                'description' => 'Als WordPress specialist lever ik hoogwaardige websites die voldoen aan de laatste technische standaarden. Met oog voor detail en focus op conversie, zorg ik ervoor dat jouw website meetbaar resultaat oplevert.',
                 'image' => '/images/global/quality-black.svg',
                 'image-dark' => '/images/global/quality.svg',
                 'imageAlt' => 'Kwaliteitsgarantie icon',
@@ -89,6 +137,9 @@
     ])
     @endcomponent
 
+    @component('components.small-testimonial')
+    @endcomponent
+
     @component('components.faq', [
         'title' => 'Veelgestelde Vragen',
         'description' => 'Bekijk de antwoorden op de meest gestelde vragen over het laten maken van een website.',
@@ -97,21 +148,9 @@
     ])
     @endcomponent
 
-    @component('components.image-text', [
-        'title' => 'Het verhaal van Develix',
-        'description' => 'Develix is opgericht door Bryan de Knikker, een liefhebber van technologie die al vroeg zijn passie vond in het bouwen van websites en het ontdekken van de digitale wereld. Door opleidingen en praktijkervaring begon zijn wens te groeien om zijn kennis in te zetten voor anderen. Zo ontstond Develix: een bedrijf dat staat voor kwaliteit, klantgerichtheid en een persoonlijke benadering.',
-        'imageSrc' => asset('images/develix.nl/developer-story.svg'),
-        'imageSrcDark' => asset('images/develix.nl/developer-story-dark.svg'),
-        'altText' => 'Foto van Bryan de Knikker',
-        'width' => 300,
-        'height' => 300,
-        'imageClass' => ''
-    ])
-    @endcomponent
-
     @component('components.cta', [
         'title' => 'Klaar om te beginnen?',
-        'description' => 'Wil je meer weten over wat Develix voor jouw bedrijf kan betekenen? Neem contact op voor een vrijblijvend gesprek en ontdek hoe ik je kan helpen jouw digitale doelen te bereiken.',
+        'description' => 'Klaar voor een professionele website die converteert? Plan je gratis adviesgesprek',
         'first_button' => 'Klaar om jouw bedrijf online te laten groeien?',
         'first_button_url' => route('quote'),
         'second_button' => 'Vragen over jouw nieuwe website?',

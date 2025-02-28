@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>@yield('title', 'Develix') - @yield('subtitle', 'Digitale Groei')</title>
+    <title>@yield('title', 'Develix') | @yield('subtitle', 'Digitale Groei')</title>
     <meta name="description" content="@yield('meta_description', 'Develix biedt professionele webdesign-, SEO- en applicatiediensten aan voor ondernemers.')">
     <meta name="keywords" content="@yield('meta_keywords', 'webdesign, SEO, applicatie ontwikkeling, hosting, Develix')">
     <meta name="author" content="Develix">

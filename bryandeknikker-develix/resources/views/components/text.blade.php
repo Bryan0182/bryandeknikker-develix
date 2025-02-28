@@ -17,7 +17,7 @@
                                 <img src="https://develix.nl/images/develix.nl/check.svg"
                                      alt="Check"
                                      class="w-5 h-5">
-                                <span>{{ $usp }}</span>
+                                <span>{!! $usp !!}</span>
                             </div>
                         @endforeach
                     </div>

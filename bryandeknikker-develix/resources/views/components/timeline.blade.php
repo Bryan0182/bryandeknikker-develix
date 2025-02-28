@@ -1,7 +1,9 @@
 <div class="container mx-auto timeline-section py-5 px-4 flex flex-col items-center">
     <div class="text-center mb-6">
         <h2 class="text-2xl font-semibold">{{ $title }}</h2>
+        @if (!empty($description))
         <p class="mt-2">{{ $description }}</p>
+        @endif
     </div>
 
     <div class="timeline-scroll-container overflow-x-auto w-full">
@@ -20,7 +22,9 @@
                         @if (!empty($timelineItem['date']))
                             <span class="timeline-date text-md font-semibold px-3 py-1 rounded-md">{{ $timelineItem['date'] }}</span>
                         @endif
+                        @if (!empty($timelineItem['description']))
                         <p class="timeline-description">{{ $timelineItem['description'] }}</p>
+                        @endif
                     </div>
                 </div>
             @endforeach
