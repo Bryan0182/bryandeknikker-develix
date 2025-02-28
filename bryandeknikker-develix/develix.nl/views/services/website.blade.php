@@ -83,26 +83,32 @@
            [
                'number' => 1,
                'title' => 'Vrijblijvend adviesgesprek en analyse van jouw wensen',
+               'description' => 'We bespreken jouw doelen, doelgroep en wensen voor de website. Samen bepalen we de beste strategie om jouw online aanwezigheid te versterken.'
            ],
            [
                'number' => 2,
                'title' => 'Strategisch plan en wireframes',
+               'description' => 'Op basis van de analyse maken we een doordacht plan en wireframes. Deze vormen de basis voor een website die perfect aansluit bij jouw bedrijfsdoelen.'
            ],
            [
                'number' => 3,
                'title' => 'Design en feedback rondes',
+               'description' => 'We ontwerpen een unieke website die past bij jouw huisstijl. Via feedback rondes zorgen we dat het design precies aansluit bij jouw wensen.'
            ],
            [
                'number' => 4,
                'title' => 'Professionele ontwikkeling en testing',
+               'description' => 'Met de nieuwste technieken bouwen we jouw website. We testen uitgebreid op gebruiksvriendelijkheid, snelheid en werking op alle apparaten.'
            ],
            [
                'number' => 5,
                'title' => 'Content implementatie en optimalisatie',
+               'description' => 'We plaatsen jouw content en optimaliseren deze voor zoekmachines. Daarnaast zorgen we voor een gebruiksvriendelijk content management systeem.'
            ],
            [
                'number' => 6,
                'title' => 'Launch en nazorg',
+               'description' => 'Na een laatste controle gaat jouw website live. We blijven bereikbaar voor support en zorgen voor regelmatige updates en onderhoud.'
            ],
        ]
     ])
