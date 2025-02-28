@@ -76,19 +76,6 @@ document.addEventListener('DOMContentLoaded', function () {
     });
     initTheme();
 
-    window.addEventListener('scroll', function() {
-        const header = document.querySelector('.header');
-        if (header) {
-            if (window.scrollY > 50) {
-                header.classList.add('scrolled', 'py-2');
-                header.classList.remove('py-4');
-            } else {
-                header.classList.remove('scrolled', 'py-2');
-                header.classList.add('py-4');
-            }
-        }
-    });
-
     document.querySelectorAll('.read-more-cta-button, .read-more-hero-button, .read-more-services-button').forEach(element => {
         const iconUrl = window.location.hostname.includes('develix.nl')
             ? "url('/images/develix.nl/develix-angle-right.svg')"
