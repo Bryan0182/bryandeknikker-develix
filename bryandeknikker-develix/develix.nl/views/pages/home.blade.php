@@ -92,9 +92,6 @@
     ])
     @endcomponent
 
-    @component('components.small-testimonial')
-    @endcomponent
-
     @component('components.text', [
         'title' => 'Complete digitale oplossingen voor ambitieuze ondernemers',
         'description' => 'Bij website ontwikkeling kijken we verder dan alleen het design. Je krijgt:',
@@ -117,6 +114,9 @@
             "Maatwerk applicatie ontwikkeling voor procesautomatisering"
         ],
     ])
+    @endcomponent
+
+    @component('components.small-testimonial')
     @endcomponent
 
     @component('components.text-image', [
