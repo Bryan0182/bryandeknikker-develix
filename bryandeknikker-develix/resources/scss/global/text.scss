@@ -17,5 +17,13 @@
         .left {
             justify-content: end;
         }
+
+        a {
+            color: var(--main-color);
+
+            &:hover {
+                text-decoration: underline;
+            }
+        }
     }
 }
