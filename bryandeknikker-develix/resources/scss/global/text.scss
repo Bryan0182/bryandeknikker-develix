@@ -20,6 +20,7 @@
 
         a {
             color: var(--main-color);
+            transition: var(--transition);
 
             &:hover {
                 text-decoration: underline;
