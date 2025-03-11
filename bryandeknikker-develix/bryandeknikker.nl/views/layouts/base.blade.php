@@ -11,13 +11,9 @@
 </head>
 <body>
 
-@include('bryandeknikker::partials.header')
-
 <div class="content">
     @yield('content')
 </div>
-
-@include('bryandeknikker::partials.footer')
 
 @yield('page-specific-js')
 
