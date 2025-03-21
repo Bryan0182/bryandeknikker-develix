@@ -15,7 +15,7 @@
 
 @section('content')
     @component('components.hero', [
-        'title' => 'Website laten maken? Ontwikkeling van conversiegerichte websites die resultaat leveren',
+        'title' => 'Website laten maken? Samen creëren we een site die echt resultaat oplevert.',
         'description' => 'Zoek je een professionele website die niet alleen mooi is, maar ook écht leads en klanten oplevert? Develix combineert technische expertise met strategisch inzicht om jouw online succes meetbaar te maken. Van concept tot realisatie ontwikkelen we websites die converteren.',
         'first_button' => 'Neem contact op',
         'first_button_url' => route('contact'),
