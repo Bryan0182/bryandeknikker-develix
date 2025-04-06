@@ -1,0 +1,157 @@
+.plan-card {
+    background-color: var(--white-color);
+    border: 1px solid var(--black-color);
+    transition: var(--transition);
+    display: flex;
+    flex-direction: column;
+
+    &:hover {
+        border-color: var(--second-color);
+    }
+}
+
+.plan-card-popular {
+    border: 2px solid var(--main-color);
+
+    &:hover {
+        border-color: var(--second-color);
+
+        .plan-badge {
+            background-color: var(--second-color);
+            color: var(--white-color);
+        }
+    }
+}
+
+.plan-badge {
+    background-color: var(--main-color);
+    transition: var(--transition);
+    right: -1px;
+    top: -1px;
+}
+
+// Tekst stijling
+.plan-title {
+    color: var(--second-color);
+}
+
+.plan-title-popular {
+    color: var(--main-color);
+}
+
+.plan-description {
+    color: var(--dark-grey-color);
+}
+
+.plan-price {
+    color: var(--black-color);
+}
+
+.plan-currency {
+    color: var(--black-color);
+}
+
+.plan-period {
+    color: var(--dark-grey-color);
+}
+
+// Button stijling
+.plan-button {
+    background-color: var(--second-color);
+    color: var(--white-color);
+    transition: var(--transition);
+
+    &:hover {
+        background-color: var(--main-color);
+    }
+}
+
+.plan-button-popular {
+    background-color: var(--main-color);
+
+    &:hover {
+        background-color: var(--second-color);
+    }
+}
+
+// Features stijling
+.features-title {
+    color: var(--black-color);
+}
+
+.feature-item {
+    color: var(--dark-grey-color);
+}
+
+.feature-icon {
+    color: var(--grey-color);
+}
+
+// Donkere thema stijling
+body.dark-theme {
+    .plan-card {
+        background-color: var(--light-black-color);
+        border-color: var(--white-color);
+
+        &:hover {
+            border-color: var(--second-color);
+        }
+    }
+
+    .plan-card-popular {
+        border-color: var(--main-color);
+
+        &:hover {
+            border-color: var(--second-color);
+        }
+    }
+
+    .plan-title {
+        color: var(--second-color);
+    }
+
+    .plan-title-popular {
+        color: var(--main-color);
+    }
+
+    .plan-description {
+        color: var(--grey-color);
+    }
+
+    .plan-price,
+    .plan-currency {
+        color: var(--white-color);
+    }
+
+    .plan-period {
+        color: var(--grey-color);
+    }
+
+    .plan-button {
+        background-color: var(--second-color);
+
+        &:hover {
+            background-color: var(--main-color);
+        }
+    }
+
+    .plan-button-popular {
+        background-color: var(--main-color);
+
+        &:hover {
+            background-color: var(--second-color);
+        }
+    }
+
+    .features-title {
+        color: var(--white-color);
+    }
+
+    .feature-item {
+        color: var(--grey-color);
+    }
+
+    .feature-icon {
+        color: var(--dark-grey-color);
+    }
+}

@@ -14,6 +14,7 @@ export default defineConfig({
                 'resources/scss/global/cta.scss',
                 'resources/scss/global/404.scss',
                 'resources/scss/global/services.scss',
+                'resources/scss/global/featured-services.scss',
                 'resources/scss/global/text.scss',
                 'resources/scss/global/features.scss',
                 'resources/scss/global/timeline.scss',

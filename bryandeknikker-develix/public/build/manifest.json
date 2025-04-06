@@ -42,7 +42,7 @@
     "isEntry": true
   },
   "resources/scss/bryandeknikker.nl/bryandeknikker.scss": {
-    "file": "assets/bryandeknikker-BXtsQTGH.css",
+    "file": "assets/bryandeknikker-D-yG2YU3.css",
     "src": "resources/scss/bryandeknikker.nl/bryandeknikker.scss",
     "isEntry": true
   },
@@ -57,7 +57,7 @@
     "isEntry": true
   },
   "resources/scss/develix.nl/develix.scss": {
-    "file": "assets/develix-DdnShg27.css",
+    "file": "assets/develix-Cd799rN9.css",
     "src": "resources/scss/develix.nl/develix.scss",
     "isEntry": true
   },
@@ -77,7 +77,7 @@
     "isEntry": true
   },
   "resources/scss/global/app.scss": {
-    "file": "assets/app-1Nu-UlxN.css",
+    "file": "assets/app-CZ6fj99-.css",
     "src": "resources/scss/global/app.scss",
     "isEntry": true
   },
@@ -124,6 +124,11 @@
   "resources/scss/global/faq.scss": {
     "file": "assets/faq-DsWE7kaE.css",
     "src": "resources/scss/global/faq.scss",
+    "isEntry": true
+  },
+  "resources/scss/global/featured-services.scss": {
+    "file": "assets/featured-services-DEghuUYQ.css",
+    "src": "resources/scss/global/featured-services.scss",
     "isEntry": true
   },
   "resources/scss/global/features.scss": {
