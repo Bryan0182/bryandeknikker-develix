@@ -73,6 +73,7 @@
 
     @component('components.cta', [
         'title' => 'Klaar om samen te groeien?',
+        'highlight_word' => 'samen',
         'description' => 'Neem contact op om meer te weten over onze missie en visie en ontdek hoe wij jouw bedrijf kunnen helpen groeien in de digitale wereld.',
         'first_button' => 'Neem contact op',
         'first_button_url' => route('contact'),

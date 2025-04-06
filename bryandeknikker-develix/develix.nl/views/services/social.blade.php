@@ -85,6 +85,7 @@
 
     @component('components.cta', [
         'title' => 'Klaar om jouw social media te laten groeien?',
+        'highlight_word' => 'groeien',
         'description' => 'Wil je weten hoe Develix jouw merk op social media kan versterken? Neem contact op voor een vrijblijvend gesprek en ontdek hoe ik jouw online aanwezigheid kunnen verbeteren.',
         'first_button' => 'Gebruik mijn social media diensten',
         'first_button_url' => route('quote'),

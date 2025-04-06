@@ -96,6 +96,7 @@
 
     @component('components.cta', [
         'title' => 'Wil je meer weten over Develix?',
+        'highlight_word' => 'Develix',
         'description' => 'Neem contact op voor meer informatie over mijn diensten en ontdek hoe ik jouw bedrijf kunnen helpen groeien. Ik sta klaar om jouw vragen te beantwoorden!',
         'first_button' => 'Neem contact op',
         'first_button_url' => route('contact'),

@@ -1,25 +1,289 @@
-.cta-container-fluid {
-    border-top: 1px solid var(--black-color);
-    border-bottom: 1px solid var(--black-color);
+.cta-section {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+    background-color: var(--black-color);
+}
 
-    body.dark-theme & {
-        border-top: 1px solid var(--white-color);
-        border-bottom: 1px solid var(--white-color);
+.cta-gradient {
+    position: absolute;
+    inset: 0;
+    background-image: linear-gradient(to bottom right, var(--black-color), var(--black-color), rgba(21, 205, 242, 0.3)); // Aangepast naar main-color tint
+    opacity: 0.95;
+}
+
+// Fade voor vloeiende overgang bovenaan
+.cta-fade-top {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 4rem;
+    background-image: linear-gradient(to bottom, var(--black-color), transparent);
+    z-index: 5;
+}
+
+// Fade voor vloeiende overgang onderaan - IDENTIEK aan bovenaan maar omgekeerd
+.cta-fade-bottom {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 4rem; // Exact dezelfde hoogte als bovenaan
+    background-image: linear-gradient(to top, var(--black-color), transparent);
+    z-index: 5;
+}
+
+.cta-light-effects {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+
+    .light-effect-1 {
+        position: absolute;
+        top: 30%;
+        left: 10%;
+        width: 24rem;
+        height: 24rem;
+        border-radius: 9999px;
+        background-color: rgba(21, 205, 242, 0.1); // main-color
+        filter: blur(3rem);
+        opacity: 0.2;
+    }
+
+    .light-effect-2 {
+        position: absolute;
+        bottom: 20%;
+        right: 15%;
+        width: 24rem;
+        height: 24rem;
+        border-radius: 9999px;
+        background-color: rgba(21, 205, 242, 0.15); // main-color
+        filter: blur(3rem);
+        opacity: 0.2;
+    }
+}
+
+.cta-content {
+    position: relative;
+    z-index: 10;
+    padding: 1.5rem;
+    padding-top: 6rem;
+    padding-bottom: 6rem;
+    text-align: center;
+    max-width: 64rem;
+    margin-left: auto;
+    margin-right: auto;
+
+    @media (min-width: 768px) {
+        padding-top: 8rem;
+        padding-bottom: 8rem;
+    }
+
+    @media (min-width: 1024px) {
+        padding-top: 9rem;
+        padding-bottom: 9rem;
     }
 }
 
 .cta-title {
-    margin: 0;
+    font-size: 2.25rem;
+    line-height: 1.2;
+    font-weight: 700;
+    color: var(--white-color);
+    margin-bottom: 1.5rem;
+    letter-spacing: -0.025em;
+
+    @media (min-width: 768px) {
+        font-size: 3rem;
+    }
+
+    @media (min-width: 1024px) {
+        font-size: 3.75rem;
+    }
+
+    .cta-highlight {
+        color: var(--main-color); // Altijd main-color
+    }
 }
 
-.cta-text {
-    padding: 15px 0;
+.cta-description {
+    font-size: 1.125rem;
+    line-height: 1.6;
+    color: rgba(250, 250, 250, 0.8);
+    margin-bottom: 2.5rem;
+    max-width: 36rem;
+    margin-left: auto;
+    margin-right: auto;
 }
 
-@media screen and (max-width: 768px) {
-    .button-cta-row {
-        display: flex !important;
-        width: fit-content;
-        margin: auto;
+.cta-buttons {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1rem;
+}
+
+.cta-button-primary {
+    padding: 0.75rem 1.5rem;
+    background-color: var(--main-color); // Altijd main-color
+    color: var(--white-color);
+    font-weight: 500;
+    border-radius: 0.5rem;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+
+    &:hover {
+        background-color: var(--main-color); // Blijft main-color
+        opacity: 0.9; // Lichte opacity verandering voor hover effect
+    }
+}
+
+.cta-button-secondary {
+    padding: 0.75rem 1.5rem;
+    color: var(--white-color);
+    font-weight: 500;
+    display: flex;
+    align-items: center;
+    transition: color 0.3s ease;
+
+    &:hover {
+        color: var(--main-color); // Altijd main-color
+    }
+
+    .cta-arrow {
+        height: 1.25rem;
+        width: 1.25rem;
+        margin-left: 0.25rem;
+        transform: translateX(0);
+        transition: transform 0.3s ease;
+    }
+
+    &:hover .cta-arrow {
+        transform: translateX(0.25rem);
+    }
+}
+
+// Donker thema (standaard)
+body.dark-theme {
+    .cta-section {
+        background-color: var(--black-color);
+    }
+
+    .cta-gradient {
+        background-image: linear-gradient(to bottom right, var(--black-color), var(--black-color), rgba(21, 205, 242, 0.3)); // main-color tint
+    }
+
+    .cta-fade-top {
+        background-image: linear-gradient(to bottom, var(--black-color), transparent);
+    }
+
+    .cta-fade-bottom {
+        background-image: linear-gradient(to top, var(--black-color), transparent);
+    }
+
+    .cta-title {
+        color: var(--white-color);
+
+        .cta-highlight {
+            color: var(--main-color); // main-color
+        }
+    }
+
+    .cta-description {
+        color: rgba(250, 250, 250, 0.8);
+    }
+
+    .cta-button-secondary {
+        color: var(--white-color);
+
+        &:hover {
+            color: var(--main-color); // main-color
+        }
+    }
+}
+
+// Licht thema
+body:not(.dark-theme) {
+    .cta-section {
+        background-color: var(--white-color);
+    }
+
+    .cta-gradient {
+        background-image: linear-gradient(to bottom right,
+            var(--white-color) 0%,
+            var(--white-color) 50%,
+            rgba(21, 205, 242, 0.2) 100%); // main-color tint
+    }
+
+    .cta-fade-top {
+        background-image: linear-gradient(to bottom, var(--white-color), transparent);
+    }
+
+    .cta-fade-bottom {
+        background-image: linear-gradient(to top, var(--white-color), transparent);
+    }
+
+    .cta-light-effects {
+        .light-effect-1 {
+            background-color: rgba(21, 205, 242, 0.2); // main-color
+            opacity: 0.4;
+            top: 15%;
+            width: 30rem;
+            height: 30rem;
+        }
+
+        .light-effect-2 {
+            background-color: rgba(21, 205, 242, 0.3); // main-color
+            opacity: 0.3;
+            width: 28rem;
+            height: 28rem;
+        }
+
+        &::after {
+            content: '';
+            position: absolute;
+            top: 60%;
+            left: 40%;
+            width: 20rem;
+            height: 20rem;
+            border-radius: 9999px;
+            background-color: rgba(21, 205, 242, 0.15); // main-color
+            filter: blur(4rem);
+            opacity: 0.6;
+        }
+    }
+
+    .cta-title {
+        color: var(--black-color);
+
+        .cta-highlight {
+            color: var(--main-color); // main-color
+        }
+    }
+
+    .cta-description {
+        color: rgba(18, 18, 18, 0.8);
+    }
+
+    .cta-button-primary {
+        background-color: var(--main-color); // main-color
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+
+        &:hover {
+            background-color: var(--main-color); // blijft main-color
+            opacity: 0.9; // Lichte opacity verandering voor hover effect
+        }
+    }
+
+    .cta-button-secondary {
+        color: var(--black-color);
+
+        &:hover {
+            color: var(--main-color); // main-color
+        }
     }
 }

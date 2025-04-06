@@ -85,6 +85,7 @@
 
     @component('components.cta', [
         'title' => 'Klaar voor een nieuw design?',
+        'highlight_word' => 'design',
         'description' => 'Wil je een sterk en professioneel design laten maken? Neem contact op voor een vrijblijvend gesprek en ontdek hoe ik jouw merk visueel sterker kan maken.',
         'first_button' => 'Start jouw design project',
         'first_button_url' => route('quote'),

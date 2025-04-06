@@ -138,6 +138,7 @@
 
     @component('components.cta', [
         'title' => 'Klaar om je online aanwezigheid naar het volgende niveau te tillen? ',
+        'highlight_word' => 'volgende niveau',
         'description' => 'Plan direct je gratis adviesgesprek en ontdek hoe ik jouw digitale ambities kan waarmaken.',
         'first_button' => 'Plan je gratis adviesgesprek',
         'first_button_url' => route('contact'),

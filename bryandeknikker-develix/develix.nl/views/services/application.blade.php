@@ -85,6 +85,7 @@
 
     @component('components.cta', [
         'title' => 'Klaar om te starten?',
+        'highlight_word' => 'starten',
         'description' => 'Wil je een applicatie laten maken die jouw bedrijfsprocessen optimaliseert? Neem contact op voor een vrijblijvend gesprek en ontdek hoe Develix jouw digitale ambities kan realiseren.',
         'first_button' => 'Start met jouw applicatie',
         'first_button_url' => route('quote'),

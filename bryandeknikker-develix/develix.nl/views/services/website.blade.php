@@ -156,6 +156,7 @@
 
     @component('components.cta', [
         'title' => 'Klaar om te beginnen?',
+        'highlight_word' => 'beginnen',
         'description' => 'Klaar voor een professionele website die converteert? Plan je gratis adviesgesprek',
         'first_button' => 'Klaar om jouw bedrijf online te laten groeien?',
         'first_button_url' => route('quote'),

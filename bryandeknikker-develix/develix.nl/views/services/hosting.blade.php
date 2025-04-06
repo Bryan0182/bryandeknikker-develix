@@ -85,6 +85,7 @@
 
     @component('components.cta', [
         'title' => 'Klaar voor snelle hosting?',
+        'highlight_word' => 'snelle',
         'description' => 'Wil je jouw website snel en veilig online houden? Neem contact op voor een vrijblijvend gesprek en ontdek hoe Develix jouw hosting kan verzorgen.',
         'first_button' => 'Maak jouw website snel',
         'first_button_url' => route('quote'),

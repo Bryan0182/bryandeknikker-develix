@@ -100,6 +100,7 @@
 
     @component('components.cta', [
         'title' => 'Klaar om je bedrijf te laten groeien?',
+        'highlight_word' => 'groeien',
         'description' => 'Wil je meer weten over mijn diensten of bespreken hoe ik jouw bedrijf kan ondersteunen? Neem gerust contact op en ontdek wat mogelijk is.',
         'first_button' => 'Vraag een offerte aan',
         'first_button_url' => route('quote'),

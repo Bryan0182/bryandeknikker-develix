@@ -117,6 +117,7 @@
 
     @component('components.cta', [
         'title' => 'Boost je vindbaarheid vandaag!',
+        'highlight_word' => 'vindbaarheid',
         'description' => 'Wil je hoger in Google en meer klanten aantrekken? Vraag een gratis SEO-scan aan en ontdek hoe ik jouw online groei kan versnellen!',
         'first_button' => 'Gratis SEO-Scan aanvragen',
         'first_button_url' => route('quote'),
