@@ -2,7 +2,7 @@
 
 @section('title', 'Design Diensten')
 @section('subtitle', 'Professioneel en op maat gemaakt design')
-@section('meta_description', 'Ontdek hoe Develix jouw merk kan versterken met op maat gemaakte designoplossingen. Van logo’s tot complete huisstijlen – wij brengen jouw visie tot leven.')
+@section('meta_description', 'Ontdek hoe Develix jouw merk kan versterken met op maat gemaakte designoplossingen. Van logo’s tot complete huisstijlen – ik breng jouw visie tot leven.')
 @section('meta_keywords', 'design diensten, professioneel design, huisstijl ontwerp, logo design, visuele identiteit')
 @section('og_title', 'Design Diensten | Develix')
 @section('og_description', 'Geef jouw merk een sterke visuele identiteit met de designoplossingen van Develix. Professioneel, creatief en altijd op maat.')
@@ -16,7 +16,7 @@
 @section('content')
     @component('components.hero', [
         'title' => 'Design Diensten',
-        'description' => 'Breng jouw merk tot leven met professionele designoplossingen van Develix. Van opvallende logo’s en complete huisstijlen tot aantrekkelijke visuals voor jouw website en marketing. Wij zorgen voor een design dat indruk maakt.',
+        'description' => 'Breng jouw merk tot leven met professionele designoplossingen van Develix. Van opvallende logo’s en complete huisstijlen tot aantrekkelijke visuals voor jouw website en marketing. Ik zorg voor een design dat indruk maakt.',
         'first_button' => 'Start jouw design project',
         'first_button_url' => route('quote'),
         'second_button' => 'Bekijk wat klanten zeggen',
@@ -32,7 +32,7 @@
 
     @component('components.text', [
         'title' => 'Waarom investeren in design?',
-        'description' => 'Een sterk en professioneel design is essentieel voor het succes van jouw merk. Het trekt niet alleen aandacht, maar creëert ook vertrouwen bij jouw doelgroep. Bij Develix zorgen wij ervoor dat jouw visuele identiteit perfect aansluit bij jouw merkwaarden en doelen.',
+        'description' => 'Een sterk en professioneel design is essentieel voor het succes van jouw merk. Het trekt niet alleen aandacht, maar creëert ook vertrouwen bij jouw doelgroep. Bij Develix zorg ik ervoor dat jouw visuele identiteit perfect aansluit bij jouw merkwaarden en doelen.',
     ])
     @endcomponent
 
@@ -44,25 +44,25 @@
 
     @component('components.cards', [
         'title' => 'Onze kernwaarden',
-        'subtitle' => 'Bij Develix staan kwaliteit, klantgerichtheid en innovatie centraal. Deze kernwaarden vormen de basis van onze dienstverlening en helpen ons om klanten te voorzien van hoogwaardige designoplossingen die echt het verschil maken.',
+        'subtitle' => 'Bij Develix staan kwaliteit, klantgerichtheid en innovatie centraal. Deze kernwaarden vormen de basis van mijn dienstverlening en helpen mij om klanten te voorzien van hoogwaardige designoplossingen die echt het verschil maken.',
         'cards' => [
             [
                 'title' => 'Kwaliteit',
-                'description' => 'Wij leveren hoogwaardige designs die voldoen aan de hoogste standaarden. Met oog voor detail zorgen wij ervoor dat jouw merk professioneel en uniek wordt gepresenteerd.',
+                'description' => 'Ik lever hoogwaardige designs die voldoen aan de hoogste standaarden. Met oog voor detail zorg ik ervoor dat jouw merk professioneel en uniek wordt gepresenteerd.',
                 'image' => '/images/global/quality-black.svg',
                 'image-dark' => '/images/global/quality.svg',
                 'imageAlt' => 'Kwaliteitsgarantie icon',
             ],
             [
                 'title' => 'Klantgerichtheid',
-                'description' => 'Bij Develix staan jouw wensen centraal. Wij luisteren naar jouw ideeën en vertalen die naar een visuele identiteit die impact maakt.',
+                'description' => 'Bij Develix staan jouw wensen centraal. Ik Luister naar jouw ideeën en vertalen die naar een visuele identiteit die impact maakt.',
                 'image' => '/images/global/customer-focus-black.svg',
                 'image-dark' => '/images/global/customer-focus.svg',
                 'imageAlt' => 'Klantgerichtheid icon',
             ],
             [
                 'title' => 'Innovatie',
-                'description' => 'Wij blijven continu leren en innoveren om de beste designoplossingen te kunnen bieden. Met een passie voor creativiteit helpen wij jouw merk groeien.',
+                'description' => 'Ik blijf continu leren en innoveren om de beste designoplossingen te kunnen bieden. Met een passie voor creativiteit help ik jouw merk groeien.',
                 'image' => '/images/global/innovation-black.svg',
                 'image-dark' => '/images/global/innovation.svg',
                 'imageAlt' => 'Innovatie icon',
@@ -85,7 +85,7 @@
 
     @component('components.cta', [
         'title' => 'Klaar voor een nieuw design?',
-        'description' => 'Wil je een sterk en professioneel design laten maken? Neem contact op voor een vrijblijvend gesprek en ontdek hoe wij jouw merk visueel sterker kunnen maken.',
+        'description' => 'Wil je een sterk en professioneel design laten maken? Neem contact op voor een vrijblijvend gesprek en ontdek hoe ik jouw merk visueel sterker kan maken.',
         'first_button' => 'Start jouw design project',
         'first_button_url' => route('quote'),
         'second_button' => 'Meer weten over design?',
@@ -96,4 +96,4 @@
 
 @section('page-specific-js')
     @vite(['resources/js/global/timeline.js'])
-        @endsection
+@endsection

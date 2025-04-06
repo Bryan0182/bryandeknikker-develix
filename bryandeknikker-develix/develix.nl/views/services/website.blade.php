@@ -5,7 +5,7 @@
 @section('meta_description', 'Op zoek naar een professionele website die converteert? Develix ontwikkelt maatwerk WordPress websites met focus op resultaat. Vraag een gratis adviesgesprek aan.')
 @section('meta_keywords', 'website laten maken, maatwerk websites, professionele websites, WordPress, Laravel, Develix')
 @section('og_title', 'Website laten maken | Develix')
-@section('og_description', 'Een website laten maken? Bij Develix krijg je maatwerk en professionele ondersteuning voor jouw online aanwezigheid. Ontdek wat wij voor jou kunnen doen!')
+@section('og_description', 'Een website laten maken? Bij Develix krijg je maatwerk en professionele ondersteuning voor jouw online aanwezigheid. Ontdek wat ik voor jou kunnen doen!')
 @section('og_image', asset('images/develix.nl/create-website.svg'))
 @section('canonical', route('website'))
 
@@ -50,8 +50,8 @@
     @endcomponent
 
     @component('components.text', [
-        'title' => 'Zo maken wij jouw website succesvol',
-        'description' => 'Bij Develix geloven we in websites die werken. Onze aanpak combineert:',
+        'title' => 'Zo maak ik jouw website succesvol',
+        'description' => 'Bij Develix geloven we in websites die werken. Mijn aanpak combineert:',
         'usps' => [
             "Data-gedreven design voor maximale gebruiksvriendelijkheid",
             "Conversion Rate Optimization (CRO) technieken",
@@ -83,32 +83,32 @@
            [
                'number' => 1,
                'title' => 'Vrijblijvend adviesgesprek en analyse van jouw wensen',
-               'description' => 'We bespreken jouw doelen, doelgroep en wensen voor de website. Samen bepalen we de beste strategie om jouw online aanwezigheid te versterken.'
+               'description' => 'Ik bespreek jouw doelen, doelgroep en wensen voor de website. Samen bepalen we de beste strategie om jouw online aanwezigheid te versterken.'
            ],
            [
                'number' => 2,
                'title' => 'Strategisch plan en wireframes',
-               'description' => 'Op basis van de analyse maken we een doordacht plan en wireframes. Deze vormen de basis voor een website die perfect aansluit bij jouw bedrijfsdoelen.'
+               'description' => 'Op basis van de analyse maak ik een doordacht plan en wireframes. Deze vormen de basis voor een website die perfect aansluit bij jouw bedrijfsdoelen.'
            ],
            [
                'number' => 3,
                'title' => 'Design en feedback rondes',
-               'description' => 'We ontwerpen een unieke website die past bij jouw huisstijl. Via feedback rondes zorgen we dat het design precies aansluit bij jouw wensen.'
+               'description' => 'IK ontwerp een unieke website die past bij jouw huisstijl. Via feedback rondes zorg ik dat het design precies aansluit bij jouw wensen.'
            ],
            [
                'number' => 4,
                'title' => 'Professionele ontwikkeling en testing',
-               'description' => 'Met de nieuwste technieken bouwen we jouw website. We testen uitgebreid op gebruiksvriendelijkheid, snelheid en werking op alle apparaten.'
+               'description' => 'Met de nieuwste technieken bouw ik jouw website. Ik test uitgebreid op gebruiksvriendelijkheid, snelheid en werking op alle apparaten.'
            ],
            [
                'number' => 5,
                'title' => 'Content implementatie en optimalisatie',
-               'description' => 'We plaatsen jouw content en optimaliseren deze voor zoekmachines. Daarnaast zorgen we voor een gebruiksvriendelijk content management systeem.'
+               'description' => 'Ik plaats jouw content en optimaliseren deze voor zoekmachines. Daarnaast zorg ik voor een gebruiksvriendelijk content management systeem.'
            ],
            [
                'number' => 6,
                'title' => 'Launch en nazorg',
-               'description' => 'Na een laatste controle gaat jouw website live. We blijven bereikbaar voor support en zorgen voor regelmatige updates en onderhoud.'
+               'description' => 'Na een laatste controle gaat jouw website live. Ik blijv bereikbaar voor support en zorgen voor regelmatige updates en onderhoud.'
            ],
        ]
     ])

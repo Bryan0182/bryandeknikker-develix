@@ -88,7 +88,7 @@
 
         <!-- Contact en Thema-switcher (desktop) -->
         <nav class="hidden lg:flex items-center space-x-4">
-            <a href="{{ route('contact') }}" class="contact-button">Contact</a>
+            <a href="{{ route('contact') }}" class="primary-button">Contact</a>
             <button id="theme-switcher" aria-label="Switch Theme" class="flex items-center">
                 <span id="icon-sun" style="display: none;">
                     <img src="{{ asset('images/global/sun.svg') }}" alt="Light Theme" width="30" height="30">

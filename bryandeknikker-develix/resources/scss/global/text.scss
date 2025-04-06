@@ -23,6 +23,7 @@
             transition: var(--transition);
 
             &:hover {
+                color: var(--second-color);
                 text-decoration: underline;
             }
         }

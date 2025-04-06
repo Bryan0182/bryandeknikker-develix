@@ -61,19 +61,44 @@
 }
 
 .primary-button {
-    background-color: var(--transparent-color);
+    position: relative;
+    padding: 6px 12px;
+    background-color: transparent;
     color: var(--main-color);
-    border: 1px solid var(--main-color);
-    padding: 6px 12px !important;
+    border: 2px solid var(--main-color);
+    font-weight: 500;
     border-radius: var(--border-radius);
-    transition: var(--transition);
+    transition: color var(--transition), border-color var(--transition);
+    overflow: hidden;
+    z-index: 1;
 
-    &:hover,
-    &:focus,
-    &:active {
-        background-color: var(--main-color) !important;
-        color: var(--white-color) !important;
-        border: 1px solid var(--main-color) !important;
+    &::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 0;
+        height: 100%;
+        background-color: var(--second-color);
+        transition: width var(--transition);
+        z-index: -1;
+    }
+
+    &:hover {
+        color: var(--white-color);
+        border-color: var(--second-color);
+
+        &::before {
+            width: 100%;
+        }
+    }
+
+    &:not(:hover)::before {
+        transition: width var(--transition);
+    }
+
+    &:not(:hover) {
+        transition: color var(--transition), border-color 0s var(--transition);
     }
 }
 
@@ -85,15 +110,8 @@
     border: none;
     padding: 6px 12px;
     border-radius: var(--border-radius);
-    transition: var(--transition);
+    transition: color var(--transition) 0.2s;
     position: relative;
-
-    &:hover,
-    &:focus,
-    &:active {
-        background-color: var(--transparent-color) !important;
-        color: var(--main-color) !important;
-    }
 
     &::after {
         content: '';
@@ -102,10 +120,32 @@
         height: 20px;
         display: inline-block;
         margin-left: 5px;
-        transition: transform var(--transition);
+        transition: transform var(--transition), opacity var(--transition) 0.2s;
     }
 
-    &:hover::after {
-        transform: translateX(8px);
+    &::before {
+        content: '';
+        background: var(--icon--angle-right-hover-url, var(--icon--angle-right-url)) no-repeat;
+        width: 15px;
+        height: 20px;
+        position: absolute;
+        right: 12px;
+        opacity: 0;
+        transform: translateX(-8px);
+        transition: opacity var(--transition) 0.2s, transform var(--transition) 0.2s;
+    }
+
+    &:hover {
+        color: var(--second-color);
+
+        &::after {
+            transform: translateX(8px);
+            opacity: 0;
+        }
+
+        &::before {
+            opacity: 1;
+            transform: translateX(0);
+        }
     }
 }

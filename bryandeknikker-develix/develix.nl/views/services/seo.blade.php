@@ -2,7 +2,7 @@
 
 @section('title', 'SEO Diensten')
 @section('subtitle', 'Verbeter jouw online vindbaarheid')
-@section('meta_description', 'Wil je jouw SEO verbeteren? Bij Develix bieden we SEO-diensten die jouw zichtbaarheid vergroten en meer verkeer naar jouw website genereren. Neem contact op voor een strategisch SEO-plan.')
+@section('meta_description', 'Wil je jouw SEO verbeteren? Bij Develix bied ik SEO-diensten die jouw zichtbaarheid vergroten en meer verkeer naar jouw website genereren. Neem contact op voor een strategisch SEO-plan.')
 @section('meta_keywords', 'SEO diensten, SEO verbeteren, vindbaarheid vergroten, SEO strategie, Develix')
 @section('og_title', 'SEO Diensten | Develix')
 @section('og_description', 'Ontdek hoe Develix jouw online vindbaarheid verbetert met resultaatgerichte SEO-diensten. Vraag een vrijblijvend advies aan.')
@@ -16,7 +16,7 @@
 @section('content')
     @component('components.hero', [
         'title' => 'Jouw Website Hoger in Google & Meer Bezoekers',
-        'description' => 'Wil je dat jouw website beter gevonden wordt door potentiële klanten? Bij Develix bieden we resultaatgerichte SEO-diensten die jouw online zichtbaarheid vergroten. Van technische optimalisatie tot waardevolle contentcreatie – wij zorgen ervoor dat jouw website hoger scoort in zoekmachines en meer relevant verkeer aantrekt.',
+        'description' => 'Wil je dat jouw website beter gevonden wordt door potentiële klanten? Bij Develix bied ik resultaatgerichte SEO-diensten die jouw online zichtbaarheid vergroten. Van technische optimalisatie tot waardevolle contentcreatie – ik zorg ervoor dat jouw website hoger scoort in zoekmachines en meer relevant verkeer aantrekt.',
         'usps' => [
             "Voor zzp'ers & kleine bedrijven",
             "Technische & contentoptimalisatie",
@@ -38,7 +38,7 @@
 
     @component('components.text', [
         'title' => 'Waarom kiezen voor Develix voor SEO?',
-        'description' => 'Bij Develix draait alles om maatwerk en klantgerichtheid. We zorgen ervoor dat jouw SEO-strategie niet alleen effectief is, maar ook perfect aansluit bij jouw bedrijfsdoelen. Dankzij onze ervaring in SEO en digitale marketing krijg je een aanpak die zowel technisch sterk is als gericht op jouw doelgroep.',
+        'description' => 'Bij Develix draait alles om maatwerk en klantgerichtheid. Ik zorg ervoor dat jouw SEO-strategie niet alleen effectief is, maar ook perfect aansluit bij jouw bedrijfsdoelen. Dankzij mijn ervaring in SEO en digitale marketing krijg je een aanpak die zowel technisch sterk is als gericht op jouw doelgroep.',
         'usps' => [
             "Maatwerk SEO-strategieën – Afgestemd op jouw specifieke doelen",
             "Transparante werkwijze – Heldere communicatie en rapportages",
@@ -55,26 +55,26 @@
     @endcomponent
 
     @component('components.cards', [
-        'title' => 'Onze kernwaarden',
-        'subtitle' => 'Bij Develix staan kwaliteit, klantgerichtheid en innovatie centraal. Deze kernwaarden vormen de basis van onze dienstverlening en helpen ons om klanten te voorzien van hoogwaardige digitale oplossingen die echt het verschil maken.',
+        'title' => 'Mijn kernwaarden',
+        'subtitle' => 'Bij Develix staan kwaliteit, klantgerichtheid en innovatie centraal. Deze kernwaarden vormen de basis van mijn dienstverlening en helpen ons om klanten te voorzien van hoogwaardige digitale oplossingen die echt het verschil maken.',
         'cards' => [
             [
                 'title' => 'Kwaliteit',
-                'description' => 'Wij leveren hoogwaardige SEO-diensten die voldoen aan de nieuwste richtlijnen van zoekmachines. Met oog voor detail zorgen we voor optimale prestaties van jouw website.',
+                'description' => 'Ik lever hoogwaardige SEO-diensten die voldoen aan de nieuwste richtlijnen van zoekmachines. Met oog voor detail zorg ik voor optimale prestaties van jouw website.',
                 'image' => '/images/global/quality-black.svg',
                 'image-dark' => '/images/global/quality.svg',
                 'imageAlt' => 'Kwaliteitsgarantie icon',
             ],
             [
                 'title' => 'Klantgerichtheid',
-                'description' => 'Bij Develix staat de klant centraal. Wij luisteren naar jouw wensen en leveren maatwerkoplossingen die perfect aansluiten op jouw doelen. Jouw tevredenheid is onze prioriteit.',
+                'description' => 'Bij Develix staat de klant centraal. Ik luister naar jouw wensen en leveren maatwerkoplossingen die perfect aansluiten op jouw doelen. Jouw tevredenheid is mijn prioriteit.',
                 'image' => '/images/global/customer-focus-black.svg',
                 'image-dark' => '/images/global/customer-focus.svg',
                 'imageAlt' => 'Klantgerichtheid icon',
             ],
             [
                 'title' => 'Innovatie',
-                'description' => 'Wij blijven continu leren en innoveren om onze klanten de beste SEO-strategieën en tools te bieden. Met een passie voor technologie helpen wij bedrijven vooruit.',
+                'description' => 'Ik blijf continu leren en innoveren om mijn klanten de beste SEO-strategieën en tools te bieden. Met een passie voor technologie help ik bedrijven vooruit.',
                 'image' => '/images/global/innovation-black.svg',
                 'image-dark' => '/images/global/innovation.svg',
                 'imageAlt' => 'Innovatie icon',
@@ -85,9 +85,9 @@
 
     @component('components.text', [
         'title' => 'Hoe werkt het?',
-        'description' => 'Het proces van SEO bij Develix begint met een grondige analyse van jouw website en doelen. We voeren een uitgebreide SEO-audit uit, bepalen de beste strategie en implementeren de optimalisaties. Vervolgens monitoren en verbeteren we continu om duurzame resultaten te behalen.',
+        'description' => 'Het proces van SEO bij Develix begint met een grondige analyse van jouw website en doelen. Ik voer  een uitgebreide SEO-audit uit, bepalen de beste strategie en implementeren de optimalisaties. Vervolgens monitor en verbeter ik continu om duurzame resultaten te behalen.',
         'usps' => [
-            "Gratis kennismaking – We analyseren jouw website en SEO-doelen",
+            "Gratis kennismaking – Ik analyseer jouw website en SEO-doelen",
             "SEO-audit en strategie – Een plan op maat voor maximale vindbaarheid",
             "Optimalisatie en uitvoering – Technische verbeteringen en contentaanpassingen",
             "Monitoring en bijsturing – Doorlopende analyses en rapportages voor blijvend succes"
@@ -97,7 +97,7 @@
 
     @component('components.faq', [
         'title' => 'Veelgestelde Vragen',
-        'description' => 'Vind hier antwoorden op de meest voorkomende vragen over onze diensten.',
+        'description' => 'Vind hier antwoorden op de meest voorkomende vragen over mijn diensten.',
         'faqs' => \App\Models\Faq::active()->byCategory('seo')->get(),
         'imageSrc' => asset('/images/develix.nl/angle-down.svg'),
     ])
@@ -117,10 +117,10 @@
 
     @component('components.cta', [
         'title' => 'Boost je vindbaarheid vandaag!',
-        'description' => 'Wil je hoger in Google en meer klanten aantrekken? Vraag een gratis SEO-scan aan en ontdek hoe wij jouw online groei kunnen versnellen!',
+        'description' => 'Wil je hoger in Google en meer klanten aantrekken? Vraag een gratis SEO-scan aan en ontdek hoe ik jouw online groei kan versnellen!',
         'first_button' => 'Gratis SEO-Scan aanvragen',
         'first_button_url' => route('quote'),
-        'second_button' => 'Vragen over onze SEO-strategie',
+        'second_button' => 'Vragen over mijn SEO-strategie',
         'second_button_url' => route('contact')
     ])
     @endcomponent

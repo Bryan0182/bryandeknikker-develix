@@ -23,7 +23,7 @@
                         @endif
                         <h3 class="text-lg font-semibold">{{ $relatedBlog->title }}</h3>
                         <span class="mt-2">{!! $relatedBlog->intro !!}</span>
-                        <a href="{{ route('blog-show', $relatedBlog->slug) }}" class="mt-4 inline-block blog-read-more angle-right-button" style="--icon--angle-right-url: url('/images/develix.nl/develix-angle-right.svg');">Lees meer</a>
+                        <a href="{{ route('blog-show', $relatedBlog->slug) }}" class="mt-4 inline-block blog-read-more angle-right-button" style="--icon--angle-right-url: url('/images/develix.nl/develix-angle-right.svg'); --icon--angle-right-hover-url: url('/images/develix.nl/develix-angle-hover-right.svg');">Lees meer</a>
                     </div>
                 @endforeach
             </div>

@@ -5,7 +5,7 @@
 @section('meta_description', 'Ontdek hoe Develix jouw website snel en veilig online houdt met betrouwbare hostingdiensten. Laat jouw website optimaal presteren!')
 @section('meta_keywords', 'hosting diensten, betrouwbare hosting, veilige hosting, snelle hosting, Develix')
 @section('og_title', 'Hosting Diensten | Develix')
-@section('og_description', 'Houd jouw website snel en veilig online met de hostingdiensten van Develix. Ontdek onze hostingoplossingen op maat.')
+@section('og_description', 'Houd jouw website snel en veilig online met de hostingdiensten van Develix. Ontdek mijn hostingoplossingen op maat.')
 @section('og_image', asset('images/develix.nl/hosting-activities.svg'))
 @section('canonical', route('hosting'))
 

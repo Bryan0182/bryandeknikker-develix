@@ -24,7 +24,7 @@
                 @endif
 
                 @if (!empty($second_button) && !empty($second_button_url))
-                    <a href="{{ $second_button_url }}" class="btn btn-primary angle-right-button py-2 px-6 text-center md:w-auto" style="--icon--angle-right-url: url('/images/develix.nl/develix-angle-right.svg');">{{ $second_button }}</a>
+                    <a href="{{ $second_button_url }}" class="btn btn-primary angle-right-button py-2 px-6 text-center md:w-auto" style="--icon--angle-right-url: url('/images/develix.nl/develix-angle-right.svg'); --icon--angle-right-hover-url: url('/images/develix.nl/develix-angle-hover-right.svg');">{{ $second_button }}</a>
                 @endif
             </div>
         </div>

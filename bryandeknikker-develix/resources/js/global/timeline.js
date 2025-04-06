@@ -3,6 +3,10 @@ document.addEventListener('DOMContentLoaded', function () {
     const timelineLine = document.querySelector('.timeline-line');
 
     if (timelineContainer && timelineLine) {
+        timelineContainer.style.overflowX = 'auto';
+        timelineContainer.style.scrollbarWidth = 'none';
+        timelineContainer.style.msOverflowStyle = 'none';
+
         function updateLineWidth() {
             const totalWidth = timelineContainer.scrollWidth;
             timelineLine.style.width = `${totalWidth}px`;
@@ -10,7 +14,6 @@ document.addEventListener('DOMContentLoaded', function () {
 
         updateLineWidth();
 
-        // Use ResizeObserver to handle width changes
         const resizeObserver = new ResizeObserver(updateLineWidth);
         resizeObserver.observe(timelineContainer);
     }

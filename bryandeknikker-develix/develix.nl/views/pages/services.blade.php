@@ -88,7 +88,7 @@
 
     @component('components.text-image', [
         'title' => 'Digitale strategieën die werken',
-        'description' => 'Bij Develix gaan we verder dan alleen technische oplossingen. We creëren digitale ervaringen die jouw merk versterken en jouw doelen ondersteunen. Met een scherp oog voor detail en innovatie helpen we jouw bedrijf om zichtbaar te worden en te groeien in een digitale wereld die continu verandert. Vertrouw op ons voor strategisch advies, betrouwbare technologie en een aanpak die echt werkt voor jouw onderneming.',
+        'description' => 'Bij Develix ga ik verder dan alleen technische oplossingen. Ik creëer digitale ervaringen die jouw merk versterken en jouw doelen ondersteunen. Met een scherp oog voor detail en innovatie help ik jouw bedrijf om zichtbaar te worden en te groeien in een digitale wereld die continu verandert. Vertrouw op mij voor strategisch advies, betrouwbare technologie en een aanpak die echt werkt voor jouw onderneming.',
         'imageSrc' => asset('images/develix.nl/code-languages.svg'),
         'imageSrcDark' => asset('images/develix.nl/code-languages-dark.svg'),
         'altText' => 'Illustratie van digitale strategieën',
@@ -110,7 +110,7 @@
 
     @component('components.faq', [
         'title' => 'Veelgestelde Vragen',
-        'description' => 'Vind hier antwoorden op de meest voorkomende vragen over onze diensten.',
+        'description' => 'Vind hier antwoorden op de meest voorkomende vragen over mijn diensten.',
         'faqs' => \App\Models\Faq::active()->byCategory('algemeen')->get(),
         'imageSrc' => asset('/images/develix.nl/angle-down.svg'),
     ])

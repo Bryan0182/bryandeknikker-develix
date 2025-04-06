@@ -17,6 +17,19 @@ body.dark-theme {
 .timeline-scroll-container {
     -ms-overflow-style: none;
     scrollbar-width: none;
+    overflow-x: auto; // Toegevoegd om horizontaal scrollen mogelijk te maken
+    position: relative;
+
+    // Visuele indicator dat er meer content is
+    &::after {
+        content: '';
+        position: absolute;
+        top: 0;
+        right: 0;
+        height: 100%;
+        width: 30px;
+        pointer-events: none; // Zodat het niet interfereert met scrolling
+    }
 
     &::-webkit-scrollbar {
         display: none;
@@ -26,6 +39,7 @@ body.dark-theme {
         position: relative;
         display: flex;
         padding-top: 20px;
+        min-width: min-content; // Zorgt dat de container niet krimpt onder de inhoud
     }
 
     .timeline-line {
@@ -46,6 +60,7 @@ body.dark-theme {
         align-items: center;
         text-align: center;
         margin-right: 2rem;
+        flex-shrink: 0; // Voorkomt dat items krimpen bij een klein viewport
 
         .timeline-icon-wrapper {
             width: 100%;

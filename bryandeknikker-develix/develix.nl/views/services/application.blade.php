@@ -2,7 +2,7 @@
 
 @section('title', 'Applicatie laten maken')
 @section('subtitle', 'Maatwerk digitale oplossingen')
-@section('meta_description', 'Wil je een applicatie laten maken? Bij Develix bouwen we op maat gemaakte digitale oplossingen die aansluiten bij jouw unieke bedrijfsbehoeften. Neem contact op voor jouw ideale applicatie.')
+@section('meta_description', 'Wil je een applicatie laten maken? Bij Develix bouw ik op maat gemaakte digitale oplossingen die aansluiten bij jouw unieke bedrijfsbehoeften. Neem contact op voor jouw ideale applicatie.')
 @section('meta_keywords', 'applicatie laten maken, maatwerk applicaties, digitale oplossingen, Develix')
 @section('og_title', 'Applicatie laten maken | Develix')
 @section('og_description', 'Ontdek hoe Develix jouw bedrijf kan versterken met op maat gemaakte applicaties. Van kleine tools tot complexe systemen.')
@@ -16,7 +16,7 @@
 @section('content')
     @component('components.hero', [
         'title' => 'Applicatie laten maken',
-        'description' => 'Wil je een applicatie laten maken die jouw bedrijf ondersteunt en optimaliseert? Bij Develix ontwikkelen we maatwerkapplicaties die jouw bedrijfsprocessen versterken. Of het nu gaat om een eenvoudige tool of een complexe oplossing, wij bouwen het op maat voor jouw unieke behoeften.',
+        'description' => 'Wil je een applicatie laten maken die jouw bedrijf ondersteunt en optimaliseert? Bij Develix ontwikkel ik maatwerkapplicaties die jouw bedrijfsprocessen versterken. Of het nu gaat om een eenvoudige tool of een complexe oplossing, ik bouw het op maat voor jouw unieke behoeften.',
         'first_button' => 'Neem contact op',
         'first_button_url' => route('contact'),
         'second_button' => 'Lees wat klanten zeggen',
@@ -32,7 +32,7 @@
 
     @component('components.text', [
         'title' => 'Waarom een maatwerk applicatie?',
-        'description' => 'Een maatwerkapplicatie biedt jouw bedrijf de mogelijkheid om unieke uitdagingen aan te pakken en processen te automatiseren. Bij Develix bouwen we oplossingen die volledig zijn afgestemd op jouw wensen. Met een focus op gebruiksvriendelijkheid en efficiëntie zorgen we ervoor dat jouw applicatie écht waarde toevoegt.',
+        'description' => 'Een maatwerkapplicatie biedt jouw bedrijf de mogelijkheid om unieke uitdagingen aan te pakken en processen te automatiseren. Bij Develix bouw ik oplossingen die volledig zijn afgestemd op jouw wensen. Met een focus op gebruiksvriendelijkheid en efficiëntie zorg ik ervoor dat jouw applicatie écht waarde toevoegt.',
     ])
     @endcomponent
 
