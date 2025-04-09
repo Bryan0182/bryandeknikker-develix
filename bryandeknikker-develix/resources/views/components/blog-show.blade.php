@@ -11,21 +11,49 @@
     </div>
 
     @if($relatedBlogs->isNotEmpty())
-        <div class="border-t pt-6 mt-8">
-            <h2 class="text-2xl font-semibold mb-4">Gerelateerde Blogs</h2>
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-                @foreach($relatedBlogs as $relatedBlog)
-                    <div class="p-4">
-                        @if($relatedBlog->featured_image)
-                            <div class="featured-image mb-6">
-                                <img src="{{ asset('storage/' . $relatedBlog->featured_image) }}" alt="Featured Image" width="auto" height="300" class="blog-image">
-                            </div>
+        <div class="border-t pt-6 mt-12">
+            <h2 class="blog-title text-4xl font-semibold tracking-tight text-balance sm:text-5xl text-center mb-10">
+                Gerelateerde Blogs
+            </h2>
+
+            <div class="mx-auto max-w-7xl">
+                <div class="blog-section mx-auto mt-8 grid max-w-2xl auto-rows-fr grid-cols-1 gap-8 lg:mx-0 lg:max-w-none lg:grid-cols-3">
+                    @foreach($relatedBlogs as $blog)
+                        @if($blog->status === 'gepubliceerd')
+                            <article class="blog-card relative isolate flex flex-col justify-end overflow-hidden px-8 pt-80 pb-8 sm:pt-48 lg:pt-80">
+                                @if($blog->featured_image)
+                                    {{--                                <img src="{{ asset('storage/' . $blog->featured_image) }}"--}}
+                                    {{--                                     alt="{{ $blog->title }}"--}}
+                                    {{--                                     class="blog-image absolute inset-0 -z-10 h-full w-full object-cover">--}}
+                                    <img src="https://images.unsplash.com/photo-1496128858413-b36217c2ce36?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=3603&q=80"
+                                         alt="{{ $blog->title }}"
+                                         class="blog-image absolute inset-0 -z-10 h-full w-full object-cover">
+                                @endif
+
+                                <div class="blog-overlay absolute inset-0 -z-10"></div>
+                                <div class="blog-ring absolute inset-0 -z-10 ring-inset"></div>
+
+                                <div class="blog-meta flex flex-wrap items-center gap-y-1 overflow-hidden text-sm/6">
+                                    <time datetime="{{ $blog->publication_date->format('Y-m-d') }}" class="mr-4">
+                                        {{ $blog->publication_date->format('d-m-Y') }}
+                                    </time>
+                                    <div class="flex items-center gap-x-2.5">
+                                        <img src="{{ asset('images/develix.nl/profielfoto-develix-circle.png') }}" alt="Auteur"
+                                             class="size-6 flex-none rounded-full">
+                                        {{ $blog->author ?? 'Develix' }}
+                                    </div>
+                                </div>
+
+                                <h3 class="blog-heading mt-3 text-lg/6 font-semibold">
+                                    <a href="{{ route('blog-show', $blog->slug) }}">
+                                        <span class="absolute inset-0"></span>
+                                        {{ $blog->title }}
+                                    </a>
+                                </h3>
+                            </article>
                         @endif
-                        <h3 class="text-lg font-semibold">{{ $relatedBlog->title }}</h3>
-                        <span class="mt-2">{!! $relatedBlog->intro !!}</span>
-                        <a href="{{ route('blog-show', $relatedBlog->slug) }}" class="mt-4 inline-block blog-read-more angle-right-button" style="--icon--angle-right-url: url('/images/develix.nl/develix-angle-right.svg'); --icon--angle-right-hover-url: url('/images/develix.nl/develix-angle-hover-right.svg');">Lees meer</a>
-                    </div>
-                @endforeach
+                    @endforeach
+                </div>
             </div>
         </div>
     @endif

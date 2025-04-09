@@ -10,11 +10,22 @@
 @section('canonical', route('blog', $blog->slug))
 
 @section('page-specific-scss')
-    @vite(['resources/scss/global/blog-show.scss'])
+    @vite(['resources/scss/global/blog-show.scss', 'resources/scss/global/blogs.scss', 'resources/scss/global/cta.scss'])
 @endsection
 
 @section('content')
     @component('components.blog-show', ['blog' => $blog, 'relatedBlogs' => $relatedBlogs])
+    @endcomponent
+
+    @component('components.cta', [
+        'title' => 'Klaar om je online aanwezigheid naar het volgende niveau te tillen? ',
+        'highlight_word' => 'volgende niveau',
+        'description' => 'Plan direct je gratis adviesgesprek en ontdek hoe ik jouw digitale ambities kan waarmaken.',
+        'first_button' => 'Plan je gratis adviesgesprek',
+        'first_button_url' => route('contact'),
+        'second_button' => 'Bekijk hoe ik jou kan helpen',
+        'second_button_url' => route('services'),
+    ])
     @endcomponent
 @endsection
 
