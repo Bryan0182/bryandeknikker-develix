@@ -20,3 +20,5 @@ yarn-error.log
 /.vscode
 /.zed
 /storage
+/public/build/
+/public/build/manifest.json
