@@ -1,4 +1,4 @@
-<section class="cards-section container mx-auto py-5 px-4">
+<section class="cards-section container mx-auto px-4 py-5 lg:py-12">
     <h2 class="text-3xl font-bold text-center mb-8">
         {{ $title }}
     </h2>

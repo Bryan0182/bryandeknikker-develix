@@ -29,6 +29,7 @@ export default defineConfig({
                 'resources/scss/global/faq.scss',
                 'resources/scss/global/quote.scss',
                 'resources/scss/global/testimonial.scss',
+                'resources/scss/global/text-image.scss',
                 'resources/scss/global/review-create.scss',
                 'resources/scss/develix.nl/cookie-element.scss',
                 'resources/scss/develix.nl/buttons.scss',

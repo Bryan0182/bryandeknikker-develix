@@ -1,7 +1,9 @@
 .plan-card {
-    background-color: var(--white-color);
+    background-color: var(--off-white-color);
     border: 1px solid var(--black-color);
     transition: var(--transition);
+    border-radius: var(--border-round-radius);
+    padding: 20px;
     display: flex;
     flex-direction: column;
 

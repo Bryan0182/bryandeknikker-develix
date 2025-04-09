@@ -1,5 +1,4 @@
-<!-- resources/views/components/featured-services.blade.php -->
-<div class="container mx-auto services-section py-5 px-4">
+<div class="container mx-auto services-section px-4 py-5 lg:py-12">
     <div class="text-center mb-6">
         <h2 class="section-title text-3xl font-bold">{{ $title }}</h2>
         <p class="section-subtitle">{{ $description }}</p>
@@ -7,7 +6,7 @@
     <div class="flex flex-wrap">
         @foreach ($plans as $plan)
             <div class="w-full md:w-1/3 px-4 my-4">
-                <div class="relative plan-card rounded-3xl p-8 shadow-lg flex flex-col h-full {{ isset($plan['popular']) && $plan['popular'] ? 'plan-card-popular' : '' }}">
+                <div class="relative plan-card p-8 shadow-lg flex flex-col h-full {{ isset($plan['popular']) && $plan['popular'] ? 'plan-card-popular' : '' }}">
                     @if(isset($plan['popular']) && $plan['popular'])
                         <div class="absolute top-0 right-0 plan-badge px-4 py-1 rounded-bl-lg rounded-tr-3xl text-sm font-medium">
                             {{ $plan['popular_text'] }}

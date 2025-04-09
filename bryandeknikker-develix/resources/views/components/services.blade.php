@@ -1,4 +1,4 @@
-<div class="container mx-auto services-section py-5 px-4">
+<div class="container mx-auto services-section px-4 py-5 lg:py-12">
     <div class="text-center mb-6">
         <h2 class="section-title text-3xl font-bold">{{ $title }}</h2>
         <p class="section-subtitle">{{ $description }}</p>

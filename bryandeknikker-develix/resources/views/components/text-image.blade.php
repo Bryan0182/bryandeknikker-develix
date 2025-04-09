@@ -1,16 +1,23 @@
-<div class="container mx-auto py-5 px-4 text-image-section">
-    <div class="flex flex-col md:flex-row items-center md:space-x-8">
-        <div class="text-section md:w-1/2 w-full mb-6 md:mb-0">
-            <h2 class="text-3xl font-bold mb-4">{{ $title }}</h2>
-            <p class="text-lg mb-4">{{ $description }}</p>
+<section class="text-image-section px-4 py-5 lg:py-12">
+    <div class="container mx-auto max-w-7xl grid grid-cols-1 md:grid-cols-2 gap-24 items-center">
+
+        <div data-aos="fade-up" class="text-box order-1 md:order-1">
+            <h2 class="title">{{ $title }}</h2>
+            <p class="description">{{ $description }}</p>
         </div>
 
-        <div class="image-section md:w-1/2 w-full flex justify-center md:justify-end">
-            <img src="{{ $imageSrc }}"
-                 data-light="{{ $imageSrc }}"
-                 data-dark="{{ $imageSrcDark }}"
-                 class="mx-auto img-fluid theme-image @if(isset($imageClass)){{ $imageClass }}@endif"
-                 alt="{{ $altText }}" width="{{ $width }}" height="{{ $height }}" loading="eager">
+        <div data-aos="zoom-in" class="image-wrapper order-2 md:order-2 justify-center flex">
+            <img
+                src="{{ $imageSrc }}"
+                data-light="{{ $imageSrc }}"
+                data-dark="{{ $imageSrcDark }}"
+                alt="{{ $altText }}"
+                width="{{ $width }}"
+                height="{{ $height }}"
+                loading="eager"
+                class="theme-image @if(isset($imageClass)){{ $imageClass }}@endif"
+            >
         </div>
+
     </div>
-</div>
+</section>

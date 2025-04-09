@@ -76,6 +76,10 @@
     </script>
     <!-- End Leadinfo tracking code -->
 
+    <!-- AOS Stylesheet -->
+    <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet">
+    <!-- End AOS Stylesheet -->
+
     <!-- Styles -->
     @vite(['resources/scss/global/app.scss', 'resources/scss/develix.nl/develix.scss', 'resources/scss/develix.nl/header.scss', 'resources/scss/develix.nl/footer.scss', 'resources/scss/develix.nl/cookie-element.scss', 'resources/scss/develix.nl/buttons.scss'])
     @yield('page-specific-scss')
@@ -99,7 +103,19 @@
 <!-- Scripts -->
 @vite(['resources/js/global/app.js', 'resources/js/develix.nl/cookie-element.js'])
 @yield('page-specific-js')
-<!-- LeadBot Script-->
+<!-- LeadBot Script -->
 <script id="ldbtscrpt" src="https://d2qh0sy46xxq25.cloudfront.net/leadbot.min.js?apiKey=7f2bc3e89199d33f7d300600"></script>
+<!-- End LeadBot Script -->
+
+<!-- AOS Script -->
+<script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+<script>
+    AOS.init({
+        duration: 800,
+        once: false, // Belangrijk: AOS mag meerdere keren triggeren
+        mirror: true // Dit laat de animatie ook terugdraaien bij omhoog scrollen
+    });
+</script>
+<!-- End AOS Script -->
 </body>
 </html>

@@ -1,4 +1,4 @@
-<div class="flex flex-col items-center py-5">
+<div class="flex flex-col items-center px-4 py-5 lg:py-12">
     <div class="container mx-auto">
         <div class="flex flex-wrap">
             <div class="w-full flex items-center text-column">

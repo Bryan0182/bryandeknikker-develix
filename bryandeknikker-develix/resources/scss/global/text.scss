@@ -1,31 +1,37 @@
-.text-section {
-    .text-paragraph {
-        padding: 15px 0 0 0;
-    }
-
-    ul, ol {
-        margin: 0.5rem 0;
-    }
-
-    ul li, ol li {
-        margin-bottom: 0.5rem;
-    }
-
-    .usps-grid {
-        column-gap: 1.5rem;
-
-        .left {
-            justify-content: end;
+body.dark-theme {
+    .text-section {
+        .title {
+            color: var(--white-color);
         }
 
-        a {
-            color: var(--main-color);
-            transition: var(--transition);
+        .description-paragraph {
+            color: var(--off-white-color);
+        }
 
-            &:hover {
-                color: var(--second-color);
-                text-decoration: underline;
-            }
+        .usp-box {
+            background-color: var(--light-black-color);
+            border-radius: var(--border-radius);
+        }
+    }
+}
+
+.text-section {
+    .title {
+        color: var(--black-color);
+    }
+
+    .description-paragraph {
+        color: var(--light-black-color);
+    }
+
+    .usp-box {
+        background-color: var(--off-white-color);
+        border-radius: var(--border-radius);
+        transition: var(--transition);
+        cursor: default;
+
+        &:hover {
+            box-shadow: 0 0 12px rgba(var(--main-color-rgb), 0.5);
         }
     }
 }

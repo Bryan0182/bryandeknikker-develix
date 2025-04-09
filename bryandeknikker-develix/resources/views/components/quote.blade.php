@@ -1,4 +1,4 @@
-<div class="container mx-auto px-4 py-5 quote-section">
+<div class="container mx-auto px-4 py-5 lg:py-12 quote-section">
     <div class="flex justify-center">
         @if(session('success'))
             <div class="alert alert-success p-4 mb-4" role="alert">

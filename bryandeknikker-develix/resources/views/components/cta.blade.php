@@ -1,14 +1,11 @@
-<!-- resources/views/components/cta.blade.php -->
 @php
-    // Controleer of we een woord moeten highlighten in de titel
     $titleHtml = $title;
     if (isset($highlight_word) && !empty($highlight_word)) {
-        // Vervang het gespecificeerde woord door een span met de highlight class
         $titleHtml = str_replace($highlight_word, '<span class="cta-highlight">' . $highlight_word . '</span>', $title);
     }
 @endphp
 
-<div class="cta-section">
+<div class="cta-section px-4 py-5 lg:py-12">
     <div class="cta-gradient"></div>
 
     <div class="cta-fade-top"></div>

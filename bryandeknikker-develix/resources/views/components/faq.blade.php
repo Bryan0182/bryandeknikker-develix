@@ -1,6 +1,6 @@
 <div class="w-full faq-container-fluid">
     <div class="container mx-auto faq-section">
-        <div class="flex flex-col items-center text-center gap-5 py-5 px-4">
+        <div class="flex flex-col items-center text-center gap-5 px-4 py-5 lg:py-12">
             <div class="w-full md:w-3/4">
                 <h2 class="faq-title font-bold text-3xl">{{ $title }}</h2>
                 <p class="faq-text">{{ $description }}</p>

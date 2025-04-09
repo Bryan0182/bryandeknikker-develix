@@ -1,4 +1,4 @@
-<div class="contact-page py-12">
+<div class="contact-page px-4 py-5 lg:py-12">
     <div class="container mx-auto">
         <div class="flex flex-wrap">
             <!-- Contact Form -->

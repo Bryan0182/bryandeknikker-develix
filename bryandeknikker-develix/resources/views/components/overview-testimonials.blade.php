@@ -1,4 +1,4 @@
-<div class="container mx-auto px-4 py-5 max-w-screen-xl text-center overview-testimonial-section">
+<div class="container mx-auto px-4 py-5 lg:py-12 max-w-screen-xl text-center overview-testimonial-section">
     <div class="mx-auto max-w-screen-sm">
         <h2 class="mb-4 text-4xl tracking-tight font-bold">{{ $title }}</h2>
         <p class="mb-8 font-light lg:mb-16 sm:text-xl">{{ $description }}</p>

@@ -1,4 +1,4 @@
-<div class="container mx-auto py-5 px-4">
+<div class="container mx-auto px-4 py-5 lg:py-12">
     <div class="flex justify-between items-center mb-6">
         <h1 class="text-3xl font-bold">Dashboard</h1>
         <a href="{{ route('logout.get') }}" class="text-sm font-semibold link-shortcuts">Uitloggen</a>

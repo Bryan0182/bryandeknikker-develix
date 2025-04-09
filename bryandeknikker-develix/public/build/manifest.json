@@ -42,7 +42,7 @@
     "isEntry": true
   },
   "resources/scss/bryandeknikker.nl/bryandeknikker.scss": {
-    "file": "assets/bryandeknikker-D-yG2YU3.css",
+    "file": "assets/bryandeknikker-2H3GyeHf.css",
     "src": "resources/scss/bryandeknikker.nl/bryandeknikker.scss",
     "isEntry": true
   },
@@ -57,7 +57,7 @@
     "isEntry": true
   },
   "resources/scss/develix.nl/develix.scss": {
-    "file": "assets/develix-BpvC0Xxt.css",
+    "file": "assets/develix-DFweD_w5.css",
     "src": "resources/scss/develix.nl/develix.scss",
     "isEntry": true
   },
@@ -77,7 +77,7 @@
     "isEntry": true
   },
   "resources/scss/global/app.scss": {
-    "file": "assets/app-CZ6fj99-.css",
+    "file": "assets/app-D1pG-Vru.css",
     "src": "resources/scss/global/app.scss",
     "isEntry": true
   },
@@ -107,7 +107,7 @@
     "isEntry": true
   },
   "resources/scss/global/cta.scss": {
-    "file": "assets/cta-D_kB_x_2.css",
+    "file": "assets/cta-D8NWeeEo.css",
     "src": "resources/scss/global/cta.scss",
     "isEntry": true
   },
@@ -127,7 +127,7 @@
     "isEntry": true
   },
   "resources/scss/global/featured-services.scss": {
-    "file": "assets/featured-services-DEghuUYQ.css",
+    "file": "assets/featured-services-uf8h4JVv.css",
     "src": "resources/scss/global/featured-services.scss",
     "isEntry": true
   },
@@ -166,8 +166,13 @@
     "src": "resources/scss/global/testimonial.scss",
     "isEntry": true
   },
+  "resources/scss/global/text-image.scss": {
+    "file": "assets/text-image-BHAAW3vL.css",
+    "src": "resources/scss/global/text-image.scss",
+    "isEntry": true
+  },
   "resources/scss/global/text.scss": {
-    "file": "assets/text-DR74-VwD.css",
+    "file": "assets/text-CG30QbL7.css",
     "src": "resources/scss/global/text.scss",
     "isEntry": true
   },

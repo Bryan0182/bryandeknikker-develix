@@ -1,4 +1,4 @@
-<div class="container mx-auto px-4 py-5 testimonial-section">
+<div class="container mx-auto px-4 py-5 lg:py-12 testimonial-section">
     <div class="flex justify-center">
         <div class="lg:w-2/3 w-full text-center">
             <img src="{{ asset('images/develix.nl/quote.svg') }}" alt="Quotes" class="mx-auto" width="50px">

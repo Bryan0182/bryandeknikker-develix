@@ -1,4 +1,4 @@
-<div class="container mx-auto px-4 py-5">
+<div class="container mx-auto px-4 py-5 lg:py-12">
     <div class="grid grid-cols-1 md:grid-cols-2 gap-5 items-center">
         <div class="flex flex-col gap-2">
             <h2 class="text-center md:text-left text-3xl font-bold">{{ $title }}</h2>

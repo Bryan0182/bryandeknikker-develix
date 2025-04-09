@@ -10,7 +10,7 @@
 @section('canonical', route('home'))
 
 @section('page-specific-scss')
-    @vite(['resources/scss/global/hero.scss', 'resources/scss/global/featured-services.scss', 'resources/scss/global/services.scss', 'resources/scss/global/cta.scss', 'resources/scss/global/text.scss', 'resources/scss/global/testimonial.scss'])
+    @vite(['resources/scss/global/hero.scss', 'resources/scss/global/featured-services.scss', 'resources/scss/global/services.scss', 'resources/scss/global/cta.scss', 'resources/scss/global/text.scss', 'resources/scss/global/testimonial.scss', 'resources/scss/global/text-image.scss'])
 @endsection
 
 @section('content')
@@ -89,10 +89,10 @@
         'title' => 'Professionele website maken met focus op resultaat',
         'description' => 'Je website is meer dan een digitaal visitekaartje. Het is je belangrijkste verkoop- en marketingtool. Daarom ontwikkel ik websites die:',
         'usps' => [
-            "Direct de juiste doelgroep aanspreken",
-            "Bezoekers omzetten in klanten",
-            "Technisch perfect presteren",
-            "Automatisch meegroeien met je bedrijf"
+            ['icon' => '🎯', 'text' => 'Direct de juiste doelgroep aanspreken'],
+            ['icon' => '🤝', 'text' => 'Bezoekers omzetten in klanten'],
+            ['icon' => '⚙️', 'text' => 'Technisch perfect presteren'],
+            ['icon' => '📈', 'text' => 'Automatisch meegroeien met je bedrijf'],
         ],
     ])
     @endcomponent
@@ -101,10 +101,10 @@
         'title' => 'Complete digitale oplossingen voor ambitieuze ondernemers',
         'description' => 'Bij website ontwikkeling kijk ik verder dan alleen het design. Je krijgt:',
         'usps' => [
-            "Strategisch advies voor maximale online impact",
-            "Datagedreven optimalisatie voor continue verbetering",
-            "24/7 monitoring en proactieve support",
-            "Maatwerk functionaliteit die je bedrijf versterkt"
+            ['icon' => '🧠', 'text' => 'Strategisch advies voor maximale online impact'],
+            ['icon' => '📊', 'text' => 'Datagedreven optimalisatie voor continue verbetering'],
+            ['icon' => '🛠️', 'text' => '24/7 monitoring en proactieve support'],
+            ['icon' => '⚙️', 'text' => 'Maatwerk functionaliteit die je bedrijf versterkt'],
         ],
     ])
     @endcomponent
@@ -113,10 +113,10 @@
         'title' => 'Technische expertise & innovatie voor maximaal resultaat',
         'description' => 'Ik combineer bewezen technieken met innovatieve oplossingen:',
         'usps' => [
-            "SEO-optimalisatie voor betere vindbaarheid",
-            "Conversie-optimalisatie voor meer leads",
-            "Snelle, veilige hosting met automatische backups",
-            "Maatwerk applicatie ontwikkeling voor procesautomatisering"
+            ['icon' => '🔍', 'text' => 'SEO-optimalisatie voor betere vindbaarheid'],
+            ['icon' => '🎯', 'text' => 'Conversie-optimalisatie voor meer leads'],
+            ['icon' => '🔒', 'text' => 'Snelle, veilige hosting met automatische backups'],
+            ['icon' => '💡', 'text' => 'Maatwerk applicatie ontwikkeling voor procesautomatisering'],
         ],
     ])
     @endcomponent

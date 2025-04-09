@@ -1,4 +1,4 @@
-<div class="container mx-auto py-5 px-4">
+<div class="container mx-auto px-4 py-5 lg:py-12">
     <h1 class="text-3xl font-bold mb-6">Review Aanmaken</h1>
 
     @if ($errors->any())
