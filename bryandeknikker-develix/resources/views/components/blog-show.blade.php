@@ -22,10 +22,7 @@
                         @if($blog->status === 'gepubliceerd')
                             <article class="blog-card relative isolate flex flex-col justify-end overflow-hidden px-8 pt-80 pb-8 sm:pt-48 lg:pt-80">
                                 @if($blog->featured_image)
-                                    {{--                                <img src="{{ asset('storage/' . $blog->featured_image) }}"--}}
-                                    {{--                                     alt="{{ $blog->title }}"--}}
-                                    {{--                                     class="blog-image absolute inset-0 -z-10 h-full w-full object-cover">--}}
-                                    <img src="https://images.unsplash.com/photo-1496128858413-b36217c2ce36?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=3603&q=80"
+                                    <img src="{{ asset('storage/' . $blog->featured_image) }}"
                                          alt="{{ $blog->title }}"
                                          class="blog-image absolute inset-0 -z-10 h-full w-full object-cover">
                                 @endif
