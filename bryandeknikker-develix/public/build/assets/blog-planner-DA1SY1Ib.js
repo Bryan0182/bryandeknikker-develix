@@ -1,1 +1,0 @@
-document.getElementById("publication_date").addEventListener("change",function(){const t=new Date(this.value),n=new Date,e=document.getElementById("status");t>n?e.value="concept":e.value="gepubliceerd"});

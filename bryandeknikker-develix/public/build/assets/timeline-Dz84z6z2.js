@@ -1,1 +1,0 @@
-document.addEventListener("DOMContentLoaded",function(){const e=document.querySelector(".timeline-container"),n=document.querySelector(".timeline-line");if(e&&n){let t=function(){const o=e.scrollWidth;n.style.width=`${o}px`};var i=t;e.style.overflowX="auto",e.style.scrollbarWidth="none",e.style.msOverflowStyle="none",t(),new ResizeObserver(t).observe(e)}});
