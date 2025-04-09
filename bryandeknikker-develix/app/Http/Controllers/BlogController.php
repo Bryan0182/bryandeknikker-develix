@@ -40,9 +40,14 @@ class BlogController extends Controller
         ]);
 
         $author = $request->input('author', 'Bryan de Knikker');
-        $featuredImagePath = $request->file('featured_image')
-            ? $request->file('featured_image')->store('uploads/blog_images', 'public')
-            : null;
+        try {
+            $featuredImagePath = $request->file('featured_image')
+                ? $request->file('featured_image')->store('uploads/blog_images', 'public')
+                : null;
+        } catch (\Exception $e) {
+            Log::error('Upload error: ' . $e->getMessage());
+            return back()->withErrors(['featured_image' => 'De afbeelding kon niet worden opgeslagen.']);
+        }
 
         // Converteer publication_date naar MySQL-formaat
         $publicationDate = $request->input('publication_date')
