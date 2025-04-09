@@ -1,47 +1,36 @@
-<div class="bg-white py-24 sm:py-32">
-    <div class="mx-auto max-w-7xl px-6 lg:px-8">
-        <div class="mx-auto max-w-2xl text-center">
-            <h2 class="text-4xl font-semibold tracking-tight text-balance text-gray-900 sm:text-5xl">Blogs</h2>
-            <p class="mt-2 text-lg/8 text-gray-600">Ontdek onze nieuwste blogs en artikelen.</p>
-        </div>
+<section class="cards-section container mx-auto px-4 py-5 lg:py-12">
+    <h2 class="text-3xl font-bold text-center mb-8">
+        Blogs
+    </h2>
+    <p class="text-center mb-6 lg:w-2/3 w-full mx-auto">
+        Ontdek onze nieuwste blogs en artikelen.
+    </p>
 
-        @if($blogs->isEmpty())
-            <p class="text-center mt-8">Er zijn momenteel geen blogs beschikbaar.</p>
-        @else
-            <div class="mx-auto mt-16 grid max-w-2xl auto-rows-fr grid-cols-1 gap-8 sm:mt-20 lg:mx-0 lg:max-w-none lg:grid-cols-3">
-                @foreach($blogs as $blog)
-                    @if($blog->status === 'gepubliceerd')
-                        <article class="relative isolate flex flex-col justify-end overflow-hidden rounded-2xl bg-gray-900 px-8 pb-8 pt-80">
-                            @if($blog->featured_image)
-                                <img src="{{ asset('storage/' . $blog->featured_image) }}" alt="{{ $blog->title }}" class="absolute inset-0 -z-10 size-full object-cover">
-                            @endif
-                            <div class="absolute inset-0 -z-10 bg-gradient-to-t from-gray-900 via-gray-900/40"></div>
-                            <div class="absolute inset-0 -z-10 rounded-2xl ring-1 ring-gray-900/10 ring-inset"></div>
-
-                            <div class="flex flex-wrap items-center gap-y-1 overflow-hidden text-sm/6 text-gray-300">
-                                <time datetime="{{ $blog->publication_date->format('Y-m-d') }}" class="mr-8">{{ $blog->publication_date->format('d-m-Y') }}</time>
-                                <div class="-ml-4 flex items-center gap-x-4">
-                                    <svg viewBox="0 0 2 2" class="-ml-0.5 size-0.5 flex-none fill-white/50">
-                                        <circle cx="1" cy="1" r="1" />
-                                    </svg>
-                                    <div class="flex gap-x-2.5">
-                                        {{ $blog->author }}
-                                    </div>
-                                </div>
+    @if($blogs->isEmpty())
+        <p class="text-center">Er zijn momenteel geen blogs beschikbaar.</p>
+    @else
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+            @foreach($blogs as $blog)
+                @if($blog->status === 'gepubliceerd')
+                    <div class="info-card px-4 py-2">
+                        @if($blog->featured_image)
+                            <div class="featured-image mb-4">
+                                <img src="{{ asset('storage/' . $blog->featured_image) }}"
+                                     class="card-img-top w-full h-64 object-cover rounded"
+                                     alt="{{ $blog->title }}">
                             </div>
-                            <h3 class="mt-3 text-lg/6 font-semibold text-white">
-                                <a href="{{ route('blog-show', $blog->slug) }}">
-                                    <span class="absolute inset-0"></span>
-                                    {{ $blog->title }}
-                                </a>
-                            </h3>
-                            <p class="mt-2 line-clamp-2 text-sm/5 text-gray-300">
-                                {!! $blog->intro !!}
-                            </p>
-                        </article>
-                    @endif
-                @endforeach
-            </div>
-        @endif
-    </div>
-</div>
+                        @endif
+                        <div class="blog-meta mb-2 text-sm">
+                            <span>{{ $blog->author }} | {{ $blog->publication_date->format('d-m-Y') }}</span>
+                        </div>
+                        <h3 class="text-xl font-semibold">{{ $blog->title }}</h3>
+                        <p class="mt-2">
+                            {!! $blog->intro !!}
+                        </p>
+                        <a href="{{ route('blog-show', $blog->slug) }}" class="mt-4 inline-block blog-read-more angle-right-button" style="--icon--angle-right-url: url('/images/develix.nl/develix-angle-right.svg'); --icon--angle-right-hover-url: url('/images/develix.nl/develix-angle-hover-right.svg');">Lees meer</a>
+                    </div>
+                @endif
+            @endforeach
+        </div>
+    @endif
+</section>
