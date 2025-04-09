@@ -40,10 +40,10 @@
         'title' => 'Waarom kiezen voor Develix voor SEO?',
         'description' => 'Bij Develix draait alles om maatwerk en klantgerichtheid. Ik zorg ervoor dat jouw SEO-strategie niet alleen effectief is, maar ook perfect aansluit bij jouw bedrijfsdoelen. Dankzij mijn ervaring in SEO en digitale marketing krijg je een aanpak die zowel technisch sterk is als gericht op jouw doelgroep.',
         'usps' => [
-            "Maatwerk SEO-strategieën – Afgestemd op jouw specifieke doelen",
-            "Transparante werkwijze – Heldere communicatie en rapportages",
-            "Blijvende resultaten – Duurzame verbeteringen in zoekresultaten",
-            "Persoonlijke begeleiding – Direct contact en korte lijnen"
+            ['icon' => '🧠', 'text' => 'Maatwerk SEO-strategieën – Afgestemd op jouw specifieke doelen'],
+            ['icon' => '📢', 'text' => 'Transparante werkwijze – Heldere communicatie en rapportages'],
+            ['icon' => '📊', 'text' => 'Blijvende resultaten – Duurzame verbeteringen in zoekresultaten'],
+            ['icon' => '🤝', 'text' => 'Persoonlijke begeleiding – Direct contact en korte lijnen'],
         ],
     ])
     @endcomponent
@@ -85,12 +85,12 @@
 
     @component('components.text', [
         'title' => 'Hoe werkt het?',
-        'description' => 'Het proces van SEO bij Develix begint met een grondige analyse van jouw website en doelen. Ik voer  een uitgebreide SEO-audit uit, bepalen de beste strategie en implementeren de optimalisaties. Vervolgens monitor en verbeter ik continu om duurzame resultaten te behalen.',
+        'description' => 'Het proces van SEO bij Develix begint met een grondige analyse van jouw website en doelen. Ik voer een uitgebreide SEO-audit uit, bepaal de beste strategie en implementeer de optimalisaties. Vervolgens monitor en verbeter ik continu om duurzame resultaten te behalen.',
         'usps' => [
-            "Gratis kennismaking – Ik analyseer jouw website en SEO-doelen",
-            "SEO-audit en strategie – Een plan op maat voor maximale vindbaarheid",
-            "Optimalisatie en uitvoering – Technische verbeteringen en contentaanpassingen",
-            "Monitoring en bijsturing – Doorlopende analyses en rapportages voor blijvend succes"
+            ['icon' => '🤝', 'text' => 'Gratis kennismaking – Ik analyseer jouw website en SEO-doelen'],
+            ['icon' => '📋', 'text' => 'SEO-audit en strategie – Een plan op maat voor maximale vindbaarheid'],
+            ['icon' => '🛠️', 'text' => 'Optimalisatie en uitvoering – Technische verbeteringen en contentaanpassingen'],
+            ['icon' => '📈', 'text' => 'Monitoring en bijsturing – Doorlopende analyses en rapportages voor blijvend succes'],
         ],
     ])
     @endcomponent

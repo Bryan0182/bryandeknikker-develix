@@ -38,27 +38,27 @@
     @endcomponent
 
     @component('components.text', [
-        'title' => 'Waarom een professionele website laten maken?',
-        'usps' => [
-            "Versterk jouw online aanwezigheid en bereik meer potentiële klanten",
-            "Converteer bezoekers naar klanten met doelgerichte call-to-actions",
-            "Bouw autoriteit op in jouw branche met een professionele uitstraling",
-            "Verbeter jouw vindbaarheid in Google met een <a href='/diensten/seo'>technisch geoptimaliseerde website</a>",
-            "Automatiseer bedrijfsprocessen en bespaar kostbare tijd"
-        ],
-    ])
+    'title' => 'Waarom een professionele website laten maken?',
+    'usps' => [
+        ['icon' => '🌐', 'text' => 'Versterk jouw online aanwezigheid en bereik meer potentiële klanten'],
+        ['icon' => '🎯', 'text' => 'Converteer bezoekers naar klanten met doelgerichte call-to-actions'],
+        ['icon' => '🏆', 'text' => 'Bouw autoriteit op in jouw branche met een professionele uitstraling'],
+        ['icon' => '🔍', 'text' => 'Verbeter jouw vindbaarheid in Google met een <a href=\'/diensten/seo\'>technisch geoptimaliseerde website</a>'],
+        ['icon' => '⚙️', 'text' => 'Automatiseer bedrijfsprocessen en bespaar kostbare tijd'],
+    ],
+])
     @endcomponent
 
     @component('components.text', [
         'title' => 'Zo maak ik jouw website succesvol',
         'description' => 'Bij Develix geloven we in websites die werken. Mijn aanpak combineert:',
         'usps' => [
-            "Data-gedreven design voor maximale gebruiksvriendelijkheid",
-            "Conversion Rate Optimization (CRO) technieken",
-            "Mobiel-eerst ontwikkeling voor perfecte weergave op alle apparaten",
-            "Snelle laadtijden voor betere gebruikerservaring en SEO",
-            "Gebruiksvriendelijk content management systeem",
-            "<a href='/diensten/hosting'>Betrouwbare hosting</a> met 24/7 monitoring"
+            ['icon' => '📊', 'text' => 'Data-gedreven design voor maximale gebruiksvriendelijkheid'],
+            ['icon' => '📈', 'text' => 'Conversion Rate Optimization (CRO) technieken'],
+            ['icon' => '📱', 'text' => 'Mobiel-eerst ontwikkeling voor perfecte weergave op alle apparaten'],
+            ['icon' => '⚡️', 'text' => 'Snelle laadtijden voor betere gebruikerservaring en SEO'],
+            ['icon' => '📝', 'text' => 'Gebruiksvriendelijk content management systeem'],
+            ['icon' => '🛡️', 'text' => "<a href='/diensten/hosting'>Betrouwbare hosting</a> met 24/7 monitoring"],
         ],
     ])
     @endcomponent
@@ -67,12 +67,12 @@
         'title' => 'WordPress websites op maat',
         'description' => 'WordPress is wereldwijd het meest gebruikte platform voor professionele websites - en met reden. Als WordPress specialist ontwikkelt Develix:',
         'usps' => [
-            "Volledig maatwerk thema afgestemd op jouw <a href='/diensten/design'>huisstijl</a>",
-            "Gebruiksvriendelijke beheeromgeving",
-            "Veilige en schaalbare oplossingen",
-            "SEO-geoptimaliseerde structuur",
-            "Integraties met uw bedrijfssoftware",
-            "<a href='/diensten/applicaties'>Maatwerk applicaties</a> wanneer nodig"
+            ['icon' => '🎨', 'text' => "Volledig maatwerk thema afgestemd op jouw <a href='/diensten/design'>huisstijl</a>"],
+            ['icon' => '🧭', 'text' => 'Gebruiksvriendelijke beheeromgeving'],
+            ['icon' => '🔒', 'text' => 'Veilige en schaalbare oplossingen'],
+            ['icon' => '🚀', 'text' => 'SEO-geoptimaliseerde structuur'],
+            ['icon' => '🔗', 'text' => 'Integraties met uw bedrijfssoftware'],
+            ['icon' => '🧩', 'text' => "<a href='/diensten/applicaties'>Maatwerk applicaties</a> wanneer nodig"],
         ],
     ])
     @endcomponent
