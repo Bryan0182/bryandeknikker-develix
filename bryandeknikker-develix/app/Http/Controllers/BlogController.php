@@ -34,7 +34,7 @@ class BlogController extends Controller
             'content' => 'required',
             'publication_date' => 'nullable|date',
             'status' => 'required|in:concept,gepubliceerd',
-            'featured_image' => 'nullable|image|max:2048',
+            'featured_image' => 'nullable|image|max:10240',
             'meta_title' => 'nullable|string|max:60',
             'meta_description' => 'nullable|string|max:160',
         ]);
@@ -96,7 +96,7 @@ class BlogController extends Controller
             'content' => 'required',
             'publication_date' => 'nullable|date',
             'status' => 'required|in:concept,gepubliceerd',
-            'featured_image' => 'nullable|image|max:2048',
+            'featured_image' => 'nullable|image|max:10240',
             'meta_title' => 'nullable|string|max:60',
             'meta_description' => 'nullable|string|max:160',
         ]);
