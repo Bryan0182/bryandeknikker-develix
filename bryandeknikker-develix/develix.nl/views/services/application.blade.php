@@ -10,7 +10,7 @@
 @section('canonical', route('application'))
 
 @section('page-specific-scss')
-    @vite(['resources/scss/global/hero.scss', 'resources/scss/global/text.scss', 'resources/scss/global/cta.scss', 'resources/scss/global/timeline.scss'])
+    @vite(['resources/scss/global/hero.scss', 'resources/scss/global/text.scss', 'resources/scss/global/cta.scss', 'resources/scss/global/timeline.scss', 'resources/scss/global/text-image.scss'])
 @endsection
 
 @section('content')
