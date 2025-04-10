@@ -17,8 +17,22 @@ body.dark-theme {
 .timeline-scroll-container {
     -ms-overflow-style: none;
     scrollbar-width: none;
-    overflow-x: auto; // Toegevoegd om horizontaal scrollen mogelijk te maken
+    overflow-x: auto;
     position: relative;
+
+    // Voeg deze stijlen toe voor de muiscursor en gebruiksvriendelijkheid
+    &.mouse-draggable {
+        cursor: grab;
+        user-select: none;
+
+        &:active {
+            cursor: grabbing;
+        }
+    }
+
+    &::-webkit-scrollbar {
+        display: none;
+    }
 
     // Visuele indicator dat er meer content is
     &::after {
