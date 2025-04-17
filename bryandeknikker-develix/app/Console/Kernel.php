@@ -8,6 +8,16 @@ use Illuminate\Support\Facades\Log;
 
 class Kernel extends ConsoleKernel
 {
+    /**
+     * Hier registreer je je custom Artisan commands.
+     */
+    protected $commands = [
+        \App\Console\Commands\GenerateSitemap::class,
+    ];
+
+    /**
+     * Hier plan je je Artisan commands in.
+     */
     protected function schedule(Schedule $schedule)
     {
         $schedule->command('blog:publish')
@@ -18,8 +28,13 @@ class Kernel extends ConsoleKernel
             ->after(function () {
                 Log::info('Blog publish task has run');
             });
+
+        $schedule->command('generate:sitemap')->daily();
     }
 
+    /**
+     * Laad de console commands van routes/console.php.
+     */
     protected function commands()
     {
         $this->load(__DIR__.'/Commands');
