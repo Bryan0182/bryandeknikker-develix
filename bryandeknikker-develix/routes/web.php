@@ -270,6 +270,8 @@ Route::domain('develix.nl')->group(function () {
         [ReviewController::class, 'index']
     )->name('reviews.index');
 
+    Route::redirect('/blogs', '/blog', 301);
+
     Route::fallback(function () {
         return response()->view('develix::errors.404', [], 404);
     });
