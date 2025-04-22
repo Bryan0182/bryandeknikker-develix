@@ -112,7 +112,7 @@ Route::domain('develix.nl')->group(function () {
         ->middleware('auth')
         ->name('dashboard');
 
-    Route::get('/blogs',
+    Route::get('/blog',
         [BlogController::class, 'index']
     )->name('blog');
 
@@ -126,7 +126,7 @@ Route::domain('develix.nl')->group(function () {
         ->middleware('auth')
         ->name('blog-store');
 
-    Route::get('/blogs/{slug}',
+    Route::get('/blog/{slug}',
         [BlogController::class, 'show']
     )->name('blog-show');
 
