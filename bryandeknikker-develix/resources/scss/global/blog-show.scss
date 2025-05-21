@@ -88,3 +88,8 @@ ul {
 ol {
     list-style: decimal;
 }
+
+footer ul {
+    list-style: none !important;
+    margin-left: 0;
+}
