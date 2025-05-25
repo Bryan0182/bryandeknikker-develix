@@ -89,6 +89,11 @@ ol {
     list-style: decimal;
 }
 
+tbody, tr, td {
+    border-width: 1px;
+    padding: 5px;
+}
+
 footer ul {
     list-style: none !important;
     margin-left: 0;
