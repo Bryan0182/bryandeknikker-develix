@@ -26,10 +26,10 @@
     'title' => 'Waarom kiezen ondernemers in Reeuwijk voor Develix?',
     'description' => 'Reeuwijk is een dorp met een sterke lokale ondernemersgeest. Van recreatiebedrijven rond de Reeuwijkse Plassen tot schilders, hoveniers en coaches — er is hier ontzettend veel ondernemerschap. Maar veel van die bedrijven zijn online nauwelijks zichtbaar. Dat is zonde, want je potentiële klanten zoeken wél online. Ik ben Bryan, oprichter van Develix, en ik werk vanuit het Groene Hart. Dat betekent: korte lijnen, persoonlijk contact en een webdesigner die snapt hoe het er lokaal aan toe gaat.',
     'usps' => [
-        "Een website die gevonden wordt — Ik optimaliseer je site voor zoekmachines zodat je zichtbaar bent in Reeuwijk en omgeving",
-        "Maatwerk, geen templates — Ik bouw op maat met Laravel, wat zorgt voor snelheid, veiligheid en schaalbaarheid",
-        "Persoonlijke aanpak — Je hebt rechtstreeks contact met mij, de maker van je website",
-        "Focus op conversie — Ik zorg dat bezoekers ook daadwerkelijk contact opnemen of een aankoop doen"
+        ['icon' => '🔍', 'text' => 'Een website die gevonden wordt — Ik optimaliseer je site voor zoekmachines zodat je zichtbaar bent in Reeuwijk en omgeving'],
+        ['icon' => '⚙️', 'text' => 'Maatwerk, geen templates — Ik bouw op maat met Laravel, wat zorgt voor snelheid, veiligheid en schaalbaarheid'],
+        ['icon' => '🤝', 'text' => 'Persoonlijke aanpak — Je hebt rechtstreeks contact met mij, de maker van je website'],
+        ['icon' => '📈', 'text' => 'Focus op conversie — Ik zorg dat bezoekers ook daadwerkelijk contact opnemen of een aankoop doen'],
     ],
 ])
 @endcomponent
@@ -38,12 +38,12 @@
     'title' => 'Mijn diensten voor ondernemers in Reeuwijk',
     'description' => "Ik bied alles wat je nodig hebt om online te groeien. Van een professionele website op maat tot SEO, social media beheer, design, maatwerk applicaties en betrouwbare hosting op mijn eigen servers. Of je nu een horecabedrijf runt bij de Reeuwijkse Plassen, een ambachtelijke onderneming hebt in het dorp, of als zzp'er vanuit huis werkt — ik bouw een digitale oplossing die bij jou past.",
     'usps' => [
-        "Website op maat — professioneel, snel en conversiegericht",
-        "SEO — gevonden worden in Google voor jouw dienst in Reeuwijk",
-        "Social media beheer — strategie en content voor Instagram, Facebook, LinkedIn en Pinterest",
-        "Maatwerk applicaties — automatisering en koppelingen op maat",
-        "Design — logo's, huisstijl en grafisch ontwerp",
-        "Hosting — betrouwbaar, met automatische backups en 24/7 monitoring"
+        ['icon' => '🌐', 'text' => "Website op maat — professioneel, snel en conversiegericht. <a href='/diensten/website'>Bekijk mijn websites</a>"],
+        ['icon' => '🔍', 'text' => "SEO — gevonden worden in Google voor jouw dienst in Reeuwijk. <a href='/diensten/seo'>Meer over SEO</a>"],
+        ['icon' => '📱', 'text' => "Social media beheer — strategie en content voor Instagram, Facebook, LinkedIn en Pinterest. <a href='/diensten/social'>Bekijk social media</a>"],
+        ['icon' => '⚙️', 'text' => "Maatwerk applicaties — automatisering en koppelingen op maat. <a href='/diensten/applicatie'>Meer over applicaties</a>"],
+        ['icon' => '🎨', 'text' => "Design — logo's, huisstijl en grafisch ontwerp. <a href='/diensten/design'>Bekijk design</a>"],
+        ['icon' => '🖥️', 'text' => "Hosting — betrouwbaar, met automatische backups en 24/7 monitoring. <a href='/diensten/hosting'>Meer over hosting</a>"],
     ],
 ])
 @endcomponent
