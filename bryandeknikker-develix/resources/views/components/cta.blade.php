@@ -17,7 +17,7 @@
     </div>
 
     <div class="cta-content">
-        <h1 class="cta-title">{!! $titleHtml !!}</h1>
+        <h2 class="cta-title">{!! $titleHtml !!}</h2>
 
         <p class="cta-description">{{ $description }}</p>
 
