@@ -90,51 +90,26 @@
     <a href="/klantbeoordelingen" class="text-blue-600 hover:underline mb-6 inline-block">Bekijk meer klantbeoordelingen →</a>
 
     {{-- FAQ --}}
-    <h2 class="text-2xl font-semibold mt-6 mb-4">Veelgestelde vragen over een website laten maken in Reeuwijk</h2>
-
-    <div class="space-y-4 mb-6">
-        <details class="border border-gray-200 dark:border-gray-700 rounded-lg p-4">
-            <summary class="font-semibold cursor-pointer">Wat kost een website laten maken bij Develix?</summary>
-            <p class="mt-2">De kosten van een website hangen af van je wensen en de complexiteit. Een professionele website op maat begint bij enkele honderden euro's. Ik maak altijd eerst een vrijblijvende offerte, zodat je precies weet waar je aan toe bent. <a href="/offerte" class="text-blue-600 hover:underline">Vraag een offerte aan →</a></p>
-        </details>
-
-        <details class="border border-gray-200 dark:border-gray-700 rounded-lg p-4">
-            <summary class="font-semibold cursor-pointer">Hoe lang duurt het om een website te laten maken?</summary>
-            <p class="mt-2">Een standaard website is meestal binnen 2 tot 4 weken klaar. Bij grotere projecten of maatwerkapplicaties kan het iets langer duren. Ik houd je altijd op de hoogte van de planning.</p>
-        </details>
-
-        <details class="border border-gray-200 dark:border-gray-700 rounded-lg p-4">
-            <summary class="font-semibold cursor-pointer">Waarom zou ik kiezen voor een lokale webdesigner in Reeuwijk?</summary>
-            <p class="mt-2">Een lokale partner begrijpt je markt en je doelgroep. Je kunt makkelijk persoonlijk afspreken, de communicatie is direct en je hebt geen last van lange wachttijden of een anoniem supportteam. Bovendien is lokale SEO mijn specialiteit.</p>
-        </details>
-
-        <details class="border border-gray-200 dark:border-gray-700 rounded-lg p-4">
-            <summary class="font-semibold cursor-pointer">Kan Develix ook mijn bestaande website verbeteren?</summary>
-            <p class="mt-2">Zeker. Ik kan je huidige website analyseren, de SEO verbeteren, het design opfrissen of technische problemen oplossen. Je hoeft niet per se een compleet nieuwe website te laten bouwen.</p>
-        </details>
-
-        <details class="border border-gray-200 dark:border-gray-700 rounded-lg p-4">
-            <summary class="font-semibold cursor-pointer">Biedt Develix ook SEO en hosting aan?</summary>
-            <p class="mt-2">Ja, ik bied naast webdesign ook SEO-optimalisatie, social media beheer, design en betrouwbare hosting aan. Zo heb je alles onder één dak en hoef je niet met meerdere partijen te schakelen.</p>
-        </details>
-
-        <details class="border border-gray-200 dark:border-gray-700 rounded-lg p-4">
-            <summary class="font-semibold cursor-pointer">Werk je alleen in Reeuwijk?</summary>
-            <p class="mt-2">Nee, ik werk door heel het Groene Hart — in <a href="/locatie/gouda" class="text-blue-600 hover:underline">Gouda</a>, <a href="/locatie/waddinxveen" class="text-blue-600 hover:underline">Waddinxveen</a>, <a href="/locatie/bodegraven" class="text-blue-600 hover:underline">Bodegraven</a> en daarbuiten. Online help ik ondernemers door heel Nederland.</p>
-        </details>
-    </div>
-
-    {{-- CTA --}}
-    <h2 class="text-2xl font-semibold mt-6 mb-2">Start vandaag nog met je nieuwe website</h2>
-
-    <p class="mb-4">Klaar om online te groeien? Neem vrijblijvend contact op voor een kennismakingsgesprek. We bespreken je wensen, je doelen en hoe ik je daarbij kan helpen.</p>
-
-    <div class="flex flex-wrap gap-4">
-        <a href="/contact" class="inline-block bg-blue-600 text-white px-6 py-3 rounded-lg hover:bg-blue-700 transition font-semibold">Neem contact op</a>
-        <a href="/offerte" class="inline-block border-2 border-blue-600 text-blue-600 px-6 py-3 rounded-lg hover:bg-blue-50 dark:hover:bg-gray-800 transition font-semibold">Vraag een offerte aan</a>
-    </div>
+    @component('components.faq', [
+        'title' => 'Veelgestelde vragen over een website laten maken in Reeuwijk',
+        'description' => 'Bekijk de antwoorden op de meest gestelde vragen over het laten maken van een website in Reeuwijk.',
+        'faqs' => \App\Models\Faq::active()->byCategory('locatie-reeuwijk')->get(),
+        'imageSrc' => asset('/images/develix.nl/angle-down.svg'),
+    ])
+    @endcomponent
 
 </div>
+
+{{-- CTA --}}
+@component('components.cta', [
+    'title' => 'Klaar om online te groeien in Reeuwijk?',
+    'description' => 'Wil je een professionele website die écht klanten oplevert? Neem contact op voor een vrijblijvend kennismakingsgesprek en ontdek hoe ik je kan helpen.',
+    'first_button' => 'Vraag een vrijblijvende offerte aan',
+    'first_button_url' => route('quote'),
+    'second_button' => 'Neem contact op',
+    'second_button_url' => route('contact')
+])
+@endcomponent
 
 {{-- JSON-LD Schema Markup --}}
 @push('schema')
