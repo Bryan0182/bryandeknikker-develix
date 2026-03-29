@@ -36,7 +36,7 @@
 
 @component('components.text', [
     'title' => 'Mijn diensten voor ondernemers in Reeuwijk',
-    'description' => 'Ik bied alles wat je nodig hebt om online te groeien. Van een professionele website op maat tot SEO, social media beheer, design, maatwerk applicaties en betrouwbare hosting op mijn eigen servers. Of je nu een horecabedrijf runt bij de Reeuwijkse Plassen, een ambachtelijke onderneming hebt in het dorp, of als zzp\'er vanuit huis werkt — ik bouw een digitale oplossing die bij jou past.',
+    'description' => "Ik bied alles wat je nodig hebt om online te groeien. Van een professionele website op maat tot SEO, social media beheer, design, maatwerk applicaties en betrouwbare hosting op mijn eigen servers. Of je nu een horecabedrijf runt bij de Reeuwijkse Plassen, een ambachtelijke onderneming hebt in het dorp, of als zzp'er vanuit huis werkt — ik bouw een digitale oplossing die bij jou past.",
     'usps' => [
         "Website op maat — professioneel, snel en conversiegericht",
         "SEO — gevonden worden in Google voor jouw dienst in Reeuwijk",
